@@ -1,5 +1,5 @@
 RSpec.describe Stave::Core::Lookup do
-  subject(:lookup) { lookup_class.new(variant) }
+  subject(:lookup) { lookup_class.new(name) }
 
   let(:lookup_class) do
     Class.new(described_class) do
@@ -10,7 +10,7 @@ RSpec.describe Stave::Core::Lookup do
 
   describe "#initialize" do
     context "when provided variant is invalid" do
-      let(:variant) { :invalid }
+      let(:name) { :invalid }
 
       it "raises an invalid variant error" do
         expect { lookup }.to raise_error(
@@ -21,32 +21,32 @@ RSpec.describe Stave::Core::Lookup do
     end
 
     context "when provided variant is valid" do
-      let(:variant) { :foo }
+      let(:name) { :foo }
 
       it "does not raise any errors" do
         expect { lookup }.not_to raise_error
       end
 
-      it "sets the variant" do
-        expect(lookup.variant).to eq(variant)
+      it "sets the name" do
+        expect(lookup.name).to eq(name)
       end
     end
   end
 
   describe ".variant?" do
     context "when specified variant is not defined" do
-      let(:variant) { :invalid }
+      let(:name) { :invalid }
 
       it "returns false" do
-        expect(lookup_class).not_to be_variant(variant)
+        expect(lookup_class).not_to be_variant(name)
       end
     end
 
     context "when specified variant is defined" do
-      let(:variant) { :foo }
+      let(:name) { :foo }
 
       it "returns true" do
-        expect(lookup_class).to be_variant(variant)
+        expect(lookup_class).to be_variant(name)
       end
     end
   end

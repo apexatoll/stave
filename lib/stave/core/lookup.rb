@@ -1,12 +1,18 @@
 module Stave
   module Core
     class Lookup
-      attr_reader :variant
+      attr_reader :name
 
-      def initialize(variant)
-        @variant = variant
+      def initialize(name)
+        @name = name
 
         validate_variant!
+      end
+
+      def variant
+        @variant ||= self.class.variants.find do |variant|
+          variant == name
+        end || raise
       end
 
       def self.variant(name)
@@ -28,15 +34,15 @@ module Stave
       private
 
       class InvalidVariantError < StandardError
-        def initialize(variant)
-          super("Invalid lookup variant: #{variant}")
+        def initialize(name)
+          super("Invalid lookup variant: #{name}")
         end
       end
 
       def validate_variant!
-        return if self.class.variant?(variant)
+        return if self.class.variant?(name)
 
-        raise InvalidVariantError, variant
+        raise InvalidVariantError, name
       end
     end
   end
