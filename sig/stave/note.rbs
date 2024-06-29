@@ -1,0 +1,48 @@
+module Stave
+  class Note < Core::Lookup
+    attr_reader pitch: Pitch
+    attr_reader accidental: Accidental
+
+    def self.a_double_flat: -> Note
+    def self.a_flat: -> Note
+    def self.a_natural: -> Note
+    def self.a_sharp: -> Note
+    def self.a_double_sharp: -> Note
+
+    def self.b_double_flat: -> Note
+    def self.b_flat: -> Note
+    def self.b_natural: -> Note
+    def self.b_sharp: -> Note
+    def self.b_double_sharp: -> Note
+
+    def self.c_double_flat: -> Note
+    def self.c_flat: -> Note
+    def self.c_natural: -> Note
+    def self.c_sharp: -> Note
+    def self.c_double_sharp: -> Note
+
+    def self.d_double_flat: -> Note
+    def self.d_flat: -> Note
+    def self.d_natural: -> Note
+    def self.d_sharp: -> Note
+    def self.d_double_sharp: -> Note
+
+    def self.e_double_flat: -> Note
+    def self.e_flat: -> Note
+    def self.e_natural: -> Note
+    def self.e_sharp: -> Note
+    def self.e_double_sharp: -> Note
+
+    def self.f_double_flat: -> Note
+    def self.f_flat: -> Note
+    def self.f_natural: -> Note
+    def self.f_sharp: -> Note
+    def self.f_double_sharp: -> Note
+
+    def self.g_double_flat: -> Note
+    def self.g_flat: -> Note
+    def self.g_natural: -> Note
+    def self.g_sharp: -> Note
+    def self.g_double_sharp: -> Note
+  end
+end
