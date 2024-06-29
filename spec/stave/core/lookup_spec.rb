@@ -8,6 +8,8 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  let(:name) { :foo }
+
   describe "#initialize" do
     context "when provided variant is invalid" do
       let(:name) { :invalid }
@@ -30,6 +32,18 @@ RSpec.describe Stave::Core::Lookup do
       it "sets the name" do
         expect(lookup.name).to eq(name)
       end
+    end
+  end
+
+  describe "#variant" do
+    subject(:variant) { lookup.variant }
+
+    it "returns the expected name" do
+      expect(variant.name).to eq(name)
+    end
+
+    it "returns the expected value" do
+      expect(variant.value).to eq(name)
     end
   end
 
@@ -66,6 +80,8 @@ RSpec.describe Stave::Core::Lookup do
   end
 
   describe "getter methods" do
+    let(:variant) { lookup.variant }
+
     it "sets getter class methods for each variant" do
       expect(lookup_class).to respond_to(:foo, :bar)
     end
@@ -78,7 +94,11 @@ RSpec.describe Stave::Core::Lookup do
       end
 
       it "sets the variant name" do
-        expect(lookup.variant.name).to eq(:foo)
+        expect(variant.name).to eq(:foo)
+      end
+
+      it "sets the variant value" do
+        expect(variant.value).to eq(:foo)
       end
     end
 
@@ -90,7 +110,11 @@ RSpec.describe Stave::Core::Lookup do
       end
 
       it "sets the variant name" do
-        expect(lookup.variant.name).to eq(:bar)
+        expect(variant.name).to eq(:bar)
+      end
+
+      it "sets the variant value" do
+        expect(variant.value).to eq(:bar)
       end
     end
   end

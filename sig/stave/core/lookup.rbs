@@ -18,8 +18,9 @@ module Stave
 
       class Variant
         attr_reader name: Symbol
+        attr_reader value: untyped
 
-        def initialize: (name: Symbol) -> void
+        def initialize: (name: Symbol, ?value: untyped) -> void
       end
 
       class InvalidVariantError < StandardError

@@ -36,8 +36,13 @@ module Stave
       class Variant
         attr_reader :name
 
-        def initialize(name:)
+        def initialize(name:, value: nil)
           @name = name
+          @value = value
+        end
+
+        def value
+          @value || name
         end
       end
 
