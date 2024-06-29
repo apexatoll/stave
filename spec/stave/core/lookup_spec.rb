@@ -33,6 +33,34 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  describe "#==" do
+    let(:name) { :foo }
+
+    context "when other is not a lookup" do
+      let(:other) { :other }
+
+      it "returns false" do
+        expect(lookup).not_to eq(other)
+      end
+    end
+
+    context "when other is a different lookup" do
+      let(:other) { lookup_class.bar }
+
+      it "returns false" do
+        expect(lookup).not_to eq(other)
+      end
+    end
+
+    context "when other is the same lookup" do
+      let(:other) { lookup_class.foo }
+
+      it "returns true" do
+        expect(lookup).to eq(other)
+      end
+    end
+  end
+
   describe "#value" do
     subject(:value) { lookup.value }
 

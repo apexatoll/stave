@@ -9,6 +9,12 @@ module Stave
         validate_variant!
       end
 
+      def ==(other)
+        return false unless other.is_a?(self.class)
+
+        name == other.name
+      end
+
       def method_missing(method, *, **)
         variant.attributes[method]
       end
