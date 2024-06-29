@@ -6,7 +6,7 @@ module Stave
 
       def initialize: (Symbol) -> void
 
-      def self.variant: (untyped) -> void
+      def self.variant: (untyped, ?value: untyped) -> void
 
       def self.variant?: (Symbol) -> bool
 
@@ -20,7 +20,7 @@ module Stave
         attr_reader name: Symbol
         attr_reader value: untyped
 
-        def initialize: (name: Symbol, ?value: untyped) -> void
+        def initialize: (name: Symbol, value: untyped) -> void
       end
 
       class InvalidVariantError < StandardError
