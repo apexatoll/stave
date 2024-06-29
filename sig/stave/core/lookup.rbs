@@ -1,0 +1,23 @@
+module Stave
+  module Core
+    class Lookup
+      attr_reader variant: Symbol
+
+      def initialize: (Symbol) -> void
+
+      def self.variant: (untyped) -> void
+
+      def self.variants: -> Array[Symbol]
+
+      self.@variants: Array[Symbol]
+
+      private
+
+      class InvalidVariantError < StandardError
+        def initialize: (Symbol) -> void
+      end
+
+      def validate_variant!: -> void
+    end
+  end
+end
