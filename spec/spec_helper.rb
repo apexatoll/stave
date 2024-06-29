@@ -1,3 +1,5 @@
+require "stave"
+
 RSpec.configure do |config|
   Kernel.srand(config.seed)
 
