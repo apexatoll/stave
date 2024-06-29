@@ -1,12 +1,12 @@
 module Stave
   class Pitch < Core::Lookup
-    variant :a, ordering: 0
-    variant :b, ordering: 1
-    variant :c, ordering: 2
-    variant :d, ordering: 3
-    variant :e, ordering: 4
-    variant :f, ordering: 5
-    variant :g, ordering: 6
+    variant :a, ordering: 0, semitones: 0
+    variant :b, ordering: 1, semitones: 2
+    variant :c, ordering: 2, semitones: 3
+    variant :d, ordering: 3, semitones: 5
+    variant :e, ordering: 4, semitones: 7
+    variant :f, ordering: 5, semitones: 8
+    variant :g, ordering: 6, semitones: 10
 
     def +(other)
       index = (ordering + other) % self.class.order.length

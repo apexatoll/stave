@@ -1,6 +1,7 @@
 module Stave
   class Pitch < Core::Lookup
     attr_reader ordering: Integer
+    attr_reader semitones: Integer
 
     def +: (Integer) -> Pitch
 
