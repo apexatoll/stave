@@ -1,6 +1,7 @@
 module Stave
   module Core
     class Lookup
+      attr_reader name: Symbol
       attr_reader variant: Symbol
 
       def initialize: (Symbol) -> void
