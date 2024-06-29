@@ -1,0 +1,13 @@
+module Stave
+  class Pitch < Core::Lookup
+    attr_reader ordering: Integer
+
+    def self.a: -> Pitch
+    def self.b: -> Pitch
+    def self.c: -> Pitch
+    def self.d: -> Pitch
+    def self.e: -> Pitch
+    def self.f: -> Pitch
+    def self.g: -> Pitch
+  end
+end
