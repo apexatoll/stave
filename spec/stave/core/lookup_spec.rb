@@ -33,30 +33,22 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
-  describe "#variant" do
-    subject(:variant) { lookup.variant }
+  describe "#value" do
+    subject(:value) { lookup.value }
 
     context "when variant value is not specified" do
       let(:name) { :foo }
 
-      it "returns the expected name" do
-        expect(variant.name).to eq(name)
-      end
-
-      it "sets the value to the variant name" do
-        expect(variant.value).to eq(name)
+      it "returns the variant name" do
+        expect(value).to eq(name)
       end
     end
 
     context "when variant value is specified" do
       let(:name) { :bar }
 
-      it "returns the expected name" do
-        expect(variant.name).to eq(name)
-      end
-
       it "returns the specified value" do
-        expect(variant.value).to eq(:value)
+        expect(value).to eq(:value)
       end
     end
   end
@@ -107,12 +99,12 @@ RSpec.describe Stave::Core::Lookup do
         expect(lookup).to be_a(lookup_class)
       end
 
-      it "sets the variant name" do
-        expect(variant.name).to eq(:foo)
+      it "sets the name" do
+        expect(lookup.name).to eq(:foo)
       end
 
-      it "sets the variant value" do
-        expect(variant.value).to eq(:foo)
+      it "sets the value" do
+        expect(lookup.value).to eq(:foo)
       end
     end
 
@@ -123,12 +115,12 @@ RSpec.describe Stave::Core::Lookup do
         expect(lookup).to be_a(lookup_class)
       end
 
-      it "sets the variant name" do
-        expect(variant.name).to eq(:bar)
+      it "sets the name" do
+        expect(lookup.name).to eq(:bar)
       end
 
-      it "sets the variant value" do
-        expect(variant.value).to eq(:value)
+      it "sets the value" do
+        expect(lookup.value).to eq(:value)
       end
     end
   end
