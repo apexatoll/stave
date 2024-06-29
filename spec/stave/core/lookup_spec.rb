@@ -4,11 +4,9 @@ RSpec.describe Stave::Core::Lookup do
   let(:lookup_class) do
     Class.new(described_class) do
       variant :foo
-      variant :bar
+      variant :bar, value: :value
     end
   end
-
-  let(:name) { :foo }
 
   describe "#initialize" do
     context "when provided variant is invalid" do
@@ -38,12 +36,28 @@ RSpec.describe Stave::Core::Lookup do
   describe "#variant" do
     subject(:variant) { lookup.variant }
 
-    it "returns the expected name" do
-      expect(variant.name).to eq(name)
+    context "when variant value is not specified" do
+      let(:name) { :foo }
+
+      it "returns the expected name" do
+        expect(variant.name).to eq(name)
+      end
+
+      it "sets the value to the variant name" do
+        expect(variant.value).to eq(name)
+      end
     end
 
-    it "returns the expected value" do
-      expect(variant.value).to eq(name)
+    context "when variant value is specified" do
+      let(:name) { :bar }
+
+      it "returns the expected name" do
+        expect(variant.name).to eq(name)
+      end
+
+      it "returns the specified value" do
+        expect(variant.value).to eq(:value)
+      end
     end
   end
 
@@ -114,7 +128,7 @@ RSpec.describe Stave::Core::Lookup do
       end
 
       it "sets the variant value" do
-        expect(variant.value).to eq(:bar)
+        expect(variant.value).to eq(:value)
       end
     end
   end

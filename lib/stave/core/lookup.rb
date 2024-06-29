@@ -15,10 +15,10 @@ module Stave
         end || raise
       end
 
-      def self.variant(name)
+      def self.variant(name, value: nil)
         @variants ||= []
 
-        variants << Variant.new(name:)
+        variants << Variant.new(name:, value:)
 
         self.class.define_method(name) { new(name) }
       end
@@ -36,7 +36,7 @@ module Stave
       class Variant
         attr_reader :name
 
-        def initialize(name:, value: nil)
+        def initialize(name:, value:)
           @name = name
           @value = value
         end
