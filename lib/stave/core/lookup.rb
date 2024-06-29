@@ -17,6 +17,10 @@ module Stave
         self.class.define_method(name) { new(name) }
       end
 
+      def self.variant?(name)
+        variants.include?(name)
+      end
+
       class << self
         attr_reader :variants
       end
@@ -30,7 +34,7 @@ module Stave
       end
 
       def validate_variant!
-        return if self.class.variants.include?(variant)
+        return if self.class.variant?(variant)
 
         raise InvalidVariantError, variant
       end
