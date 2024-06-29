@@ -7,6 +7,8 @@ module Stave
 
       def value: -> untyped
 
+      def self.all: -> Array[instance]
+
       def self.variant: (untyped, **untyped) -> void
 
       def self.variant?: (Symbol) -> bool
