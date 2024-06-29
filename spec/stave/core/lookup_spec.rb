@@ -54,8 +54,14 @@ RSpec.describe Stave::Core::Lookup do
   describe ".variants" do
     subject(:variants) { lookup_class.variants }
 
-    it "returns the expected variants" do
-      expect(variants).to contain_exactly(:foo, :bar)
+    let(:variant_names) { variants.map(&:name) }
+
+    it "returns Variant objects" do
+      expect(variants).to all be_a(described_class::Variant)
+    end
+
+    it "returns the expected variant names" do
+      expect(variant_names).to contain_exactly(:foo, :bar)
     end
   end
 
@@ -71,8 +77,8 @@ RSpec.describe Stave::Core::Lookup do
         expect(lookup).to be_a(lookup_class)
       end
 
-      it "sets the variant" do
-        expect(lookup.variant).to eq(:foo)
+      it "sets the variant name" do
+        expect(lookup.variant.name).to eq(:foo)
       end
     end
 
@@ -83,8 +89,8 @@ RSpec.describe Stave::Core::Lookup do
         expect(lookup).to be_a(lookup_class)
       end
 
-      it "sets the variant" do
-        expect(lookup.variant).to eq(:bar)
+      it "sets the variant name" do
+        expect(lookup.variant.name).to eq(:bar)
       end
     end
   end

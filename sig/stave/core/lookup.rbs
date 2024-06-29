@@ -2,7 +2,7 @@ module Stave
   module Core
     class Lookup
       attr_reader name: Symbol
-      attr_reader variant: Symbol
+      attr_reader variant: Variant
 
       def initialize: (Symbol) -> void
 
@@ -10,11 +10,17 @@ module Stave
 
       def self.variant?: (Symbol) -> bool
 
-      def self.variants: -> Array[Symbol]
+      def self.variants: -> Array[Variant]
 
-      self.@variants: Array[Symbol]
+      self.@variants: Array[Variant]
 
       private
+
+      class Variant
+        attr_reader name: Symbol
+
+        def initialize: (name: Symbol) -> void
+      end
 
       class InvalidVariantError < StandardError
         def initialize: (Symbol) -> void

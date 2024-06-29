@@ -11,20 +11,20 @@ module Stave
 
       def variant
         @variant ||= self.class.variants.find do |variant|
-          variant == name
+          variant.name == name
         end || raise
       end
 
       def self.variant(name)
         @variants ||= []
 
-        variants << name.to_sym
+        variants << Variant.new(name:)
 
         self.class.define_method(name) { new(name) }
       end
 
       def self.variant?(name)
-        variants.include?(name)
+        variants.map(&:name).include?(name)
       end
 
       class << self
@@ -32,6 +32,14 @@ module Stave
       end
 
       private
+
+      class Variant
+        attr_reader :name
+
+        def initialize(name:)
+          @name = name
+        end
+      end
 
       class InvalidVariantError < StandardError
         def initialize(name)
