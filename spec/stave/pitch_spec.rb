@@ -54,4 +54,14 @@ RSpec.describe Stave::Pitch do
       expect(pitch.ordering).to eq(6)
     end
   end
+
+  describe ".order" do
+    subject(:order) { described_class.order }
+
+    let(:expected) { %i[a b c d e f g] }
+
+    it "returns the expected order" do
+      expect(order).to eq(expected)
+    end
+  end
 end

@@ -7,5 +7,11 @@ module Stave
     variant :e, ordering: 4
     variant :f, ordering: 5
     variant :g, ordering: 6
+
+    def self.order
+      variants
+        .sort_by { |variant| variant.attributes[:ordering] }
+        .map(&:name)
+    end
   end
 end
