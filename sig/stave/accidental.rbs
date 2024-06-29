@@ -1,0 +1,9 @@
+module Stave
+  class Accidental < Core::Lookup
+    def self.double_flat: -> Accidental
+    def self.flat: -> Accidental
+    def self.natural: -> Accidental
+    def self.sharp: -> Accidental
+    def self.double_sharp: -> Accidental
+  end
+end
