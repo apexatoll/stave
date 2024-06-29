@@ -36,15 +36,15 @@ RSpec.describe Stave::Core::Lookup do
   describe "#value" do
     subject(:value) { lookup.value }
 
-    context "when variant value is not specified" do
+    context "when variant attribute is not specified" do
       let(:name) { :foo }
 
-      it "returns the variant name" do
-        expect(value).to eq(name)
+      it "returns nil" do
+        expect(value).to be_nil
       end
     end
 
-    context "when variant value is specified" do
+    context "when variant attribute is specified" do
       let(:name) { :bar }
 
       it "returns the specified value" do
@@ -103,8 +103,8 @@ RSpec.describe Stave::Core::Lookup do
         expect(lookup.name).to eq(:foo)
       end
 
-      it "sets the value" do
-        expect(lookup.value).to eq(:foo)
+      it "does not set a value" do
+        expect(lookup.value).to be_nil
       end
     end
 
