@@ -1,5 +1,7 @@
 module Stave
   class Accidental < Core::Lookup
+    attr_reader offset: Integer
+
     def self.double_flat: -> Accidental
     def self.flat: -> Accidental
     def self.natural: -> Accidental
