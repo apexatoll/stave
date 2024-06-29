@@ -7,6 +7,8 @@ module Stave
 
       def self.variant: (untyped) -> void
 
+      def self.variant?: (Symbol) -> bool
+
       def self.variants: -> Array[Symbol]
 
       self.@variants: Array[Symbol]

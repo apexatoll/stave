@@ -33,6 +33,24 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  describe ".variant?" do
+    context "when specified variant is not defined" do
+      let(:variant) { :invalid }
+
+      it "returns false" do
+        expect(lookup_class).not_to be_variant(variant)
+      end
+    end
+
+    context "when specified variant is defined" do
+      let(:variant) { :foo }
+
+      it "returns true" do
+        expect(lookup_class).to be_variant(variant)
+      end
+    end
+  end
+
   describe ".variants" do
     subject(:variants) { lookup_class.variants }
 
