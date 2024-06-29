@@ -18,6 +18,9 @@ module Stave
       end
 
       def validate_variant!: -> void
+
+      # Internal
+      def new: (Symbol) -> Lookup
     end
   end
 end

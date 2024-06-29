@@ -40,4 +40,34 @@ RSpec.describe Stave::Core::Lookup do
       expect(variants).to contain_exactly(:foo, :bar)
     end
   end
+
+  describe "getter methods" do
+    it "sets getter class methods for each variant" do
+      expect(lookup_class).to respond_to(:foo, :bar)
+    end
+
+    describe ".foo" do
+      let(:lookup) { lookup_class.foo }
+
+      it "returns the expected object" do
+        expect(lookup).to be_a(lookup_class)
+      end
+
+      it "sets the variant" do
+        expect(lookup.variant).to eq(:foo)
+      end
+    end
+
+    describe ".bar" do
+      let(:lookup) { lookup_class.bar }
+
+      it "returns the expected object" do
+        expect(lookup).to be_a(lookup_class)
+      end
+
+      it "sets the variant" do
+        expect(lookup.variant).to eq(:bar)
+      end
+    end
+  end
 end

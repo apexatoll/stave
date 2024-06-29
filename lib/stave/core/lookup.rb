@@ -13,6 +13,8 @@ module Stave
         @variants ||= []
 
         variants << name.to_sym
+
+        self.class.define_method(name) { new(name) }
       end
 
       class << self
