@@ -9,14 +9,18 @@ module Stave
         validate_variant!
       end
 
-      def value
-        variant.value
+      def method_missing(method, *, **)
+        variant.attributes[method]
       end
 
-      def self.variant(name, value: nil)
+      def respond_to_missing?(attribute, include_private)
+        variant.attributes.key?(attribute) || super
+      end
+
+      def self.variant(name, **attributes)
         @variants ||= []
 
-        variants << Variant.new(name:, value:)
+        variants << Variant.new(name:, **attributes)
 
         self.class.define_method(name) { new(name) }
       end
@@ -32,15 +36,11 @@ module Stave
       private
 
       class Variant
-        attr_reader :name
+        attr_reader :name, :attributes
 
-        def initialize(name:, value:)
+        def initialize(name:, **attributes)
           @name = name
-          @value = value
-        end
-
-        def value
-          @value || name
+          @attributes = attributes
         end
       end
 
