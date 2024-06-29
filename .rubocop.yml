@@ -21,6 +21,8 @@ Lint/AmbiguousBlockAssociation:
 Lint/ConstantDefinitionInBlock:
   Exclude:
     - spec/spec_helper.rb
+Lint/EmptyClass:
+  Enabled: false
 Lint/MissingSuper:
   Enabled: false
 
