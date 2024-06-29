@@ -2,6 +2,10 @@ module Stave
   class Pitch < Core::Lookup
     attr_reader ordering: Integer
 
+    def +: (Integer) -> Pitch
+
+    def -: (Integer) -> Pitch
+
     def self.order: -> Array[Symbol]
 
     def self.a: -> Pitch

@@ -8,6 +8,20 @@ module Stave
     variant :f, ordering: 5
     variant :g, ordering: 6
 
+    def +(other)
+      index = (ordering + other) % self.class.order.length
+      pitch = self.class.order[index]
+
+      self.class.new(pitch)
+    end
+
+    def -(other)
+      index = (ordering - other) % self.class.order.length
+      pitch = self.class.order[index]
+
+      self.class.new(pitch)
+    end
+
     def self.order
       variants
         .sort_by { |variant| variant.attributes[:ordering] }
