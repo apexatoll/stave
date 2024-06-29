@@ -23,6 +23,10 @@ module Stave
         variant.attributes.key?(attribute) || super
       end
 
+      def self.all
+        variants.map(&:name).map { |name| send(name) }
+      end
+
       def self.variant(name, **attributes)
         @variants ||= []
 

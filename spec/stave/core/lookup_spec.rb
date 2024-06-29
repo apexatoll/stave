@@ -81,6 +81,16 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  describe ".all" do
+    it "returns a list of Lookup objects" do
+      expect(lookup_class.all).to all be_a(lookup_class)
+    end
+
+    it "contains the expected objects" do
+      expect(lookup_class.all.map(&:name)).to contain_exactly(:foo, :bar)
+    end
+  end
+
   describe ".variant?" do
     context "when specified variant is not defined" do
       let(:name) { :invalid }
