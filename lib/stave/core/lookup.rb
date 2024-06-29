@@ -9,10 +9,8 @@ module Stave
         validate_variant!
       end
 
-      def variant
-        @variant ||= self.class.variants.find do |variant|
-          variant.name == name
-        end || raise
+      def value
+        variant.value
       end
 
       def self.variant(name, value: nil)
@@ -50,6 +48,12 @@ module Stave
         def initialize(name)
           super("Invalid lookup variant: #{name}")
         end
+      end
+
+      def variant
+        @variant ||= self.class.variants.find do |variant|
+          variant.name == name
+        end || raise
       end
 
       def validate_variant!

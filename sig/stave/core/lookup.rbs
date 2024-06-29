@@ -2,9 +2,10 @@ module Stave
   module Core
     class Lookup
       attr_reader name: Symbol
-      attr_reader variant: Variant
 
       def initialize: (Symbol) -> void
+
+      def value: -> untyped
 
       def self.variant: (untyped, ?value: untyped) -> void
 
@@ -15,6 +16,8 @@ module Stave
       self.@variants: Array[Variant]
 
       private
+
+      attr_reader variant: Variant
 
       class Variant
         attr_reader name: Symbol
