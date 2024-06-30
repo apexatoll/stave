@@ -10,7 +10,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.a,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 0
   end
 
   describe ":a_flat" do
@@ -18,7 +19,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.a,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 1
   end
 
   describe ":a_natural" do
@@ -26,7 +28,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.a,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 2
   end
 
   describe ":a_sharp" do
@@ -34,7 +37,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.a,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 3
   end
 
   describe ":a_double_sharp" do
@@ -42,7 +46,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.a,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 4
   end
 
   describe ":b_double_flat" do
@@ -50,7 +55,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.b,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 2
   end
 
   describe ":b_flat" do
@@ -58,7 +64,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.b,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 3
   end
 
   describe ":b_natural" do
@@ -66,7 +73,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.b,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 4
   end
 
   describe ":b_sharp" do
@@ -74,7 +82,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.b,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 5
   end
 
   describe ":b_double_sharp" do
@@ -82,7 +91,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.b,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 6
   end
 
   describe ":c_double_flat" do
@@ -90,7 +100,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.c,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 3
   end
 
   describe ":c_flat" do
@@ -98,7 +109,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.c,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 4
   end
 
   describe ":c_natural" do
@@ -106,7 +118,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.c,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 5
   end
 
   describe ":c_sharp" do
@@ -114,7 +127,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.c,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 6
   end
 
   describe ":c_double_sharp" do
@@ -122,7 +136,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.c,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 7
   end
 
   describe ":d_double_flat" do
@@ -130,7 +145,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.d,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 5
   end
 
   describe ":d_flat" do
@@ -138,7 +154,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.d,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 6
   end
 
   describe ":d_natural" do
@@ -146,7 +163,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.d,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 7
   end
 
   describe ":d_sharp" do
@@ -154,7 +172,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.d,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 8
   end
 
   describe ":d_double_sharp" do
@@ -162,7 +181,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.d,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 9
   end
 
   describe ":e_double_flat" do
@@ -170,7 +190,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.e,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 7
   end
 
   describe ":e_flat" do
@@ -178,7 +199,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.e,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 8
   end
 
   describe ":e_natural" do
@@ -186,7 +208,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.e,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 9
   end
 
   describe ":e_sharp" do
@@ -194,7 +217,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.e,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 10
   end
 
   describe ":e_double_sharp" do
@@ -202,7 +226,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.e,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 11
   end
 
   describe ":f_double_flat" do
@@ -210,7 +235,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.f,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 8
   end
 
   describe ":f_flat" do
@@ -218,7 +244,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.f,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 9
   end
 
   describe ":f_natural" do
@@ -226,7 +253,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.f,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 10
   end
 
   describe ":f_sharp" do
@@ -234,7 +262,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.f,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 11
   end
 
   describe ":f_double_sharp" do
@@ -242,7 +271,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.f,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 0
   end
 
   describe ":g_double_flat" do
@@ -250,7 +280,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.g,
-                     accidental: Stave::Accidental.double_flat
+                     accidental: Stave::Accidental.double_flat,
+                     semitones: 10
   end
 
   describe ":g_flat" do
@@ -258,7 +289,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.g,
-                     accidental: Stave::Accidental.flat
+                     accidental: Stave::Accidental.flat,
+                     semitones: 11
   end
 
   describe ":g_natural" do
@@ -266,7 +298,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.g,
-                     accidental: Stave::Accidental.natural
+                     accidental: Stave::Accidental.natural,
+                     semitones: 0
   end
 
   describe ":g_sharp" do
@@ -274,7 +307,8 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.g,
-                     accidental: Stave::Accidental.sharp
+                     accidental: Stave::Accidental.sharp,
+                     semitones: 1
   end
 
   describe ":g_double_sharp" do
@@ -282,6 +316,7 @@ RSpec.describe Stave::Note do
 
     include_examples :has_attributes,
                      pitch: Stave::Pitch.g,
-                     accidental: Stave::Accidental.double_sharp
+                     accidental: Stave::Accidental.double_sharp,
+                     semitones: 2
   end
 end

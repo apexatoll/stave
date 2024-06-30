@@ -41,5 +41,19 @@ module Stave
     variant :g_natural,      pitch: Pitch.g, accidental: Accidental.natural
     variant :g_sharp,        pitch: Pitch.g, accidental: Accidental.sharp
     variant :g_double_sharp, pitch: Pitch.g, accidental: Accidental.double_sharp
+
+    def semitones
+      @semitones ||= calculate_semitones!
+    end
+
+    private
+
+    def calculate_semitones!
+      semitones = pitch.semitones + accidental.offset + 2
+      semitones += 12 while semitones.negative?
+      semitones -= 12 while semitones >= 12
+
+      semitones
+    end
   end
 end

@@ -2,6 +2,7 @@ module Stave
   class Note < Core::Lookup
     attr_reader pitch: Pitch
     attr_reader accidental: Accidental
+    attr_reader semitones: Integer
 
     def self.a_double_flat: -> Note
     def self.a_flat: -> Note
@@ -44,5 +45,9 @@ module Stave
     def self.g_natural: -> Note
     def self.g_sharp: -> Note
     def self.g_double_sharp: -> Note
+
+    private
+
+    def calculate_semitones!: -> Integer
   end
 end
