@@ -1,8 +1,13 @@
 module Stave
   class Scale
+    attr_reader notes: Array[Note]
     attr_reader tonic: Note
     attr_reader scale_type: ScaleType
 
     def initialize: (tonic: Note, scale_type: ScaleType) -> void
+
+    private
+
+    def map_notes!: -> Array[Note]
   end
 end
