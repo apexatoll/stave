@@ -1,0 +1,8 @@
+module Stave
+  class Scale
+    attr_reader tonic: Note
+    attr_reader scale_type: ScaleType
+
+    def initialize: (tonic: Note, scale_type: ScaleType) -> void
+  end
+end
