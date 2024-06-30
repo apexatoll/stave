@@ -1,0 +1,8 @@
+module Stave
+  class ScaleQuality < Core::Lookup
+    attr_reader steps: Array[Interval]
+
+    def self.major: -> ScaleQuality
+    def self.minor: -> ScaleQuality
+  end
+end

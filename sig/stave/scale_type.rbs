@@ -1,0 +1,13 @@
+module Stave
+  class ScaleType < Core::Lookup
+    attr_reader offsets: Array[Integer]
+    attr_reader steps: Array[Interval]
+
+    def self.major: -> ScaleType
+    def self.minor: -> ScaleType
+
+    private
+
+    def map_offsets!: -> Array[Integer]
+  end
+end
