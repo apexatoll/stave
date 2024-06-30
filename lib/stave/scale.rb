@@ -11,6 +11,14 @@ module Stave
       @notes ||= map_notes!
     end
 
+    def self.major(tonic)
+      new(tonic:, scale_type: ScaleType.major)
+    end
+
+    def self.minor(tonic)
+      new(tonic:, scale_type: ScaleType.minor)
+    end
+
     private
 
     def map_notes!

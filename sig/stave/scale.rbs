@@ -6,6 +6,10 @@ module Stave
 
     def initialize: (tonic: Note, scale_type: ScaleType) -> void
 
+    def self.major: (Note) -> Scale
+
+    def self.minor: (Note) -> Scale
+
     private
 
     def map_notes!: -> Array[Note]
