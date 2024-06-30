@@ -47,6 +47,8 @@ module Stave
     def self.g_sharp: -> Note
     def self.g_double_sharp: -> Note
 
+    def enharmonic_at: (Pitch) -> Note?
+
     private
 
     def calculate_semitones!: -> Integer

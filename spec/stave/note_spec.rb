@@ -453,4 +453,36 @@ RSpec.describe Stave::Note do
                        described_class.b_double_flat
                      ]
   end
+
+  describe "#enharmonic_at" do
+    subject(:enharmonic) { note.enharmonic_at(pitch) }
+
+    let(:note) { described_class.a_flat }
+
+    context "when enharmonic for specified pitch does not exist" do
+      let(:pitch) { Stave::Pitch.b }
+
+      it "returns nil" do
+        expect(enharmonic).to be_nil
+      end
+    end
+
+    context "when enharmonic for specified pitch exists" do
+      context "and pitch is the same" do
+        let(:pitch) { Stave::Pitch.a }
+
+        it "returns self" do
+          expect(enharmonic).to eq(note)
+        end
+      end
+
+      context "and pitch is not the same" do
+        let(:pitch) { Stave::Pitch.g }
+
+        it "returns the enharmonic" do
+          expect(enharmonic.name).to eq(:g_sharp)
+        end
+      end
+    end
+  end
 end

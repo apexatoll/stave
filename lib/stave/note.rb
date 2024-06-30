@@ -46,6 +46,11 @@ module Stave
       @enharmonics ||= find_enharmonics!
     end
 
+    # Returns the enharmonic with the specified pitch if it exists.
+    def enharmonic_at(target)
+      [self, *enharmonics].find { |note| note.pitch == target }
+    end
+
     def semitones
       @semitones ||= calculate_semitones!
     end
