@@ -1,0 +1,9 @@
+module Stave
+  class Interval < Core::Lookup
+    attr_reader size: Integer
+
+    def self.semitone: -> Interval
+
+    def self.tone: -> Interval
+  end
+end
