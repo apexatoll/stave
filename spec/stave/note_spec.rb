@@ -454,6 +454,28 @@ RSpec.describe Stave::Note do
                      ]
   end
 
+  describe "#+" do
+    subject(:new_note) { note + other }
+
+    let(:note) { described_class.e_sharp }
+
+    context "when target is not wrapped" do
+      let(:other) { 1 }
+
+      it "returns the first suitable note" do
+        expect(new_note.name).to eq(:e_double_sharp)
+      end
+    end
+
+    context "when target is wrapped" do
+      let(:other) { 8 }
+
+      it "returns the first suitable note" do
+        expect(new_note.name).to eq(:b_double_sharp)
+      end
+    end
+  end
+
   describe "#enharmonic_at" do
     subject(:enharmonic) { note.enharmonic_at(pitch) }
 

@@ -42,6 +42,13 @@ module Stave
     variant :g_sharp,        pitch: Pitch.g, accidental: Accidental.sharp
     variant :g_double_sharp, pitch: Pitch.g, accidental: Accidental.double_sharp
 
+    def +(other)
+      target = semitones + other
+      target -= 12 while target >= 12
+
+      self.class.all.find { |note| note.semitones == target } || raise
+    end
+
     def enharmonics
       @enharmonics ||= find_enharmonics!
     end
