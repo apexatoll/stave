@@ -2,6 +2,7 @@ module Stave
   class Note < Core::Lookup
     attr_reader pitch: Pitch
     attr_reader accidental: Accidental
+    attr_reader enharmonics: Array[Note]
     attr_reader semitones: Integer
 
     def self.a_double_flat: -> Note
@@ -49,5 +50,7 @@ module Stave
     private
 
     def calculate_semitones!: -> Integer
+
+    def find_enharmonics!: -> Array[Note]
   end
 end

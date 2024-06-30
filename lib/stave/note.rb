@@ -42,6 +42,10 @@ module Stave
     variant :g_sharp,        pitch: Pitch.g, accidental: Accidental.sharp
     variant :g_double_sharp, pitch: Pitch.g, accidental: Accidental.double_sharp
 
+    def enharmonics
+      @enharmonics ||= find_enharmonics!
+    end
+
     def semitones
       @semitones ||= calculate_semitones!
     end
@@ -54,6 +58,12 @@ module Stave
       semitones -= 12 while semitones >= 12
 
       semitones
+    end
+
+    def find_enharmonics!
+      Note.all.select do |note|
+        note.semitones == semitones && note.name != name
+      end
     end
   end
 end
