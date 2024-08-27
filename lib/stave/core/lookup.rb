@@ -10,6 +10,16 @@ module Stave
         set_attributes!
       end
 
+      def ==(other)
+        case other
+        when String, Symbol then variant == other.to_sym
+        when Lookup then variant == other.variant
+        else false
+        end
+      end
+
+      alias eql? ==
+
       class << self
         def variant(name, **attributes)
           variant_lookup[name] = attributes

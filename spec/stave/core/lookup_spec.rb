@@ -37,6 +37,68 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  describe "#==" do
+    subject(:equals?) { lookup == other }
+
+    let(:variant) { :felix }
+
+    context "when other is a String" do
+      context "and string does not match variant" do
+        let(:other) { "foobar" }
+
+        it "returns false" do
+          expect(equals?).to be(false)
+        end
+      end
+
+      context "and string matches variant" do
+        let(:other) { "felix" }
+
+        it "returns true" do
+          expect(equals?).to be(true)
+        end
+      end
+    end
+
+    context "when other is a Symbol" do
+      context "and symbol does not match variant" do
+        let(:other) { :foobar }
+
+        it "returns false" do
+          expect(equals?).to be(false)
+        end
+      end
+
+      context "and string matches variant" do
+        let(:other) { :felix }
+
+        it "returns true" do
+          expect(equals?).to be(true)
+        end
+      end
+    end
+
+    context "when other is a Lookup" do
+      let(:other) { lookup_class.new(other_variant) }
+
+      context "and lookup variants do not match" do
+        let(:other_variant) { :fido }
+
+        it "returns false" do
+          expect(equals?).to be(false)
+        end
+      end
+
+      context "and lookup variants match" do
+        let(:other_variant) { :felix }
+
+        it "returns true" do
+          expect(equals?).to be(true)
+        end
+      end
+    end
+  end
+
   describe "factory methods" do
     it "sets class factory methods for each variant" do
       expect(lookup_class).to respond_to(:fido, :felix)
