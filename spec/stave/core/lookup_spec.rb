@@ -159,4 +159,24 @@ RSpec.describe Stave::Core::Lookup do
       end
     end
   end
+
+  describe ".find_by" do
+    subject(:variant) { lookup_class.find_by(**attributes) }
+
+    context "when no variants match specified criteria" do
+      let(:attributes) { { species: :bird } }
+
+      it "returns nil" do
+        expect(variant).to be_nil
+      end
+    end
+
+    context "when some variants match specified criteria" do
+      let(:attributes) { { species: :cat } }
+
+      it "returns the first matching variant" do
+        expect(variant).to eq(lookup_class.felix)
+      end
+    end
+  end
 end

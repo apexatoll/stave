@@ -48,6 +48,10 @@ module Stave
             end
           end
         end
+
+        def find_by(**attributes)
+          where(**attributes).first
+        end
       end
 
       class InvalidVariantError < StandardError
