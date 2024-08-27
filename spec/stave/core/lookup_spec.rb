@@ -113,6 +113,18 @@ RSpec.describe Stave::Core::Lookup do
     end
   end
 
+  describe ".keys" do
+    subject(:keys) { lookup_class.keys }
+
+    it "returns an array containing symbols" do
+      expect(keys).to all be_a(Symbol)
+    end
+
+    it "returns the expected variant keys" do
+      expect(keys).to contain_exactly(:fido, :felix)
+    end
+  end
+
   describe ".variants" do
     subject(:variants) { lookup_class.variants }
 

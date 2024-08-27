@@ -21,6 +21,8 @@ module Stave
       alias eql? ==
 
       class << self
+        def keys = variant_lookup.keys
+
         def variant(name, **attributes)
           variant_lookup[name] = attributes
 
