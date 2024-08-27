@@ -31,6 +31,10 @@ module Stave
           variant_lookup.keys.include?(name)
         end
 
+        def variants
+          variant_lookup.keys.map { |variant| new(variant) }
+        end
+
         def variant_lookup
           @variant_lookup ||= {}
         end

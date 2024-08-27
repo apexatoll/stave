@@ -112,4 +112,19 @@ RSpec.describe Stave::Core::Lookup do
       )
     end
   end
+
+  describe ".variants" do
+    subject(:variants) { lookup_class.variants }
+
+    it "returns an array containing lookup instances" do
+      expect(variants).to all be_a(lookup_class)
+    end
+
+    it "returns all of the variants" do
+      expect(variants).to contain_exactly(
+        lookup_class.fido,
+        lookup_class.felix
+      )
+    end
+  end
 end
