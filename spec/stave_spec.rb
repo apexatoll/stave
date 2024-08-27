@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 RSpec.describe Stave do
   it "has a version number" do
     expect(Stave::VERSION).not_to be nil
