@@ -38,6 +38,14 @@ module Stave
         def variant_lookup
           @variant_lookup ||= {}
         end
+
+        def where(**attributes)
+          variants.select do |variant|
+            attributes.all? do |attribute, value|
+              variant.send(attribute) == value
+            end
+          end
+        end
       end
 
       class InvalidVariantError < StandardError

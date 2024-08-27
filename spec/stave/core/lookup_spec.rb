@@ -127,4 +127,24 @@ RSpec.describe Stave::Core::Lookup do
       )
     end
   end
+
+  describe ".where" do
+    subject(:variants) { lookup_class.where(**attributes) }
+
+    context "when no variants match specified criteria" do
+      let(:attributes) { { species: :bird } }
+
+      it "returns an empty array" do
+        expect(variants).to be_empty
+      end
+    end
+
+    context "when some variants match specified criteria" do
+      let(:attributes) { { species: :cat } }
+
+      it "returns the matching variants" do
+        expect(variants).to contain_exactly(lookup_class.felix)
+      end
+    end
+  end
 end
