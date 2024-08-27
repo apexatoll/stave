@@ -36,4 +36,18 @@ RSpec.describe Stave::Core::Lookup do
       end
     end
   end
+
+  describe "factory methods" do
+    it "sets class factory methods for each variant" do
+      expect(lookup_class).to respond_to(:fido, :felix)
+    end
+
+    it "initialises the corresponding variant" do
+      expect(lookup_class.fido).to have_attributes(
+        variant: :fido,
+        species: :dog,
+        age: 3
+      )
+    end
+  end
 end
