@@ -1,6 +1,28 @@
 module Stave
   module Theory
     class Interval < Core::Lookup
+      class Quality < Core::Lookup
+        variant :diminished,
+                transform: { major: -2, perfect: -1 },
+                to_s: "d"
+
+        variant :minor,
+                transform: { major: -1, perfect: nil },
+                to_s: "m"
+
+        variant :major,
+                transform: { major: 0, perfect: nil },
+                to_s: "M"
+
+        variant :perfect,
+                transform: { major: nil, perfect: 0 },
+                to_s: "P"
+
+        variant :augmented,
+                transform: { major: 1, perfect: 1 },
+                to_s: "A"
+      end
+
       class Number < Core::Lookup
         variant :one, to_i: 1, size: 0
         variant :two, to_i: 2, size: 2

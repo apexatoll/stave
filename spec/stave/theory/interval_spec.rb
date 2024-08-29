@@ -1,4 +1,61 @@
 RSpec.describe Stave::Theory::Interval do
+  describe Stave::Theory::Interval::Quality do
+    describe ":diminished" do
+      subject(:quality) { described_class.diminished }
+
+      it "sets the expected attributes" do
+        expect(quality).to have_attributes(
+          transform: { major: -2, perfect: -1 },
+          to_s: "d"
+        )
+      end
+    end
+
+    describe ":minor" do
+      subject(:quality) { described_class.minor }
+
+      it "sets the expected attributes" do
+        expect(quality).to have_attributes(
+          transform: { major: -1, perfect: nil },
+          to_s: "m"
+        )
+      end
+    end
+
+    describe ":major" do
+      subject(:quality) { described_class.major }
+
+      it "sets the expected attributes" do
+        expect(quality).to have_attributes(
+          transform: { major: 0, perfect: nil },
+          to_s: "M"
+        )
+      end
+    end
+
+    describe ":perfect" do
+      subject(:quality) { described_class.perfect }
+
+      it "sets the expected attributes" do
+        expect(quality).to have_attributes(
+          transform: { major: nil, perfect: 0 },
+          to_s: "P"
+        )
+      end
+    end
+
+    describe ":augmentred" do
+      subject(:quality) { described_class.augmented }
+
+      it "sets the expected attributes" do
+        expect(quality).to have_attributes(
+          transform: { major: 1, perfect: 1 },
+          to_s: "A"
+        )
+      end
+    end
+  end
+
   describe Stave::Theory::Interval::Number do
     describe ":one" do
       subject(:number) { described_class.one }
