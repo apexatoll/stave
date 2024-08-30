@@ -95,6 +95,10 @@ module Stave
 
         Note.find_by(pitch_class: target_pitch_class, to_i: target_integer)
       end
+
+      def note_below(interval)
+        note_above(interval.invert!)
+      end
     end
   end
 end

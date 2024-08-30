@@ -619,4 +619,92 @@ RSpec.describe Stave::Theory::Note do
       ]
     end
   end
+
+  describe "#note_below" do
+    shared_examples :returns_note_below do |cases|
+      cases.each do |options|
+        context "when #{options[:other]}" do
+          it "returns #{options[:note]}" do
+            expect(
+              note.note_below(Stave::Theory::Interval.new(options[:other]))
+            ).to eq(options[:note])
+          end
+        end
+      end
+    end
+
+    describe "C" do
+      let(:note) { described_class.c_natural }
+
+      include_examples :returns_note_below, [
+        { other: :minor_second, note: described_class.b_natural },
+        { other: :major_second, note: described_class.b_flat },
+        { other: :minor_third, note: described_class.a_natural },
+        { other: :major_third, note: described_class.a_flat },
+        { other: :perfect_fourth, note: described_class.g_natural },
+        { other: :diminished_fifth, note: described_class.f_sharp },
+        { other: :perfect_fifth, note: described_class.f_natural },
+        { other: :minor_sixth, note: described_class.e_natural },
+        { other: :major_sixth, note: described_class.e_flat },
+        { other: :minor_seventh, note: described_class.d_natural },
+        { other: :major_seventh, note: described_class.d_flat },
+        { other: :perfect_octave, note: described_class.c_natural }
+      ]
+    end
+
+    describe "G" do
+      let(:note) { described_class.g_natural }
+
+      include_examples :returns_note_below, [
+        { other: :minor_second, note: described_class.f_sharp },
+        { other: :major_second, note: described_class.f_natural },
+        { other: :minor_third, note: described_class.e_natural },
+        { other: :major_third, note: described_class.e_flat },
+        { other: :perfect_fourth, note: described_class.d_natural },
+        { other: :diminished_fifth, note: described_class.c_sharp },
+        { other: :perfect_fifth, note: described_class.c_natural },
+        { other: :minor_sixth, note: described_class.b_natural },
+        { other: :major_sixth, note: described_class.b_flat },
+        { other: :minor_seventh, note: described_class.a_natural },
+        { other: :major_seventh, note: described_class.a_flat },
+        { other: :perfect_octave, note: described_class.g_natural }
+      ]
+    end
+
+    describe "F♯" do
+      let(:note) { described_class.f_sharp }
+
+      include_examples :returns_note_below, [
+        { other: :minor_second, note: described_class.e_sharp },
+        { other: :major_second, note: described_class.e_natural },
+        { other: :minor_third, note: described_class.d_sharp },
+        { other: :major_third, note: described_class.d_natural },
+        { other: :perfect_fourth, note: described_class.c_sharp },
+        { other: :perfect_fifth, note: described_class.b_natural },
+        { other: :minor_sixth, note: described_class.a_sharp },
+        { other: :major_sixth, note: described_class.a_natural },
+        { other: :minor_seventh, note: described_class.g_sharp },
+        { other: :major_seventh, note: described_class.g_natural },
+        { other: :perfect_octave, note: described_class.f_sharp }
+      ]
+    end
+
+    describe "B♭" do
+      let(:note) { described_class.b_flat }
+
+      include_examples :returns_note_below, [
+        { other: :minor_second, note: described_class.a_natural },
+        { other: :major_second, note: described_class.a_flat },
+        { other: :minor_third, note: described_class.g_natural },
+        { other: :major_third, note: described_class.g_flat },
+        { other: :perfect_fourth, note: described_class.f_natural },
+        { other: :perfect_fifth, note: described_class.e_flat },
+        { other: :minor_sixth, note: described_class.d_natural },
+        { other: :major_sixth, note: described_class.d_flat },
+        { other: :minor_seventh, note: described_class.c_natural },
+        { other: :major_seventh, note: described_class.c_flat },
+        { other: :perfect_octave, note: described_class.b_flat }
+      ]
+    end
+  end
 end
