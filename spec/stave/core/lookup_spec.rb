@@ -179,4 +179,27 @@ RSpec.describe Stave::Core::Lookup do
       end
     end
   end
+
+  describe ".with_options" do
+    let(:lookup_class) do
+      Class.new(described_class) do
+        with_options foobar: true do
+          variant :foo
+          variant :bar
+        end
+
+        variant :baz, foobar: false
+      end
+    end
+
+    it "sets the variants with the common options" do
+      %i[foo bar].each do |variant|
+        expect(lookup_class.send(variant).foobar).to be(true)
+      end
+    end
+
+    it "does not set the common options for variants outside of block" do
+      expect(lookup_class.baz.foobar).to be(false)
+    end
+  end
 end

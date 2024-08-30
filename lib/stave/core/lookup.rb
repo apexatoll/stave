@@ -52,6 +52,12 @@ module Stave
         def find_by(**attributes)
           where(**attributes).first
         end
+
+        def with_options(**options, &)
+          merger = OptionMerger.new(self, options)
+
+          merger.instance_eval(&)
+        end
       end
 
       class InvalidVariantError < StandardError
