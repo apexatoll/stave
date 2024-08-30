@@ -2,13 +2,27 @@ module Stave
   module Theory
     class Note < Core::Lookup
       class PitchClass < Core::Lookup
-        variant :c, to_s: "C", to_i: 0
-        variant :d, to_s: "D", to_i: 2
-        variant :e, to_s: "E", to_i: 4
-        variant :f, to_s: "F", to_i: 5
-        variant :g, to_s: "G", to_i: 7
-        variant :a, to_s: "A", to_i: 9
-        variant :b, to_s: "B", to_i: 11
+        variant :c, index: 0, to_s: "C", to_i: 0
+        variant :d, index: 1, to_s: "D", to_i: 2
+        variant :e, index: 2, to_s: "E", to_i: 4
+        variant :f, index: 3, to_s: "F", to_i: 5
+        variant :g, index: 4, to_s: "G", to_i: 7
+        variant :a, index: 5, to_s: "A", to_i: 9
+        variant :b, index: 6, to_s: "B", to_i: 11
+
+        def +(other)
+          case other
+          when Integer then PitchClass.find_by(index: (index + other) % 7)
+          else raise TypeError
+          end
+        end
+
+        def -(other)
+          case other
+          when Integer then PitchClass.find_by(index: (index - other) % 7)
+          else raise TypeError
+          end
+        end
       end
 
       with_options pitch_class: PitchClass.a do
