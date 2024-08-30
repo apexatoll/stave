@@ -51,7 +51,15 @@ module Stave
 
         def to_s = to_i.to_s
 
+        def invert!
+          return self if octave?
+
+          Number.find_by(degree: 9 - degree)
+        end
+
         def perfect? = perfect
+
+        def octave? = (size % 12).zero?
       end
 
       with_options number: Number.one do
@@ -127,6 +135,10 @@ module Stave
 
       def to_s
         "#{quality}#{number}"
+      end
+
+      def invert!
+        Interval.find_by(number: number.invert!, quality: quality.invert!)
       end
 
       def pitch_offset

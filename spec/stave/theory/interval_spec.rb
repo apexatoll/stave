@@ -437,4 +437,52 @@ RSpec.describe Stave::Theory::Interval do
       end
     end
   end
+
+  describe "#invert!" do
+    subject(:inverted) { interval.invert! }
+
+    [
+      { interval: :perfect_unison, inverted: :perfect_unison },
+      { interval: :minor_second, inverted: :major_seventh },
+      { interval: :major_second, inverted: :minor_seventh },
+      { interval: :augmented_second, inverted: :diminished_seventh },
+      { interval: :diminished_third, inverted: :augmented_sixth },
+      { interval: :minor_third, inverted: :major_sixth },
+      { interval: :major_third, inverted: :minor_sixth },
+      { interval: :augmented_third, inverted: :diminished_sixth },
+      { interval: :diminished_fourth, inverted: :augmented_fifth },
+      { interval: :perfect_fourth, inverted: :perfect_fifth },
+      { interval: :augmented_fourth, inverted: :diminished_fifth },
+      { interval: :diminished_fifth, inverted: :augmented_fourth },
+      { interval: :perfect_fifth, inverted: :perfect_fourth },
+      { interval: :augmented_fifth, inverted: :diminished_fourth },
+      { interval: :diminished_sixth, inverted: :augmented_third },
+      { interval: :minor_sixth, inverted: :major_third },
+      { interval: :major_sixth, inverted: :minor_third },
+      { interval: :augmented_sixth, inverted: :diminished_third },
+      { interval: :diminished_seventh, inverted: :augmented_second },
+      { interval: :minor_seventh, inverted: :major_second },
+      { interval: :major_seventh, inverted: :minor_second },
+      { interval: :perfect_octave, inverted: :perfect_octave },
+      { interval: :minor_ninth, inverted: :major_seventh },
+      { interval: :major_ninth, inverted: :minor_seventh },
+      { interval: :augmented_ninth, inverted: :diminished_seventh },
+      { interval: :diminished_eleventh, inverted: :augmented_fifth },
+      { interval: :perfect_eleventh, inverted: :perfect_fifth },
+      { interval: :augmented_eleventh, inverted: :diminished_fifth },
+      { interval: :diminished_thirteenth, inverted: :augmented_third },
+      { interval: :minor_thirteenth, inverted: :major_third },
+      { interval: :major_thirteenth, inverted: :minor_third },
+      { interval: :augmented_thirteenth, inverted: :diminished_third }
+    ].each do |params|
+      describe params[:interval].to_s do
+        let(:interval) { described_class.new(params[:interval]) }
+        let(:expected) { described_class.new(params[:inverted]) }
+
+        it "returns #{params[:inverted]}" do
+          expect(inverted).to eq(expected)
+        end
+      end
+    end
+  end
 end
