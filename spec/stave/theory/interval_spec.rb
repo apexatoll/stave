@@ -167,4 +167,274 @@ RSpec.describe Stave::Theory::Interval do
       end
     end
   end
+
+  describe "unisons" do
+    describe ":perfect_unison" do
+      subject(:interval) { described_class.perfect_unison }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "P1", to_i: 0)
+      end
+    end
+  end
+
+  describe "seconds" do
+    describe ":minor_second" do
+      subject(:interval) { described_class.minor_second }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m2", to_i: 1)
+      end
+    end
+
+    describe ":major_second" do
+      subject(:interval) { described_class.major_second }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M2", to_i: 2)
+      end
+    end
+
+    describe ":augmented_second" do
+      subject(:interval) { described_class.augmented_second }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A2", to_i: 3)
+      end
+    end
+  end
+
+  describe "thirds" do
+    describe ":diminished_third" do
+      subject(:interval) { described_class.diminished_third }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d3", to_i: 2)
+      end
+    end
+
+    describe ":minor_third" do
+      subject(:interval) { described_class.minor_third }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m3", to_i: 3)
+      end
+    end
+
+    describe ":major_third" do
+      subject(:interval) { described_class.major_third }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M3", to_i: 4)
+      end
+    end
+  end
+
+  describe "fourths" do
+    describe ":diminished_fourth" do
+      subject(:interval) { described_class.diminished_fourth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d4", to_i: 4)
+      end
+    end
+
+    describe ":perfect_fourth" do
+      subject(:interval) { described_class.perfect_fourth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "P4", to_i: 5)
+      end
+    end
+
+    describe ":augmented_fourth" do
+      subject(:interval) { described_class.augmented_fourth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A4", to_i: 6)
+      end
+    end
+  end
+
+  describe "fifths" do
+    describe ":diminished_fifth" do
+      subject(:interval) { described_class.diminished_fifth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d5", to_i: 6)
+      end
+    end
+
+    describe ":perfect_fifth" do
+      subject(:interval) { described_class.perfect_fifth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "P5", to_i: 7)
+      end
+    end
+
+    describe ":augmented_fifth" do
+      subject(:interval) { described_class.augmented_fifth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A5", to_i: 8)
+      end
+    end
+  end
+
+  describe "sixths" do
+    describe ":diminished_sixth" do
+      subject(:interval) { described_class.diminished_sixth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d6", to_i: 7)
+      end
+    end
+
+    describe ":minor_sixth" do
+      subject(:interval) { described_class.minor_sixth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m6", to_i: 8)
+      end
+    end
+
+    describe ":major_sixth" do
+      subject(:interval) { described_class.major_sixth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M6", to_i: 9)
+      end
+    end
+
+    describe ":augmented_sixth" do
+      subject(:interval) { described_class.augmented_sixth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A6", to_i: 10)
+      end
+    end
+  end
+
+  describe "sevenths" do
+    describe ":diminished_seventh" do
+      subject(:interval) { described_class.diminished_seventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d7", to_i: 9)
+      end
+    end
+
+    describe ":minor_seventh" do
+      subject(:interval) { described_class.minor_seventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m7", to_i: 10)
+      end
+    end
+
+    describe ":major_seventh" do
+      subject(:interval) { described_class.major_seventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M7", to_i: 11)
+      end
+    end
+  end
+
+  describe "octaves" do
+    describe ":perfect_octave" do
+      subject(:interval) { described_class.perfect_octave }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "P8", to_i: 12)
+      end
+    end
+  end
+
+  describe "ninths" do
+    describe ":minor_ninth" do
+      subject(:interval) { described_class.minor_ninth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m9", to_i: 13)
+      end
+    end
+
+    describe ":major_ninth" do
+      subject(:interval) { described_class.major_ninth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M9", to_i: 14)
+      end
+    end
+
+    describe ":augmented_ninth" do
+      subject(:interval) { described_class.augmented_ninth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A9", to_i: 15)
+      end
+    end
+  end
+
+  describe "elevenths" do
+    describe ":diminished_eleventh" do
+      subject(:interval) { described_class.diminished_eleventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d11", to_i: 16)
+      end
+    end
+
+    describe ":perfect_eleventh" do
+      subject(:interval) { described_class.perfect_eleventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "P11", to_i: 17)
+      end
+    end
+
+    describe ":augmented_eleventh" do
+      subject(:interval) { described_class.augmented_eleventh }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A11", to_i: 18)
+      end
+    end
+  end
+
+  describe "thirteenths" do
+    describe ":diminished_thirteenth" do
+      subject(:interval) { described_class.diminished_thirteenth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "d13", to_i: 19)
+      end
+    end
+
+    describe ":minor_thirteenth" do
+      subject(:interval) { described_class.minor_thirteenth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "m13", to_i: 20)
+      end
+    end
+
+    describe ":major_thirteenth" do
+      subject(:interval) { described_class.major_thirteenth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "M13", to_i: 21)
+      end
+    end
+
+    describe ":augmented_thirteenth" do
+      subject(:interval) { described_class.augmented_thirteenth }
+
+      it "sets the expected attributes" do
+        expect(interval).to have_attributes(to_s: "A13", to_i: 22)
+      end
+    end
+  end
 end
