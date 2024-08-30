@@ -4,23 +4,32 @@ module Stave
       class Quality < Core::Lookup
         variant :diminished,
                 transform: { major: -2, perfect: -1 },
+                inversion: :augmented,
                 to_s: "d"
 
         variant :minor,
                 transform: { major: -1, perfect: nil },
+                inversion: :major,
                 to_s: "m"
 
         variant :major,
                 transform: { major: 0, perfect: nil },
+                inversion: :minor,
                 to_s: "M"
 
         variant :perfect,
                 transform: { major: nil, perfect: 0 },
+                inversion: :perfect,
                 to_s: "P"
 
         variant :augmented,
                 transform: { major: 1, perfect: 1 },
+                inversion: :diminished,
                 to_s: "A"
+
+        def invert!
+          Quality.new(inversion)
+        end
       end
 
       class Number < Core::Lookup
@@ -118,6 +127,10 @@ module Stave
 
       def to_s
         "#{quality}#{number}"
+      end
+
+      def pitch_offset
+        number.to_i - 1
       end
     end
   end

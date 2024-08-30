@@ -88,6 +88,13 @@ module Stave
       def to_i
         (pitch_class.to_i + accidental.transform) % 12
       end
+
+      def note_above(interval)
+        target_pitch_class = pitch_class + interval.pitch_offset
+        target_integer = (to_i + interval.to_i) % 12
+
+        Note.find_by(pitch_class: target_pitch_class, to_i: target_integer)
+      end
     end
   end
 end
