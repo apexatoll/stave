@@ -81,6 +81,22 @@ module Stave
         variant :g_double_sharp, accidental: Accidental.double_sharp
       end
 
+      def +(other)
+        case other
+        when Interval then note_above(other)
+        when Integer then Note.find_by(to_i: (to_i + other) % 12)
+        else raise
+        end
+      end
+
+      def -(other)
+        case other
+        when Interval then note_below(other)
+        when Integer then Note.find_by(to_i: (to_i - other) % 12)
+        else raise
+        end
+      end
+
       def to_s
         "#{pitch_class}#{accidental}"
       end
