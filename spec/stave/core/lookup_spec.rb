@@ -3,8 +3,8 @@ RSpec.describe Stave::Core::Lookup do
 
   let(:lookup_class) do
     Class.new(described_class) do
-      variant :fido, species: :dog, age: 3
-      variant :felix, species: :cat, age: 4
+      variant :fido, species: :dog, age: 3, short_hair?: true
+      variant :felix, species: :cat, age: 4, short_hair?: false
     end
   end
 
@@ -33,6 +33,10 @@ RSpec.describe Stave::Core::Lookup do
 
       it "sets getters for each attribute" do
         expect(lookup).to have_attributes(species: :dog, age: 3)
+      end
+
+      it "sets boolean attributes correctly" do
+        expect(lookup).to be_short_hair
       end
     end
   end

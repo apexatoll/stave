@@ -76,9 +76,16 @@ module Stave
 
       def set_attributes!
         self.class.variant_lookup[variant].each do |attribute, value|
-          instance_variable_set(:"@#{attribute}", value)
+          set_attribute!(attribute, value)
+        end
+      end
 
-          self.class.attr_reader(attribute)
+      def set_attribute!(name, value)
+        ivar_name = name.to_s.delete_suffix("?")
+        instance_variable_set(:"@#{ivar_name}", value)
+
+        self.class.define_method name do
+          instance_variable_get(:"@#{ivar_name}")
         end
       end
     end
