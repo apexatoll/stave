@@ -33,33 +33,33 @@ module Stave
       end
 
       class Number < Core::Lookup
-        variant :one, to_i: 1, size: 0, perfect: true
-        variant :two, to_i: 2, size: 2, perfect: false
-        variant :three, to_i: 3, size: 4, perfect: false
-        variant :four, to_i: 4, size: 5, perfect: true
-        variant :five, to_i: 5, size: 7, perfect: true
-        variant :six, to_i: 6, size: 9, perfect: false
-        variant :seven, to_i: 7, size: 11, perfect: false
-        variant :eight, to_i: 8, size: 12, perfect: true
-        variant :nine, to_i: 9, size: 14, perfect: false
-        variant :eleven, to_i: 11, size: 17, perfect: true
-        variant :thirteen, to_i: 13, size: 21, perfect: false
+        variant :one, to_i: 1, size: 0, perfect?: true
+        variant :two, to_i: 2, size: 2, perfect?: false
+        variant :three, to_i: 3, size: 4, perfect?: false
+        variant :four, to_i: 4, size: 5, perfect?: true
+        variant :five, to_i: 5, size: 7, perfect?: true
+        variant :six, to_i: 6, size: 9, perfect?: false
+        variant :seven, to_i: 7, size: 11, perfect?: false
+        variant :eight, to_i: 8, size: 12, perfect?: true
+        variant :nine, to_i: 9, size: 14, perfect?: false
+        variant :eleven, to_i: 11, size: 17, perfect?: true
+        variant :thirteen, to_i: 13, size: 21, perfect?: false
 
-        def degree
-          to_i >= 8 ? to_i - 7 : to_i
-        end
+        def_delegators :to_i, :to_s
 
-        def to_s = to_i.to_s
+        def compound? = size >= 12
+
+        def octave? = (size % 12).zero?
+
+        def degree = compound? ? to_i - 7 : to_i
+
+        def offset = to_i - 1
 
         def invert!
           return self if octave?
 
           Number.find_by(degree: 9 - degree)
         end
-
-        def perfect? = perfect
-
-        def octave? = (size % 12).zero?
       end
 
       with_options number: Number.one do
@@ -139,10 +139,6 @@ module Stave
 
       def invert!
         Interval.find_by(number: number.invert!, quality: quality.invert!)
-      end
-
-      def pitch_offset
-        number.to_i - 1
       end
     end
   end

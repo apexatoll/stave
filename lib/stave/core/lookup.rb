@@ -1,6 +1,8 @@
 module Stave
   module Core
     class Lookup
+      extend Forwardable
+
       attr_reader :variant
 
       def initialize(variant)
