@@ -721,4 +721,506 @@ RSpec.describe Stave::Theory::Interval do
       end
     end
   end
+
+  describe "#+" do
+    subject(:sum) { interval + other }
+
+    shared_examples :adds_intervals do |cases|
+      cases.each do |params|
+        context "and other is #{params[:other]}" do
+          let(:other) { described_class.new(params[:other]) }
+
+          let(:expected) { described_class.new(params[:expected]) }
+
+          it "returns #{params[:expected]}" do
+            expect(sum).to eq(expected)
+          end
+        end
+      end
+    end
+
+    context "when current is perfect_unison" do
+      let(:interval) { described_class.perfect_unison }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :perfect_unison },
+        { other: :minor_second, expected: :minor_second },
+        { other: :major_second, expected: :major_second },
+        { other: :augmented_second, expected: :augmented_second },
+        { other: :diminished_third, expected: :diminished_third },
+        { other: :minor_third, expected: :minor_third },
+        { other: :major_third, expected: :major_third },
+        { other: :augmented_third, expected: :augmented_third },
+        { other: :diminished_fourth, expected: :diminished_fourth },
+        { other: :perfect_fourth, expected: :perfect_fourth },
+        { other: :augmented_fourth, expected: :augmented_fourth },
+        { other: :diminished_fifth, expected: :diminished_fifth },
+        { other: :perfect_fifth, expected: :perfect_fifth },
+        { other: :augmented_fifth, expected: :augmented_fifth },
+        { other: :diminished_sixth, expected: :diminished_sixth },
+        { other: :minor_sixth, expected: :minor_sixth },
+        { other: :major_sixth, expected: :major_sixth },
+        { other: :augmented_sixth, expected: :augmented_sixth },
+        { other: :diminished_seventh, expected: :diminished_seventh },
+        { other: :minor_seventh, expected: :minor_seventh },
+        { other: :major_seventh, expected: :major_seventh },
+        { other: :perfect_octave, expected: :perfect_unison },
+        { other: :minor_ninth, expected: :minor_second },
+        { other: :major_ninth, expected: :major_second },
+        { other: :augmented_ninth, expected: :augmented_second },
+        { other: :diminished_eleventh, expected: :diminished_fourth },
+        { other: :perfect_eleventh, expected: :perfect_fourth },
+        { other: :augmented_eleventh, expected: :augmented_fourth },
+        { other: :diminished_thirteenth, expected: :diminished_sixth },
+        { other: :minor_thirteenth, expected: :minor_sixth },
+        { other: :major_thirteenth, expected: :major_sixth },
+        { other: :augmented_thirteenth, expected: :augmented_sixth }
+      ]
+    end
+
+    context "when current is minor_second" do
+      let(:interval) { described_class.minor_second }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :minor_second },
+        { other: :minor_second, expected: :diminished_third },
+        { other: :major_second, expected: :minor_third },
+        { other: :augmented_second, expected: :major_third },
+        # { other: :diminished_third, expected: nil },
+        { other: :minor_third, expected: :diminished_fourth },
+        { other: :major_third, expected: :perfect_fourth },
+        { other: :augmented_third, expected: :augmented_fourth },
+        # { other: :diminished_fourth, expected: nil },
+        { other: :perfect_fourth, expected: :diminished_fifth },
+        { other: :augmented_fourth, expected: :perfect_fifth },
+        { other: :diminished_fifth, expected: :diminished_sixth },
+        { other: :perfect_fifth, expected: :minor_sixth },
+        { other: :augmented_fifth, expected: :major_sixth },
+        { other: :minor_sixth, expected: :diminished_seventh },
+        { other: :major_sixth, expected: :minor_seventh },
+        { other: :augmented_sixth, expected: :major_seventh },
+        # { other: :diminished_seventh, expected: nil },
+        # { other: :minor_seventh, expected: nil },
+        { other: :major_seventh, expected: :perfect_unison },
+        { other: :perfect_octave, expected: :minor_second },
+        { other: :minor_ninth, expected: :diminished_third },
+        { other: :major_ninth, expected: :minor_third },
+        { other: :augmented_ninth, expected: :major_third },
+        # { other: :diminished_eleventh, expected: nil },
+        { other: :perfect_eleventh, expected: :diminished_fifth },
+        { other: :augmented_eleventh, expected: :perfect_fifth },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :diminished_seventh },
+        { other: :major_thirteenth, expected: :minor_seventh },
+        { other: :augmented_thirteenth, expected: :major_seventh }
+      ]
+    end
+
+    context "when current is major_third" do
+      let(:interval) { described_class.major_third }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :major_third },
+        { other: :minor_second, expected: :perfect_fourth },
+        { other: :major_second, expected: :augmented_fourth },
+        # { other: :augmented_second, expected: nil },
+        { other: :diminished_third, expected: :diminished_fifth },
+        { other: :minor_third, expected: :perfect_fifth },
+        { other: :major_third, expected: :augmented_fifth },
+        # { other: :augmented_third, expected: nil },
+        { other: :diminished_fourth, expected: :minor_sixth },
+        { other: :perfect_fourth, expected: :major_sixth },
+        { other: :augmented_fourth, expected: :augmented_sixth },
+        { other: :diminished_fifth, expected: :minor_seventh },
+        { other: :perfect_fifth, expected: :major_seventh },
+        # { other: :augmented_fifth, expected: nil },
+        # { other: :diminished_sixth, expected: nil },
+        { other: :minor_sixth, expected: :perfect_unison },
+        # { other: :major_sixth, expected: nil },
+        # { other: :augmented_sixth, expected: nil },
+        { other: :diminished_seventh, expected: :minor_second },
+        { other: :minor_seventh, expected: :major_second },
+        { other: :major_seventh, expected: :augmented_second },
+        { other: :perfect_octave, expected: :major_third },
+        { other: :minor_ninth, expected: :perfect_fourth },
+        { other: :major_ninth, expected: :augmented_fourth },
+        # { other: :augmented_ninth, expected: nil },
+        { other: :diminished_eleventh, expected: :minor_sixth },
+        { other: :perfect_eleventh, expected: :major_sixth },
+        { other: :augmented_eleventh, expected: :augmented_sixth },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :perfect_unison }
+        # { other: :major_thirteenth, expected: nil },
+        # { other: :augmented_thirteenth, expected: nil }
+      ]
+    end
+
+    context "when current is perfect_fourth" do
+      let(:interval) { described_class.perfect_fourth }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :perfect_fourth },
+        { other: :minor_second, expected: :diminished_fifth },
+        { other: :major_second, expected: :perfect_fifth },
+        { other: :augmented_second, expected: :augmented_fifth },
+        { other: :diminished_third, expected: :diminished_sixth },
+        { other: :minor_third, expected: :minor_sixth },
+        { other: :major_third, expected: :major_sixth },
+        { other: :augmented_third, expected: :augmented_sixth },
+        { other: :diminished_fourth, expected: :diminished_seventh },
+        { other: :perfect_fourth, expected: :minor_seventh },
+        { other: :augmented_fourth, expected: :major_seventh },
+        # { other: :diminished_fifth, expected: nil },
+        { other: :perfect_fifth, expected: :perfect_unison },
+        # { other: :augmented_fifth, expected: nil },
+        # { other: :diminished_sixth, expected: nil },
+        { other: :minor_sixth, expected: :minor_second },
+        { other: :major_sixth, expected: :major_second },
+        { other: :augmented_sixth, expected: :augmented_second },
+        { other: :diminished_seventh, expected: :diminished_third },
+        { other: :minor_seventh, expected: :minor_third },
+        { other: :major_seventh, expected: :major_third },
+        { other: :perfect_octave, expected: :perfect_fourth },
+        { other: :minor_ninth, expected: :diminished_fifth },
+        { other: :major_ninth, expected: :perfect_fifth },
+        { other: :augmented_ninth, expected: :augmented_fifth },
+        { other: :diminished_eleventh, expected: :diminished_seventh },
+        { other: :perfect_eleventh, expected: :minor_seventh },
+        { other: :augmented_eleventh, expected: :major_seventh },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :minor_second },
+        { other: :major_thirteenth, expected: :major_second },
+        { other: :augmented_thirteenth, expected: :augmented_second }
+      ]
+    end
+
+    context "when current is diminished_fifth" do
+      let(:interval) { described_class.diminished_fifth }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :diminished_fifth },
+        { other: :minor_second, expected: :diminished_sixth },
+        { other: :major_second, expected: :minor_sixth },
+        { other: :augmented_second, expected: :major_sixth },
+        # { other: :diminished_third, expected: nil },
+        { other: :minor_third, expected: :diminished_seventh },
+        { other: :major_third, expected: :minor_seventh },
+        { other: :augmented_third, expected: :major_seventh },
+        # { other: :diminished_fourth, expected: nil },
+        # { other: :perfect_fourth, expected: nil },
+        { other: :augmented_fourth, expected: :perfect_unison },
+        # { other: :diminished_fifth, expected: nil },
+        { other: :perfect_fifth, expected: :minor_second },
+        { other: :augmented_fifth, expected: :major_second },
+        # { other: :diminished_sixth, expected: nil },
+        { other: :minor_sixth, expected: :diminished_third },
+        { other: :major_sixth, expected: :minor_third },
+        { other: :augmented_sixth, expected: :major_third },
+        # { other: :diminished_seventh, expected: nil },
+        { other: :minor_seventh, expected: :diminished_fourth },
+        { other: :major_seventh, expected: :perfect_fourth },
+        { other: :perfect_octave, expected: :diminished_fifth },
+        { other: :minor_ninth, expected: :diminished_sixth },
+        { other: :major_ninth, expected: :minor_sixth },
+        { other: :augmented_ninth, expected: :major_sixth },
+        # { other: :diminished_eleventh, expected: nil },
+        # { other: :perfect_eleventh, expected: nil },
+        { other: :augmented_eleventh, expected: :perfect_unison },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :diminished_third },
+        { other: :major_thirteenth, expected: :minor_third },
+        { other: :augmented_thirteenth, expected: :major_third }
+      ]
+    end
+
+    context "when current is minor_seventh" do
+      let(:interval) { described_class.minor_seventh }
+
+      include_examples :adds_intervals, [
+        { other: :perfect_unison, expected: :minor_seventh },
+        # { other: :minor_second, expected: nil },
+        { other: :major_second, expected: :perfect_unison },
+        # { other: :augmented_second, expected: nil },
+        # { other: :diminished_third, expected: nil },
+        { other: :minor_third, expected: :minor_second },
+        { other: :major_third, expected: :major_second },
+        { other: :augmented_third, expected: :augmented_second },
+        { other: :diminished_fourth, expected: :diminished_third },
+        { other: :perfect_fourth, expected: :minor_third },
+        { other: :augmented_fourth, expected: :major_third },
+        { other: :diminished_fifth, expected: :diminished_fourth },
+        { other: :perfect_fifth, expected: :perfect_fourth },
+        { other: :augmented_fifth, expected: :augmented_fourth },
+        # { other: :diminished_sixth, expected: nil },
+        { other: :minor_sixth, expected: :diminished_fifth },
+        { other: :major_sixth, expected: :perfect_fifth },
+        { other: :augmented_sixth, expected: :augmented_fifth },
+        { other: :diminished_seventh, expected: :diminished_sixth },
+        { other: :minor_seventh, expected: :minor_sixth },
+        { other: :major_seventh, expected: :major_sixth },
+        { other: :perfect_octave, expected: :minor_seventh },
+        # { other: :minor_ninth, expected: nil },
+        { other: :major_ninth, expected: :perfect_unison },
+        # { other: :augmented_ninth, expected: nil },
+        { other: :diminished_eleventh, expected: :diminished_third },
+        { other: :perfect_eleventh, expected: :minor_third },
+        { other: :augmented_eleventh, expected: :major_third },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :diminished_fifth },
+        { other: :major_thirteenth, expected: :perfect_fifth },
+        { other: :augmented_thirteenth, expected: :augmented_fifth }
+      ]
+    end
+  end
+
+  describe "#-" do
+    subject(:sum) { interval - other }
+
+    shared_examples :subtracts_intervals do |cases|
+      cases.each do |params|
+        context "and other is #{params[:other]}" do
+          let(:other) { described_class.new(params[:other]) }
+
+          let(:expected) { described_class.new(params[:expected]) }
+
+          it "returns #{params[:expected]}" do
+            expect(sum).to eq(expected)
+          end
+        end
+      end
+    end
+
+    context "when current is perfect_unison" do
+      let(:interval) { described_class.perfect_unison }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :perfect_unison },
+        { other: :minor_second, expected: :major_seventh },
+        { other: :major_second, expected: :minor_seventh },
+        { other: :augmented_second, expected: :diminished_seventh },
+        { other: :diminished_third, expected: :augmented_sixth },
+        { other: :minor_third, expected: :major_sixth },
+        { other: :major_third, expected: :minor_sixth },
+        { other: :augmented_third, expected: :diminished_sixth },
+        { other: :diminished_fourth, expected: :augmented_fifth },
+        { other: :perfect_fourth, expected: :perfect_fifth },
+        { other: :augmented_fourth, expected: :diminished_fifth },
+        { other: :diminished_fifth, expected: :augmented_fourth },
+        { other: :perfect_fifth, expected: :perfect_fourth },
+        { other: :augmented_fifth, expected: :diminished_fourth },
+        { other: :diminished_sixth, expected: :augmented_third },
+        { other: :minor_sixth, expected: :major_third },
+        { other: :major_sixth, expected: :minor_third },
+        { other: :augmented_sixth, expected: :diminished_third },
+        { other: :diminished_seventh, expected: :augmented_second },
+        { other: :minor_seventh, expected: :major_second },
+        { other: :major_seventh, expected: :minor_second },
+        { other: :perfect_octave, expected: :perfect_unison },
+        { other: :minor_ninth, expected: :major_seventh },
+        { other: :major_ninth, expected: :minor_seventh },
+        { other: :augmented_ninth, expected: :diminished_seventh },
+        { other: :diminished_eleventh, expected: :augmented_fifth },
+        { other: :perfect_eleventh, expected: :perfect_fifth },
+        { other: :augmented_eleventh, expected: :diminished_fifth },
+        { other: :diminished_thirteenth, expected: :augmented_third },
+        { other: :minor_thirteenth, expected: :major_third },
+        { other: :major_thirteenth, expected: :minor_third },
+        { other: :augmented_thirteenth, expected: :diminished_third }
+      ]
+    end
+
+    context "when current is minor_second" do
+      let(:interval) { described_class.minor_second }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :minor_second },
+        { other: :minor_second, expected: :perfect_unison },
+        # { other: :major_second, expected: nil },
+        # { other: :augmented_second, expected: nil },
+        { other: :diminished_third, expected: :major_seventh },
+        { other: :minor_third, expected: :minor_seventh },
+        { other: :major_third, expected: :diminished_seventh },
+        # { other: :augmented_third, expected: nil },
+        { other: :diminished_fourth, expected: :major_sixth },
+        { other: :perfect_fourth, expected: :minor_sixth },
+        { other: :augmented_fourth, expected: :diminished_sixth },
+        { other: :diminished_fifth, expected: :perfect_fifth },
+        { other: :perfect_fifth, expected: :diminished_fifth },
+        # { other: :augmented_fifth, expected: nil },
+        { other: :minor_sixth, expected: :perfect_fourth },
+        { other: :major_sixth, expected: :diminished_fourth },
+        # { other: :augmented_sixth, expected: nil },
+        { other: :diminished_seventh, expected: :major_third },
+        { other: :minor_seventh, expected: :minor_third },
+        { other: :major_seventh, expected: :diminished_third },
+        { other: :perfect_octave, expected: :minor_second },
+        { other: :minor_ninth, expected: :perfect_unison },
+        # { other: :major_ninth, expected: nil },
+        # { other: :augmented_ninth, expected: nil },
+        { other: :diminished_eleventh, expected: :major_sixth },
+        { other: :perfect_eleventh, expected: :minor_sixth },
+        { other: :augmented_eleventh, expected: :diminished_sixth },
+        { other: :diminished_thirteenth, expected: :augmented_fourth },
+        { other: :minor_thirteenth, expected: :perfect_fourth },
+        { other: :major_thirteenth, expected: :diminished_fourth }
+        # { other: :augmented_thirteenth, expected: nil },
+      ]
+    end
+
+    context "when current is major_third" do
+      let(:interval) { described_class.major_third }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :major_third },
+        { other: :minor_second, expected: :augmented_second },
+        { other: :major_second, expected: :major_second },
+        { other: :augmented_second, expected: :minor_second },
+        # { other: :diminished_third, expected: nil },
+        # { other: :minor_third, expected: nil },
+        { other: :major_third, expected: :perfect_unison },
+        # { other: :augmented_third, expected: nil },
+        # { other: :diminished_fourth, expected: nil },
+        { other: :perfect_fourth, expected: :major_seventh },
+        { other: :augmented_fourth, expected: :minor_seventh },
+        { other: :diminished_fifth, expected: :augmented_sixth },
+        { other: :perfect_fifth, expected: :major_sixth },
+        { other: :augmented_fifth, expected: :minor_sixth },
+        # { other: :diminished_sixth, expected: nil },
+        { other: :minor_sixth, expected: :augmented_fifth },
+        { other: :major_sixth, expected: :perfect_fifth },
+        { other: :augmented_sixth, expected: :diminished_fifth },
+        # { other: :diminished_seventh, expected: nil },
+        { other: :minor_seventh, expected: :augmented_fourth },
+        { other: :major_seventh, expected: :perfect_fourth },
+        { other: :perfect_octave, expected: :major_third },
+        { other: :minor_ninth, expected: :augmented_second },
+        { other: :major_ninth, expected: :major_second },
+        { other: :augmented_ninth, expected: :minor_second },
+        # { other: :diminished_eleventh, expected: nil },
+        { other: :perfect_eleventh, expected: :major_seventh },
+        { other: :augmented_eleventh, expected: :minor_seventh },
+        # { other: :diminished_thirteenth, expected: nil },
+        { other: :minor_thirteenth, expected: :augmented_fifth },
+        { other: :major_thirteenth, expected: :perfect_fifth },
+        { other: :augmented_thirteenth, expected: :diminished_fifth }
+      ]
+    end
+
+    context "when current is perfect_fourth" do
+      let(:interval) { described_class.perfect_fourth }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :perfect_fourth },
+        { other: :minor_second, expected: :major_third },
+        { other: :major_second, expected: :minor_third },
+        { other: :augmented_second, expected: :diminished_third },
+        { other: :diminished_third, expected: :augmented_second },
+        { other: :minor_third, expected: :major_second },
+        { other: :major_third, expected: :minor_second },
+        # { other: :augmented_third, expected: nil },
+        # { other: :diminished_fourth, expected: nil },
+        { other: :perfect_fourth, expected: :perfect_unison },
+        # { other: :augmented_fourth, expected: nil },
+        { other: :diminished_fifth, expected: :major_seventh },
+        { other: :perfect_fifth, expected: :minor_seventh },
+        { other: :augmented_fifth, expected: :diminished_seventh },
+        { other: :diminished_sixth, expected: :augmented_sixth },
+        { other: :minor_sixth, expected: :major_sixth },
+        { other: :major_sixth, expected: :minor_sixth },
+        { other: :augmented_sixth, expected: :diminished_sixth },
+        { other: :diminished_seventh, expected: :augmented_fifth },
+        { other: :minor_seventh, expected: :perfect_fifth },
+        { other: :major_seventh, expected: :diminished_fifth },
+        { other: :perfect_octave, expected: :perfect_fourth },
+        { other: :minor_ninth, expected: :major_third },
+        { other: :major_ninth, expected: :minor_third },
+        { other: :augmented_ninth, expected: :diminished_third },
+        { other: :perfect_eleventh, expected: :perfect_unison },
+        # { other: :diminished_eleventh, expected: nil },
+        # { other: :augmented_eleventh, expected: nil },
+        { other: :diminished_thirteenth, expected: :augmented_sixth },
+        { other: :minor_thirteenth, expected: :major_sixth },
+        { other: :major_thirteenth, expected: :minor_sixth },
+        { other: :augmented_thirteenth, expected: :diminished_sixth }
+      ]
+    end
+
+    context "when current is diminished_fifth" do
+      let(:interval) { described_class.diminished_fifth }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :diminished_fifth },
+        { other: :minor_second, expected: :perfect_fourth },
+        { other: :major_second, expected: :diminished_fourth },
+        # { other: :augmented_second, expected: nil },
+        { other: :diminished_third, expected: :major_third },
+        { other: :minor_third, expected: :minor_third },
+        { other: :major_third, expected: :diminished_third },
+        # { other: :augmented_third, expected: nil },
+        { other: :diminished_fourth, expected: :major_second },
+        { other: :perfect_fourth, expected: :minor_second },
+        # { other: :augmented_fourth, expected: nil },
+        { other: :diminished_fifth, expected: :perfect_unison },
+        # { other: :perfect_fifth, expected: nil },
+        # { other: :augmented_fifth, expected: nil },
+        { other: :diminished_sixth, expected: :major_seventh },
+        { other: :minor_sixth, expected: :minor_seventh },
+        { other: :major_sixth, expected: :diminished_seventh },
+        # { other: :augmented_sixth, expected: nil },
+        { other: :diminished_seventh, expected: :major_sixth },
+        { other: :minor_seventh, expected: :minor_sixth },
+        { other: :major_seventh, expected: :diminished_sixth },
+        { other: :perfect_octave, expected: :diminished_fifth },
+        { other: :minor_ninth, expected: :perfect_fourth },
+        { other: :major_ninth, expected: :diminished_fourth },
+        # { other: :augmented_ninth, expected: nil },
+        { other: :diminished_eleventh, expected: :major_second },
+        { other: :perfect_eleventh, expected: :minor_second },
+        # { other: :augmented_eleventh, expected: nil },
+        { other: :diminished_thirteenth, expected: :major_seventh },
+        { other: :minor_thirteenth, expected: :minor_seventh },
+        { other: :major_thirteenth, expected: :diminished_seventh }
+        # { other: :augmented_thirteenth, expected: nil },
+      ]
+    end
+
+    context "when current is minor_seventh" do
+      let(:interval) { described_class.minor_seventh }
+
+      include_examples :subtracts_intervals, [
+        { other: :perfect_unison, expected: :minor_seventh },
+        { other: :minor_second, expected: :major_sixth },
+        { other: :major_second, expected: :minor_sixth },
+        { other: :augmented_second, expected: :diminished_sixth },
+        { other: :diminished_third, expected: :augmented_fifth },
+        { other: :minor_third, expected: :perfect_fifth },
+        { other: :major_third, expected: :diminished_fifth },
+        # { other: :augmented_third, expected: nil },
+        { other: :diminished_fourth, expected: :augmented_fourth },
+        { other: :perfect_fourth, expected: :perfect_fourth },
+        { other: :augmented_fourth, expected: :diminished_fourth },
+        { other: :diminished_fifth, expected: :major_third },
+        { other: :perfect_fifth, expected: :minor_third },
+        { other: :augmented_fifth, expected: :diminished_third },
+        { other: :diminished_sixth, expected: :augmented_second },
+        { other: :minor_sixth, expected: :major_second },
+        { other: :major_sixth, expected: :minor_second },
+        # { other: :augmented_sixth, expected: nil },
+        # { other: :diminished_seventh, expected: nil },
+        { other: :minor_seventh, expected: :perfect_unison },
+        # { other: :major_seventh, expected: nil },
+        { other: :perfect_octave, expected: :minor_seventh },
+        { other: :minor_ninth, expected: :major_sixth },
+        { other: :major_ninth, expected: :minor_sixth },
+        { other: :augmented_ninth, expected: :diminished_sixth },
+        { other: :diminished_eleventh, expected: :augmented_fourth },
+        { other: :perfect_eleventh, expected: :perfect_fourth },
+        { other: :augmented_eleventh, expected: :diminished_fourth },
+        { other: :diminished_thirteenth, expected: :augmented_second },
+        { other: :minor_thirteenth, expected: :major_second },
+        { other: :major_thirteenth, expected: :minor_second }
+        # { other: :augmented_thirteenth, expected: nil },
+      ]
+    end
+  end
 end

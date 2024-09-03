@@ -151,6 +151,17 @@ module Stave
         "#{quality}#{number}"
       end
 
+      def +(other)
+        target_number = number + other.number
+        target_i = (to_i + other.to_i) % 12
+
+        Interval.find_by(number: target_number, to_i: target_i)
+      end
+
+      def -(other)
+        self + other.invert!
+      end
+
       def invert!
         Interval.find_by(number: number.invert!, quality: quality.invert!)
       end
