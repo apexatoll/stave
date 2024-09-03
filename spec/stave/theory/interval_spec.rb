@@ -57,6 +57,22 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe Stave::Theory::Interval::Number do
+    shared_examples :handles_addition do |assertions|
+      subject(:sum) { number + other }
+
+      assertions.each do |assertion|
+        describe ":#{assertion[:other]}" do
+          let(:other) { described_class.new(assertion[:other]) }
+
+          let(:expected) { described_class.new(assertion[:expected]) }
+
+          it "= :#{assertion[:expected]}" do
+            expect(sum).to eq(expected)
+          end
+        end
+      end
+    end
+
     describe ":one" do
       subject(:number) { described_class.one }
 
@@ -68,6 +84,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 1,
           to_s: "1"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :one },
+          { other: :two, expected: :two },
+          { other: :three, expected: :three },
+          { other: :four, expected: :four },
+          { other: :five, expected: :five },
+          { other: :six, expected: :six },
+          { other: :seven, expected: :seven },
+          { other: :eight, expected: :one },
+          { other: :nine, expected: :two },
+          { other: :eleven, expected: :four },
+          { other: :thirteen, expected: :six }
+        ]
       end
     end
 
@@ -83,6 +115,22 @@ RSpec.describe Stave::Theory::Interval do
           to_s: "2"
         )
       end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :two },
+          { other: :two, expected: :three },
+          { other: :three, expected: :four },
+          { other: :four, expected: :five },
+          { other: :five, expected: :six },
+          { other: :six, expected: :seven },
+          { other: :seven, expected: :one },
+          { other: :eight, expected: :two },
+          { other: :nine, expected: :three },
+          { other: :eleven, expected: :five },
+          { other: :thirteen, expected: :seven }
+        ]
+      end
     end
 
     describe ":three" do
@@ -96,6 +144,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 3,
           to_s: "3"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :three },
+          { other: :two, expected: :four },
+          { other: :three, expected: :five },
+          { other: :four, expected: :six },
+          { other: :five, expected: :seven },
+          { other: :six, expected: :one },
+          { other: :seven, expected: :two },
+          { other: :eight, expected: :three },
+          { other: :nine, expected: :four },
+          { other: :eleven, expected: :six },
+          { other: :thirteen, expected: :one }
+        ]
       end
     end
 
@@ -111,6 +175,22 @@ RSpec.describe Stave::Theory::Interval do
           to_s: "4"
         )
       end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :four },
+          { other: :two, expected: :five },
+          { other: :three, expected: :six },
+          { other: :four, expected: :seven },
+          { other: :five, expected: :one },
+          { other: :six, expected: :two },
+          { other: :seven, expected: :three },
+          { other: :eight, expected: :four },
+          { other: :nine, expected: :five },
+          { other: :eleven, expected: :seven },
+          { other: :thirteen, expected: :two }
+        ]
+      end
     end
 
     describe ":five" do
@@ -124,6 +204,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 5,
           to_s: "5"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :five },
+          { other: :two, expected: :six },
+          { other: :three, expected: :seven },
+          { other: :four, expected: :one },
+          { other: :five, expected: :two },
+          { other: :six, expected: :three },
+          { other: :seven, expected: :four },
+          { other: :eight, expected: :five },
+          { other: :nine, expected: :six },
+          { other: :eleven, expected: :one },
+          { other: :thirteen, expected: :three }
+        ]
       end
     end
 
@@ -139,6 +235,22 @@ RSpec.describe Stave::Theory::Interval do
           to_s: "6"
         )
       end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :six },
+          { other: :two, expected: :seven },
+          { other: :three, expected: :one },
+          { other: :four, expected: :two },
+          { other: :five, expected: :three },
+          { other: :six, expected: :four },
+          { other: :seven, expected: :five },
+          { other: :eight, expected: :six },
+          { other: :nine, expected: :seven },
+          { other: :eleven, expected: :two },
+          { other: :thirteen, expected: :four }
+        ]
+      end
     end
 
     describe ":seven" do
@@ -152,6 +264,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 7,
           to_s: "7"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :seven },
+          { other: :two, expected: :one },
+          { other: :three, expected: :two },
+          { other: :four, expected: :three },
+          { other: :five, expected: :four },
+          { other: :six, expected: :five },
+          { other: :seven, expected: :six },
+          { other: :eight, expected: :seven },
+          { other: :nine, expected: :one },
+          { other: :eleven, expected: :three },
+          { other: :thirteen, expected: :five }
+        ]
       end
     end
 
@@ -167,6 +295,22 @@ RSpec.describe Stave::Theory::Interval do
           to_s: "8"
         )
       end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :one },
+          { other: :two, expected: :two },
+          { other: :three, expected: :three },
+          { other: :four, expected: :four },
+          { other: :five, expected: :five },
+          { other: :six, expected: :six },
+          { other: :seven, expected: :seven },
+          { other: :eight, expected: :one },
+          { other: :nine, expected: :two },
+          { other: :eleven, expected: :four },
+          { other: :thirteen, expected: :six }
+        ]
+      end
     end
 
     describe ":nine" do
@@ -180,6 +324,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 9,
           to_s: "9"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :two },
+          { other: :two, expected: :three },
+          { other: :three, expected: :four },
+          { other: :four, expected: :five },
+          { other: :five, expected: :six },
+          { other: :six, expected: :seven },
+          { other: :seven, expected: :one },
+          { other: :eight, expected: :two },
+          { other: :nine, expected: :three },
+          { other: :eleven, expected: :five },
+          { other: :thirteen, expected: :seven }
+        ]
       end
     end
 
@@ -195,6 +355,22 @@ RSpec.describe Stave::Theory::Interval do
           to_s: "11"
         )
       end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :four },
+          { other: :two, expected: :five },
+          { other: :three, expected: :six },
+          { other: :four, expected: :seven },
+          { other: :five, expected: :one },
+          { other: :six, expected: :two },
+          { other: :seven, expected: :three },
+          { other: :eight, expected: :four },
+          { other: :nine, expected: :five },
+          { other: :eleven, expected: :seven },
+          { other: :thirteen, expected: :two }
+        ]
+      end
     end
 
     describe ":thirteen" do
@@ -208,6 +384,22 @@ RSpec.describe Stave::Theory::Interval do
           to_i: 13,
           to_s: "13"
         )
+      end
+
+      describe "+" do
+        include_examples :handles_addition, [
+          { other: :one, expected: :six },
+          { other: :two, expected: :seven },
+          { other: :three, expected: :one },
+          { other: :four, expected: :two },
+          { other: :five, expected: :three },
+          { other: :six, expected: :four },
+          { other: :seven, expected: :five },
+          { other: :eight, expected: :six },
+          { other: :nine, expected: :seven },
+          { other: :eleven, expected: :two },
+          { other: :thirteen, expected: :four }
+        ]
       end
     end
   end

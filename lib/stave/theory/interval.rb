@@ -55,6 +55,13 @@ module Stave
 
         def offset = to_i - 1
 
+        def +(other)
+          target_i = to_i + other.relative.offset
+          target_i -= 7 while target_i >= 8
+
+          Number.find_by(to_i: target_i)
+        end
+
         def relative
           target_i = to_i
           target_i -= 7 while target_i >= 8
