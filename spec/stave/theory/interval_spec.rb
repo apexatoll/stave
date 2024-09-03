@@ -62,7 +62,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 1, size: 0, to_i: 1, to_s: "1"
+          degree: 1,
+          size: 0,
+          relative: number,
+          to_i: 1,
+          to_s: "1"
         )
       end
     end
@@ -72,7 +76,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 2, size: 2, to_i: 2, to_s: "2"
+          degree: 2,
+          size: 2,
+          relative: number,
+          to_i: 2,
+          to_s: "2"
         )
       end
     end
@@ -82,7 +90,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 3, size: 4, to_i: 3, to_s: "3"
+          degree: 3,
+          size: 4,
+          relative: number,
+          to_i: 3,
+          to_s: "3"
         )
       end
     end
@@ -92,7 +104,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 4, size: 5, to_i: 4, to_s: "4"
+          degree: 4,
+          size: 5,
+          relative: number,
+          to_i: 4,
+          to_s: "4"
         )
       end
     end
@@ -102,7 +118,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 5, size: 7, to_i: 5, to_s: "5"
+          degree: 5,
+          size: 7,
+          relative: number,
+          to_i: 5,
+          to_s: "5"
         )
       end
     end
@@ -112,7 +132,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 6, size: 9, to_i: 6, to_s: "6"
+          degree: 6,
+          size: 9,
+          relative: number,
+          to_i: 6,
+          to_s: "6"
         )
       end
     end
@@ -122,7 +146,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 7, size: 11, to_i: 7, to_s: "7"
+          degree: 7,
+          size: 11,
+          relative: number,
+          to_i: 7,
+          to_s: "7"
         )
       end
     end
@@ -132,7 +160,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 1, size: 12, to_i: 8, to_s: "8"
+          degree: 1,
+          size: 12,
+          relative: described_class.one,
+          to_i: 8,
+          to_s: "8"
         )
       end
     end
@@ -142,7 +174,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 2, size: 14, to_i: 9, to_s: "9"
+          degree: 2,
+          size: 14,
+          relative: described_class.two,
+          to_i: 9,
+          to_s: "9"
         )
       end
     end
@@ -152,7 +188,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 4, size: 17, to_i: 11, to_s: "11"
+          degree: 4,
+          size: 17,
+          relative: described_class.four,
+          to_i: 11,
+          to_s: "11"
         )
       end
     end
@@ -162,7 +202,11 @@ RSpec.describe Stave::Theory::Interval do
 
       it "sets the expected attributes" do
         expect(number).to have_attributes(
-          degree: 6, size: 21, to_i: 13, to_s: "13"
+          degree: 6,
+          size: 21,
+          relative: described_class.six,
+          to_i: 13,
+          to_s: "13"
         )
       end
     end

@@ -55,6 +55,13 @@ module Stave
 
         def offset = to_i - 1
 
+        def relative
+          target_i = to_i
+          target_i -= 7 while target_i >= 8
+
+          Number.find_by(to_i: target_i)
+        end
+
         def invert!
           return self if octave?
 
