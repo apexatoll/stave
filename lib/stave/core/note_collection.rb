@@ -23,6 +23,18 @@ module Stave
       def uniq
         notes.uniq(&:variant)
       end
+
+      def self.type_class
+        const_get("#{self}Type")
+      end
+
+      def self.inherited(note_class)
+        note_class.type_class.variants.each do |type|
+          self.class.define_method(
+            :"#{type.variant}_from", ->(root) { new(type:, root:) }
+          )
+        end
+      end
     end
   end
 end

@@ -1,21 +1,31 @@
 RSpec.describe Stave::Core::NoteCollection do
   subject(:note_collection) { described_class.new(root:, type:) }
 
-  let(:type) { instance_double(Stave::Core::DegreeCollection, intervals:) }
+  let(:type) { type_class.foo }
 
-  let(:degrees) do
-    [
-      Stave::Theory::Degree.root,
-      Stave::Theory::Degree.four,
-      Stave::Theory::Degree.six,
-      Stave::Theory::Degree.seven,
-      Stave::Theory::Degree.octave
-    ]
+  let(:type_class) do
+    Class.new(Stave::Core::DegreeCollection) do
+      variant :foo, degrees: [
+        Stave::Theory::Degree.root,
+        Stave::Theory::Degree.four,
+        Stave::Theory::Degree.six,
+        Stave::Theory::Degree.seven,
+        Stave::Theory::Degree.octave
+      ]
+
+      variant :bar, degrees: [
+        Stave::Theory::Degree.root,
+        Stave::Theory::Degree.three,
+        Stave::Theory::Degree.four
+      ]
+    end
   end
 
-  let(:intervals) { degrees.map(&:interval) }
-
   let(:root) { Stave::Theory::Note.c_natural }
+
+  before do
+    stub_const "Stave::Theory::NoteCollectionType", type_class
+  end
 
   describe "#notes" do
     subject(:notes) { note_collection.notes }
