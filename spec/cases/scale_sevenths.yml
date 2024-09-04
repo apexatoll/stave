@@ -1,0 +1,175 @@
+major:
+  a_flat:
+    - A♭∆7
+    - B♭m7
+    - Cm7
+    - D♭∆7
+    - E♭7
+    - Fm7
+    - Gø7
+  a_natural:
+    - A∆7
+    - Bm7
+    - C♯m7
+    - D∆7
+    - E7
+    - F♯m7
+    - G♯ø7
+  a_sharp:
+    - A♯∆7
+    - B♯m7
+    - C♯♯m7
+    - D♯∆7
+    - E♯7
+    - F♯♯m7
+    - G♯♯ø7
+
+  b_flat:
+    - B♭∆7
+    - Cm7
+    - Dm7
+    - E♭∆7
+    - F7
+    - Gm7
+    - Aø7
+  b_natural:
+    - B∆7
+    - C♯m7
+    - D♯m7
+    - E∆7
+    - F♯7
+    - G♯m7
+    - A♯ø7
+  b_sharp:
+    - B♯∆7
+    - C♯♯m7
+    - D♯♯m7
+    - E♯∆7
+    - F♯♯7
+    - G♯♯m7
+    - A♯♯ø7
+
+  c_flat:
+    - C♭∆7
+    - D♭m7
+    - E♭m7
+    - F♭∆7
+    - G♭7
+    - A♭m7
+    - B♭ø7
+  c_natural:
+    - C∆7
+    - Dm7
+    - Em7
+    - F∆7
+    - G7
+    - Am7
+    - Bø7
+  c_sharp:
+    - C♯∆7
+    - D♯m7
+    - E♯m7
+    - F♯∆7
+    - G♯7
+    - A♯m7
+    - B♯ø7
+
+  d_flat:
+    - D♭∆7
+    - E♭m7
+    - Fm7
+    - G♭∆7
+    - A♭7
+    - B♭m7
+    - Cø7
+  d_natural:
+    - D∆7
+    - Em7
+    - F♯m7
+    - G∆7
+    - A7
+    - Bm7
+    - C♯ø7
+  d_sharp:
+    - D♯∆7
+    - E♯m7
+    - F♯♯m7
+    - G♯∆7
+    - A♯7
+    - B♯m7
+    - C♯♯ø7
+
+  e_flat:
+    - E♭∆7
+    - Fm7
+    - Gm7
+    - A♭∆7
+    - B♭7
+    - Cm7
+    - Dø7
+  e_natural:
+    - E∆7
+    - F♯m7
+    - G♯m7
+    - A∆7
+    - B7
+    - C♯m7
+    - D♯ø7
+  e_sharp:
+    - E♯∆7
+    - F♯♯m7
+    - G♯♯m7
+    - A♯∆7
+    - B♯7
+    - C♯♯m7
+    - D♯♯ø7
+
+  f_flat:
+    - F♭∆7
+    - G♭m7
+    - A♭m7
+    - B♭♭∆7
+    - C♭7
+    - D♭m7
+    - E♭ø7
+  f_natural:
+    - F∆7
+    - Gm7
+    - Am7
+    - B♭∆7
+    - C7
+    - Dm7
+    - Eø7
+  f_sharp:
+    - F♯∆7
+    - G♯m7
+    - A♯m7
+    - B∆7
+    - C♯7
+    - D♯m7
+    - E♯ø7
+
+  g_flat:
+    - G♭∆7
+    - A♭m7
+    - B♭m7
+    - C♭∆7
+    - D♭7
+    - E♭m7
+    - Fø7
+  g_natural:
+    - G∆7
+    - Am7
+    - Bm7
+    - C∆7
+    - D7
+    - Em7
+    - F♯ø7
+  g_sharp:
+    - G♯∆7
+    - A♯m7
+    - B♯m7
+    - C♯∆7
+    - D♯7
+    - E♯m7
+    - F♯♯ø7
