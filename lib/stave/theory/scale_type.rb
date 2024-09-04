@@ -12,6 +12,17 @@ module Stave
         Degree.octave
       ]
 
+      variant :minor, degrees: [
+        Degree.root,
+        Degree.two,
+        Degree.flat_three,
+        Degree.four,
+        Degree.five,
+        Degree.flat_six,
+        Degree.flat_seven,
+        Degree.octave
+      ]
+
       def triad_types
         Core::ScaleHarmoniser
           .new(scale_type: self, chord_set: ChordType::Set.triad)
