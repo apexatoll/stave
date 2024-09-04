@@ -66,4 +66,28 @@ RSpec.describe Stave::Theory::Scale do
       end
     end
   end
+
+  describe "#mode" do
+    subject(:mode) { scale.mode(position) }
+
+    let(:root) { Stave::Theory::Note.e_natural }
+
+    let(:position) { 3 }
+
+    context "when scale type does not define any modes" do
+      let(:type) { Stave::Theory::ScaleType.minor }
+
+      it "returns nil" do
+        expect(mode).to be_nil
+      end
+    end
+
+    context "when scale type defines any modes" do
+      let(:type) { Stave::Theory::ScaleType.major }
+
+      it "returns the expected mode" do
+        expect(mode.type).to have_attributes(variant: :phrygian)
+      end
+    end
+  end
 end
