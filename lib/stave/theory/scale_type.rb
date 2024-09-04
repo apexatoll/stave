@@ -17,6 +17,12 @@ module Stave
           .new(scale_type: self, chord_set: ChordType::Set.triad)
           .harmonise!
       end
+
+      def seventh_types
+        Core::ScaleHarmoniser
+          .new(scale_type: self, chord_set: ChordType::Set.seventh)
+          .harmonise!
+      end
     end
   end
 end
