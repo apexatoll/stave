@@ -28,6 +28,14 @@ module Stave
         variant :six_sharps, sharp_count: 6
         variant :seven_sharps, sharp_count: 7
       end
+
+      def self.parse(scale)
+        accidentals = scale.uniq.map(&:accidental)
+        flat_count  = accidentals.count(&:flat?)
+        sharp_count = accidentals.count(&:sharp?)
+
+        find_by(flat_count:, sharp_count:)
+      end
     end
   end
 end

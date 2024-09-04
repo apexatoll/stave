@@ -1,0 +1,33 @@
+major:
+  a_flat: four_flats
+  a_natural: three_sharps
+  b_flat: two_flats
+  b_natural: five_sharps
+  c_flat: seven_flats
+  c_natural: natural
+  c_sharp: seven_sharps
+  d_flat: five_flats
+  d_natural: two_sharps
+  e_flat: three_flats
+  e_natural: four_sharps
+  f_natural: one_flat
+  f_sharp: six_sharps
+  g_flat: six_flats
+  g_natural: one_sharp
+
+minor:
+  a_flat: seven_flats
+  a_natural: natural
+  a_sharp: seven_sharps
+  b_flat: five_flats
+  b_natural: two_sharps
+  c_natural: three_flats
+  c_sharp: four_sharps
+  d_natural: one_flat
+  d_sharp: six_sharps
+  e_flat: six_flats
+  e_natural: one_sharp
+  f_natural: four_flats
+  f_sharp: three_sharps
+  g_natural: two_flats
+  g_sharp: five_sharps

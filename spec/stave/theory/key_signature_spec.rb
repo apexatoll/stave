@@ -182,4 +182,28 @@ RSpec.describe Stave::Theory::KeySignature do
       end
     end
   end
+
+  describe ".parse" do
+    subject(:key_signature) { described_class.parse(scale) }
+
+    let(:scale) { Stave::Theory::Scale.new(type: scale_type, root:) }
+
+    each_case(:key_signatures).each do |scale_type_variant, cases|
+      describe ":#{scale_type_variant}" do
+        let(:scale_type) { Stave::Theory::ScaleType.new(scale_type_variant) }
+
+        cases.each do |root_variant, expected_variant|
+          describe ":#{root_variant}" do
+            let(:root) { Stave::Theory::Note.new(root_variant) }
+
+            let(:expected) { described_class.new(expected_variant) }
+
+            it "returns #{expected_variant}" do
+              expect(key_signature).to eq(expected)
+            end
+          end
+        end
+      end
+    end
+  end
 end
