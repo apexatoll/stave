@@ -1,0 +1,175 @@
+major:
+  a_flat:
+    - A♭
+    - B♭m
+    - Cm
+    - D♭
+    - E♭
+    - Fm
+    - Go
+  a_natural:
+    - A
+    - Bm
+    - C♯m
+    - D
+    - E
+    - F♯m
+    - G♯o
+  a_sharp:
+    - A♯
+    - B♯m
+    - C♯♯m
+    - D♯
+    - E♯
+    - F♯♯m
+    - G♯♯o
+
+  b_flat:
+    - B♭
+    - Cm
+    - Dm
+    - E♭
+    - F
+    - Gm
+    - Ao
+  b_natural:
+    - B
+    - C♯m
+    - D♯m
+    - E
+    - F♯
+    - G♯m
+    - A♯o
+  b_sharp:
+    - B♯
+    - C♯♯m
+    - D♯♯m
+    - E♯
+    - F♯♯
+    - G♯♯m
+    - A♯♯o
+
+  c_flat:
+    - C♭
+    - D♭m
+    - E♭m
+    - F♭
+    - G♭
+    - A♭m
+    - B♭o
+  c_natural:
+    - C
+    - Dm
+    - Em
+    - F
+    - G
+    - Am
+    - Bo
+  c_sharp:
+    - C♯
+    - D♯m
+    - E♯m
+    - F♯
+    - G♯
+    - A♯m
+    - B♯o
+
+  d_flat:
+    - D♭
+    - E♭m
+    - Fm
+    - G♭
+    - A♭
+    - B♭m
+    - Co
+  d_natural:
+    - D
+    - Em
+    - F♯m
+    - G
+    - A
+    - Bm
+    - C♯o
+  d_sharp:
+    - D♯
+    - E♯m
+    - F♯♯m
+    - G♯
+    - A♯
+    - B♯m
+    - C♯♯o
+
+  e_flat:
+    - E♭
+    - Fm
+    - Gm
+    - A♭
+    - B♭
+    - Cm
+    - Do
+  e_natural:
+    - E
+    - F♯m
+    - G♯m
+    - A
+    - B
+    - C♯m
+    - D♯o
+  e_sharp:
+    - E♯
+    - F♯♯m
+    - G♯♯m
+    - A♯
+    - B♯
+    - C♯♯m
+    - D♯♯o
+
+  f_flat:
+    - F♭
+    - G♭m
+    - A♭m
+    - B♭♭
+    - C♭
+    - D♭m
+    - E♭o
+  f_natural:
+    - F
+    - Gm
+    - Am
+    - B♭
+    - C
+    - Dm
+    - Eo
+  f_sharp:
+    - F♯
+    - G♯m
+    - A♯m
+    - B
+    - C♯
+    - D♯m
+    - E♯o
+
+  g_flat:
+    - G♭
+    - A♭m
+    - B♭m
+    - C♭
+    - D♭
+    - E♭m
+    - Fo
+  g_natural:
+    - G
+    - Am
+    - Bm
+    - C
+    - D
+    - Em
+    - F♯o
+  g_sharp:
+    - G♯
+    - A♯m
+    - B♯m
+    - C♯
+    - D♯
+    - E♯m
+    - F♯♯o
