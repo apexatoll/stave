@@ -24,4 +24,48 @@ RSpec.describe Stave::Theory::Circle do
       end
     end
   end
+
+  describe "#key_signatures" do
+    subject(:key_signatures) { circle.key_signatures }
+
+    let(:root) { Stave::Theory::Note.c_natural }
+
+    describe ":fourths" do
+      let(:type) { Stave::Theory::CircleType.fourths }
+
+      it "returns the expected key signatures" do
+        expect(key_signatures).to eq(
+          [
+            Stave::Theory::KeySignature.natural,
+            Stave::Theory::KeySignature.one_flat,
+            Stave::Theory::KeySignature.two_flats,
+            Stave::Theory::KeySignature.three_flats,
+            Stave::Theory::KeySignature.four_flats,
+            Stave::Theory::KeySignature.five_flats,
+            Stave::Theory::KeySignature.six_flats,
+            Stave::Theory::KeySignature.seven_flats
+          ]
+        )
+      end
+    end
+
+    describe ":fifths" do
+      let(:type) { Stave::Theory::CircleType.fifths }
+
+      it "returns the expected key signatures" do
+        expect(key_signatures).to eq(
+          [
+            Stave::Theory::KeySignature.natural,
+            Stave::Theory::KeySignature.one_sharp,
+            Stave::Theory::KeySignature.two_sharps,
+            Stave::Theory::KeySignature.three_sharps,
+            Stave::Theory::KeySignature.four_sharps,
+            Stave::Theory::KeySignature.five_sharps,
+            Stave::Theory::KeySignature.six_sharps,
+            Stave::Theory::KeySignature.seven_sharps
+          ]
+        )
+      end
+    end
+  end
 end

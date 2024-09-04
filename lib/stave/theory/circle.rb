@@ -13,6 +13,12 @@ module Stave
           notes + [notes.last + type.step]
         end
       end
+
+      def key_signatures
+        notes.map do |root|
+          Scale.new(type: ScaleType.major, root:).key_signature
+        end
+      end
     end
   end
 end
