@@ -4,6 +4,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 1,
         interval: Stave::Theory::Interval.perfect_unison,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "R",
@@ -17,6 +18,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 2,
         interval: Stave::Theory::Interval.minor_second,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭2",
@@ -30,6 +32,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 2,
         interval: Stave::Theory::Interval.major_second,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "2",
@@ -43,6 +46,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 2,
         interval: Stave::Theory::Interval.augmented_second,
         accidental: Stave::Theory::Accidental.sharp,
         to_s: "♯2",
@@ -56,6 +60,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 3,
         interval: Stave::Theory::Interval.minor_third,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭3",
@@ -69,6 +74,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 3,
         interval: Stave::Theory::Interval.major_third,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "3",
@@ -82,6 +88,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 3,
         interval: Stave::Theory::Interval.augmented_third,
         accidental: Stave::Theory::Accidental.sharp,
         to_s: "♯3",
@@ -95,6 +102,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 4,
         interval: Stave::Theory::Interval.diminished_fourth,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭4",
@@ -108,6 +116,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 4,
         interval: Stave::Theory::Interval.perfect_fourth,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "4",
@@ -121,6 +130,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 4,
         interval: Stave::Theory::Interval.augmented_fourth,
         accidental: Stave::Theory::Accidental.sharp,
         to_s: "♯4",
@@ -134,6 +144,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 5,
         interval: Stave::Theory::Interval.diminished_fifth,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭5",
@@ -147,6 +158,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 5,
         interval: Stave::Theory::Interval.perfect_fifth,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "5",
@@ -160,6 +172,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 5,
         interval: Stave::Theory::Interval.augmented_fifth,
         accidental: Stave::Theory::Accidental.sharp,
         to_s: "♯5",
@@ -173,6 +186,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 6,
         interval: Stave::Theory::Interval.minor_sixth,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭6",
@@ -186,6 +200,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 6,
         interval: Stave::Theory::Interval.major_sixth,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "6",
@@ -199,6 +214,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 6,
         interval: Stave::Theory::Interval.augmented_sixth,
         accidental: Stave::Theory::Accidental.sharp,
         to_s: "♯6",
@@ -212,6 +228,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 7,
         interval: Stave::Theory::Interval.minor_seventh,
         accidental: Stave::Theory::Accidental.flat,
         to_s: "♭7",
@@ -225,6 +242,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 7,
         interval: Stave::Theory::Interval.major_seventh,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "7",
@@ -238,6 +256,7 @@ RSpec.describe Stave::Theory::Degree do
 
     it "sets the expected attributes" do
       expect(degree).to have_attributes(
+        position: 1,
         interval: Stave::Theory::Interval.perfect_octave,
         accidental: Stave::Theory::Accidental.natural,
         to_s: "R",
