@@ -26,6 +26,24 @@ RSpec.describe Stave::Core::ScaleHarmoniser do
           )
         end
       end
+
+      describe ":sevenths" do
+        let(:chord_set) { Stave::Theory::ChordType::Set.seventh }
+
+        it "returns the expected chord types" do
+          expect(chord_types).to eq(
+            [
+              Stave::Theory::ChordType.major_seventh,
+              Stave::Theory::ChordType.minor_seventh,
+              Stave::Theory::ChordType.minor_seventh,
+              Stave::Theory::ChordType.major_seventh,
+              Stave::Theory::ChordType.dominant_seventh,
+              Stave::Theory::ChordType.minor_seventh,
+              Stave::Theory::ChordType.half_diminished_seventh
+            ]
+          )
+        end
+      end
     end
   end
 end

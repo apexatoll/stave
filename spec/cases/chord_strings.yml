@@ -84,3 +84,119 @@ diminished_triad:
   g_flat: "G♭o"
   g_natural: "Go"
   g_sharp: "G♯o"
+
+major_seventh:
+  a_flat: "A♭∆7"
+  a_natural: "A∆7"
+  a_sharp: "A♯∆7"
+
+  b_flat: "B♭∆7"
+  b_natural: "B∆7"
+  b_sharp: "B♯∆7"
+
+  c_flat: "C♭∆7"
+  c_natural: "C∆7"
+  c_sharp: "C♯∆7"
+
+  d_flat: "D♭∆7"
+  d_natural: "D∆7"
+  d_sharp: "D♯∆7"
+
+  e_flat: "E♭∆7"
+  e_natural: "E∆7"
+  e_sharp: "E♯∆7"
+
+  f_flat: "F♭∆7"
+  f_natural: "F∆7"
+  f_sharp: "F♯∆7"
+
+  g_flat: "G♭∆7"
+  g_natural: "G∆7"
+  g_sharp: "G♯∆7"
+
+dominant_seventh:
+  a_flat: "A♭7"
+  a_natural: "A7"
+  a_sharp: "A♯7"
+
+  b_flat: "B♭7"
+  b_natural: "B7"
+  b_sharp: "B♯7"
+
+  c_flat: "C♭7"
+  c_natural: "C7"
+  c_sharp: "C♯7"
+
+  d_flat: "D♭7"
+  d_natural: "D7"
+  d_sharp: "D♯7"
+
+  e_flat: "E♭7"
+  e_natural: "E7"
+  e_sharp: "E♯7"
+
+  f_flat: "F♭7"
+  f_natural: "F7"
+  f_sharp: "F♯7"
+
+  g_flat: "G♭7"
+  g_natural: "G7"
+  g_sharp: "G♯7"
+
+minor_seventh:
+  a_flat: "A♭m7"
+  a_natural: "Am7"
+  a_sharp: "A♯m7"
+
+  b_flat: "B♭m7"
+  b_natural: "Bm7"
+  b_sharp: "B♯m7"
+
+  c_flat: "C♭m7"
+  c_natural: "Cm7"
+  c_sharp: "C♯m7"
+
+  d_flat: "D♭m7"
+  d_natural: "Dm7"
+  d_sharp: "D♯m7"
+
+  e_flat: "E♭m7"
+  e_natural: "Em7"
+  e_sharp: "E♯m7"
+
+  f_flat: "F♭m7"
+  f_natural: "Fm7"
+  f_sharp: "F♯m7"
+
+  g_flat: "G♭m7"
+  g_natural: "Gm7"
+  g_sharp: "G♯m7"
+
+half_diminished_seventh:
+  a_flat: "A♭ø7"
+  a_natural: "Aø7"
+  a_sharp: "A♯ø7"
+
+  b_flat: "B♭ø7"
+  b_natural: "Bø7"
+  b_sharp: "B♯ø7"
+
+  c_flat: "C♭ø7"
+  c_natural: "Cø7"
+  c_sharp: "C♯ø7"
+
+  d_flat: "D♭ø7"
+  d_natural: "Dø7"
+  d_sharp: "D♯ø7"
+
+  e_flat: "E♭ø7"
+  e_natural: "Eø7"
+  e_sharp: "E♯ø7"
+
+  f_flat: "F♭ø7"
+  f_natural: "Fø7"
+  f_sharp: "F♯ø7"
+
+  g_flat: "G♭ø7"
+  g_natural: "Gø7"
+  g_sharp: "G♯ø7"
