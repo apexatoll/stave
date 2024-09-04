@@ -51,8 +51,8 @@ RSpec.describe Stave::Core::DegreeCollection do
     context "when position is 1" do
       let(:position) { 1 }
 
-      it "returns the unrotated degrees without repeats" do
-        expect(rotated).to eq(degree_collection.uniq)
+      it "returns the unrotated degrees" do
+        expect(rotated).to eq(degree_collection.degrees)
       end
     end
 
@@ -65,7 +65,8 @@ RSpec.describe Stave::Core::DegreeCollection do
             Stave::Theory::Degree.three,
             Stave::Theory::Degree.five,
             Stave::Theory::Degree.six,
-            Stave::Theory::Degree.root
+            Stave::Theory::Degree.root,
+            Stave::Theory::Degree.three
           ]
         )
       end
@@ -80,7 +81,8 @@ RSpec.describe Stave::Core::DegreeCollection do
             Stave::Theory::Degree.six,
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.three,
-            Stave::Theory::Degree.five
+            Stave::Theory::Degree.five,
+            Stave::Theory::Degree.six
           ]
         )
       end

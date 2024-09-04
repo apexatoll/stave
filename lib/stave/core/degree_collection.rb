@@ -15,7 +15,11 @@ module Stave
       end
 
       def rotate(position)
-        uniq.rotate(position - 1)
+        return degrees if position == 1
+
+        uniq.rotate(position - 1).tap do |degrees|
+          degrees << degrees.first
+        end
       end
 
       def steps
