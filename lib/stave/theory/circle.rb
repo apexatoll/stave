@@ -15,9 +15,7 @@ module Stave
       end
 
       def key_signatures
-        notes.map do |root|
-          Scale.new(type: ScaleType.major, root:).key_signature
-        end
+        notes.map { |root| Scale.major_from(root).key_signature }
       end
     end
   end
