@@ -11,6 +11,12 @@ module Stave
         Degree.seven,
         Degree.octave
       ]
+
+      def triad_types
+        Core::ScaleHarmoniser
+          .new(scale_type: self, chord_set: ChordType::Set.triad)
+          .harmonise!
+      end
     end
   end
 end
