@@ -1,6 +1,10 @@
 module Stave
   module Theory
     class Scale < Core::NoteCollection
+      def key_signature
+        KeySignature.parse(self)
+      end
+
       def triads
         harmonise!(type.triad_types)
       end
