@@ -1,0 +1,86 @@
+major_triad:
+  a_flat: "A♭"
+  a_natural: "A"
+  a_sharp: "A♯"
+
+  b_flat: "B♭"
+  b_natural: "B"
+  b_sharp: "B♯"
+
+  c_flat: "C♭"
+  c_natural: "C"
+  c_sharp: "C♯"
+
+  d_flat: "D♭"
+  d_natural: "D"
+  d_sharp: "D♯"
+
+  e_flat: "E♭"
+  e_natural: "E"
+  e_sharp: "E♯"
+
+  f_flat: "F♭"
+  f_natural: "F"
+  f_sharp: "F♯"
+
+  g_flat: "G♭"
+  g_natural: "G"
+  g_sharp: "G♯"
+
+minor_triad:
+  a_flat: "A♭m"
+  a_natural: "Am"
+  a_sharp: "A♯m"
+
+  b_flat: "B♭m"
+  b_natural: "Bm"
+  b_sharp: "B♯m"
+
+  c_flat: "C♭m"
+  c_natural: "Cm"
+  c_sharp: "C♯m"
+
+  d_flat: "D♭m"
+  d_natural: "Dm"
+  d_sharp: "D♯m"
+
+  e_flat: "E♭m"
+  e_natural: "Em"
+  e_sharp: "E♯m"
+
+  f_flat: "F♭m"
+  f_natural: "Fm"
+  f_sharp: "F♯m"
+
+  g_flat: "G♭m"
+  g_natural: "Gm"
+  g_sharp: "G♯m"
+
+diminished_triad:
+  a_flat: "A♭o"
+  a_natural: "Ao"
+  a_sharp: "A♯o"
+
+  b_flat: "B♭o"
+  b_natural: "Bo"
+  b_sharp: "B♯o"
+
+  c_flat: "C♭o"
+  c_natural: "Co"
+  c_sharp: "C♯o"
+
+  d_flat: "D♭o"
+  d_natural: "Do"
+  d_sharp: "D♯o"
+
+  e_flat: "E♭o"
+  e_natural: "Eo"
+  e_sharp: "E♯o"
+
+  f_flat: "F♭o"
+  f_natural: "Fo"
+  f_sharp: "F♯o"
+
+  g_flat: "G♭o"
+  g_natural: "Go"
+  g_sharp: "G♯o"
