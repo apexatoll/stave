@@ -402,6 +402,139 @@ RSpec.describe Stave::Theory::Interval do
         ]
       end
     end
+
+    describe ".between" do
+      subject(:number) { described_class.between(note, other_note) }
+
+      context "when first note is less than second" do
+        let(:note) { Stave::Theory::Note.a_natural }
+
+        context "and difference is 0" do
+          let(:other_note) { Stave::Theory::Note.a_sharp }
+
+          it "returns :one" do
+            expect(number).to eq(described_class.one)
+          end
+        end
+
+        context "and difference is 1" do
+          let(:other_note) { Stave::Theory::Note.b_natural }
+
+          it "returns :two" do
+            expect(number).to eq(described_class.two)
+          end
+        end
+
+        context "and difference is 2" do
+          let(:other_note) { Stave::Theory::Note.c_natural }
+
+          it "returns :three" do
+            expect(number).to eq(described_class.three)
+          end
+        end
+
+        context "and difference is 3" do
+          let(:other_note) { Stave::Theory::Note.d_natural }
+
+          it "returns :four" do
+            expect(number).to eq(described_class.four)
+          end
+        end
+
+        context "and difference is 4" do
+          let(:other_note) { Stave::Theory::Note.e_natural }
+
+          it "returns :five" do
+            expect(number).to eq(described_class.five)
+          end
+        end
+
+        context "and difference is 5" do
+          let(:other_note) { Stave::Theory::Note.f_natural }
+
+          it "returns :six" do
+            expect(number).to eq(described_class.six)
+          end
+        end
+
+        context "and difference is 6" do
+          let(:other_note) { Stave::Theory::Note.g_natural }
+
+          it "returns :seven" do
+            expect(number).to eq(described_class.seven)
+          end
+        end
+      end
+
+      context "when first note is equal to second" do
+        let(:note) { Stave::Theory::Note.a_flat }
+        let(:other_note) { note }
+
+        it "returns :one" do
+          expect(number).to eq(described_class.one)
+        end
+      end
+
+      context "when first note is greater than second" do
+        let(:note) { Stave::Theory::Note.g_flat }
+
+        context "and difference is -1" do
+          let(:other_note) { Stave::Theory::Note.f_natural }
+
+          it "returns :seven" do
+            expect(number).to eq(described_class.seven)
+          end
+        end
+
+        context "and difference is -2" do
+          let(:other_note) { Stave::Theory::Note.e_natural }
+
+          it "returns :six" do
+            expect(number).to eq(described_class.six)
+          end
+        end
+
+        context "and difference is -3" do
+          let(:other_note) { Stave::Theory::Note.d_natural }
+
+          it "returns :five" do
+            expect(number).to eq(described_class.five)
+          end
+        end
+
+        context "and difference is -4" do
+          let(:other_note) { Stave::Theory::Note.c_sharp }
+
+          it "returns :four" do
+            expect(number).to eq(described_class.four)
+          end
+        end
+
+        context "and difference is -5" do
+          let(:other_note) { Stave::Theory::Note.b_natural }
+
+          it "returns :three" do
+            expect(number).to eq(described_class.three)
+          end
+        end
+
+        context "and difference is -6" do
+          let(:other_note) { Stave::Theory::Note.a_natural }
+
+          it "returns :two" do
+            expect(number).to eq(described_class.two)
+          end
+        end
+
+        context "and difference is 0" do
+          let(:other_note) { Stave::Theory::Note.g_double_flat }
+
+          it "returns :one" do
+            expect(number).to eq(described_class.one)
+          end
+        end
+      end
+    end
   end
 
   describe "unisons" do
@@ -1221,6 +1354,44 @@ RSpec.describe Stave::Theory::Interval do
         { other: :major_thirteenth, expected: :minor_second }
         # { other: :augmented_thirteenth, expected: nil },
       ]
+    end
+  end
+
+  describe ".between" do
+    subject(:interval) { described_class.between(note, other_note) }
+
+    let(:note) { Stave::Theory::Note.c_natural }
+
+    let(:other_note) { Stave::Theory::Note.g_natural }
+
+    context "when first note is less than second" do
+      let(:note) { Stave::Theory::Note.g_natural }
+
+      let(:other_note) { Stave::Theory::Note.b_natural }
+
+      it "returns the expected interval" do
+        expect(interval).to eq(described_class.major_third)
+      end
+    end
+
+    context "when first note is equal to second" do
+      let(:note) { Stave::Theory::Note.f_natural }
+
+      let(:other_note) { Stave::Theory::Note.f_natural }
+
+      it "returns the expected interval" do
+        expect(interval).to eq(described_class.perfect_unison)
+      end
+    end
+
+    context "when first note is greater than second" do
+      let(:note) { Stave::Theory::Note.c_natural }
+
+      let(:other_note) { Stave::Theory::Note.g_flat }
+
+      it "returns the expected interval" do
+        expect(interval).to eq(described_class.diminished_fifth)
+      end
     end
   end
 end
