@@ -15,6 +15,8 @@ RSpec.describe Stave::Core::NoteCollection do
 
   let(:intervals) { degrees.map(&:interval) }
 
+  let(:root) { Stave::Theory::Note.c_natural }
+
   describe "#notes" do
     subject(:notes) { note_collection.notes }
 
@@ -127,6 +129,34 @@ RSpec.describe Stave::Core::NoteCollection do
             Stave::Theory::Note.b_natural
           ]
         )
+      end
+    end
+  end
+
+  describe "#note_at" do
+    subject(:note) { note_collection.note_at(position) }
+
+    context "when position is 0" do
+      let(:position) { 0 }
+
+      it "returns nil" do
+        expect(note).to be_nil
+      end
+    end
+
+    context "when position is less than number of notes" do
+      let(:position) { 3 }
+
+      it "returns the third note" do
+        expect(note).to eq(Stave::Theory::Note.a_natural)
+      end
+    end
+
+    context "when position is greater than number of notes" do
+      let(:position) { 9 }
+
+      it "returns the wrapped note" do
+        expect(note).to eq(Stave::Theory::Note.f_natural)
       end
     end
   end
