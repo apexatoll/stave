@@ -89,6 +89,50 @@ RSpec.describe Stave::Core::DegreeCollection do
     end
   end
 
+  describe "#relative_rotate" do
+    subject(:rotated) { degree_collection.relative_rotate(position) }
+
+    context "when position is 1" do
+      let(:position) { 1 }
+
+      it "returns the unrotated degrees" do
+        expect(rotated).to eq(degree_collection.degrees)
+      end
+    end
+
+    context "when position is less than degree count" do
+      let(:position) { 2 }
+
+      it "returns the rotated degrees relative to new root" do
+        expect(rotated).to eq(
+          [
+            Stave::Theory::Degree.root,
+            Stave::Theory::Degree.flat_three,
+            Stave::Theory::Degree.four,
+            Stave::Theory::Degree.flat_six,
+            Stave::Theory::Degree.root
+          ]
+        )
+      end
+    end
+
+    context "when position is greater than degree count" do
+      let(:position) { 8 }
+
+      it "returns the rotated degrees" do
+        expect(rotated).to eq(
+          [
+            Stave::Theory::Degree.root,
+            Stave::Theory::Degree.flat_three,
+            Stave::Theory::Degree.five,
+            Stave::Theory::Degree.flat_seven,
+            Stave::Theory::Degree.root
+          ]
+        )
+      end
+    end
+  end
+
   describe "#steps" do
     subject(:steps) { degree_collection.steps }
 

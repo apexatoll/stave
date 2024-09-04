@@ -22,6 +22,16 @@ module Stave
         end
       end
 
+      def relative_rotate(position)
+        return degrees if position == 1
+
+        rotated_degrees = rotate(position)
+
+        rotated_degrees.map do |degree|
+          degree - rotated_degrees.first
+        end
+      end
+
       def steps
         intervals.each_cons(2).map { |pair| pair.reverse.reduce(:-) }
       end
