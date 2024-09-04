@@ -1,0 +1,1378 @@
+ionian:
+  a_flat:
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_double_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+
+dorian:
+  a_flat:
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+
+phrygian:
+  a_flat:
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_double_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+
+lydian:
+  a_flat:
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_double_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_double_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_double_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+
+mixolydian:
+  a_flat:
+   - a_flat
+   - b_flat
+   - c_natural
+   - d_flat
+   - e_flat
+   - f_natural
+   - g_flat
+   - a_flat
+  a_natural:
+   - a_natural
+   - b_natural
+   - c_sharp
+   - d_natural
+   - e_natural
+   - f_sharp
+   - g_natural
+   - a_natural
+  a_sharp:
+   - a_sharp
+   - b_sharp
+   - c_double_sharp
+   - d_sharp
+   - e_sharp
+   - f_double_sharp
+   - g_sharp
+   - a_sharp
+  
+  b_flat:
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_double_sharp
+    - d_double_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_double_sharp
+    - g_double_sharp
+    - a_sharp
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+
+aeolian:
+  a_flat:
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_double_sharp
+    - d_sharp
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_double_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+
+locrian:
+  a_flat:
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_flat
+  a_natural:
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_natural
+  a_sharp:
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_sharp
+
+  b_flat:
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_flat
+  b_natural:
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_natural
+  b_sharp:
+    - b_sharp
+    - c_sharp
+    - d_sharp
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_sharp
+
+  c_flat:
+    - c_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+    - g_double_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+  c_natural:
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_natural
+  c_sharp:
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_sharp
+
+  d_flat:
+    - d_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+  d_natural:
+    - d_natural
+    - e_flat
+    - f_natural
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_natural
+  d_sharp:
+    - d_sharp
+    - e_natural
+    - f_sharp
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_sharp
+
+  e_flat:
+    - e_flat
+    - f_flat
+    - g_flat
+    - a_flat
+    - b_double_flat
+    - c_flat
+    - d_flat
+    - e_flat
+  e_natural:
+    - e_natural
+    - f_natural
+    - g_natural
+    - a_natural
+    - b_flat
+    - c_natural
+    - d_natural
+    - e_natural
+  e_sharp:
+    - e_sharp
+    - f_sharp
+    - g_sharp
+    - a_sharp
+    - b_natural
+    - c_sharp
+    - d_sharp
+    - e_sharp
+
+  f_flat:
+    - f_flat
+    - g_double_flat
+    - a_double_flat
+    - b_double_flat
+    - c_double_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+  f_natural:
+    - f_natural
+    - g_flat
+    - a_flat
+    - b_flat
+    - c_flat
+    - d_flat
+    - e_flat
+    - f_natural
+  f_sharp:
+    - f_sharp
+    - g_natural
+    - a_natural
+    - b_natural
+    - c_natural
+    - d_natural
+    - e_natural
+    - f_sharp
+
+  g_flat:
+    - g_flat
+    - a_double_flat
+    - b_double_flat
+    - c_flat
+    - d_double_flat
+    - e_double_flat
+    - f_flat
+    - g_flat
+  g_natural:
+    - g_natural
+    - a_flat
+    - b_flat
+    - c_natural
+    - d_flat
+    - e_flat
+    - f_natural
+    - g_natural
+  g_sharp:
+    - g_sharp
+    - a_natural
+    - b_natural
+    - c_sharp
+    - d_natural
+    - e_natural
+    - f_sharp
+    - g_sharp
