@@ -23,6 +23,15 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::Interval.major_second,
           Stave::Theory::Interval.major_second,
           Stave::Theory::Interval.minor_second
+        ],
+        mode_types: [
+          Stave::Theory::ModeType.ionian,
+          Stave::Theory::ModeType.dorian,
+          Stave::Theory::ModeType.phrygian,
+          Stave::Theory::ModeType.lydian,
+          Stave::Theory::ModeType.mixolydian,
+          Stave::Theory::ModeType.aeolian,
+          Stave::Theory::ModeType.locrian
         ]
       )
     end
@@ -52,7 +61,8 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::Interval.minor_second,
           Stave::Theory::Interval.major_second,
           Stave::Theory::Interval.major_second
-        ]
+        ],
+        mode_types: []
       )
     end
   end

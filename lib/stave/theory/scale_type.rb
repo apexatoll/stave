@@ -34,6 +34,16 @@ module Stave
           .new(scale_type: self, chord_set: ChordType::Set.seventh)
           .harmonise!
       end
+
+      def mode_types
+        ModeType.where(scale_type: self).sort_by(&:position)
+      end
+
+      def mode_type_at(position)
+        position -= 7 while position >= 8
+
+        mode_types[position - 1]
+      end
     end
   end
 end
