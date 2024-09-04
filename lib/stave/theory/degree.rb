@@ -100,6 +100,18 @@ module Stave
       def to_i
         interval.to_i
       end
+
+      def +(other)
+        new_interval = interval + other.interval
+
+        Degree.find_by(interval: new_interval)
+      end
+
+      def -(other)
+        new_interval = interval - other.interval
+
+        Degree.find_by(interval: new_interval)
+      end
     end
   end
 end
