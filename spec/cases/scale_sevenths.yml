@@ -173,3 +173,179 @@ major:
     - D♯7
     - E♯m7
     - F♯♯ø7
+
+minor:
+  a_flat:
+    - A♭m7
+    - B♭ø7
+    - C♭∆7
+    - D♭m7
+    - E♭m7
+    - F♭∆7
+    - G♭7
+  a_natural:
+    - Am7
+    - Bø7
+    - C∆7
+    - Dm7
+    - Em7
+    - F∆7
+    - G7
+  a_sharp:
+    - A♯m7
+    - B♯ø7
+    - C♯∆7
+    - D♯m7
+    - E♯m7
+    - F♯∆7
+    - G♯7
+
+  b_flat:
+    - B♭m7
+    - Cø7
+    - D♭∆7
+    - E♭m7
+    - Fm7
+    - G♭∆7
+    - A♭7
+  b_natural:
+    - Bm7
+    - C♯ø7
+    - D∆7
+    - Em7
+    - F♯m7
+    - G∆7
+    - A7
+  b_sharp:
+    - B♯m7
+    - C♯♯ø7
+    - D♯∆7
+    - E♯m7
+    - F♯♯m7
+    - G♯∆7
+    - A♯7
+
+  c_flat:
+    - C♭m7
+    - D♭ø7
+    - E♭♭∆7
+    - F♭m7
+    - G♭m7
+    - A♭♭∆7
+    - B♭♭7
+  c_natural:
+    - Cm7
+    - Dø7
+    - E♭∆7
+    - Fm7
+    - Gm7
+    - A♭∆7
+    - B♭7
+  c_sharp:
+    - C♯m7
+    - D♯ø7
+    - E∆7
+    - F♯m7
+    - G♯m7
+    - A∆7
+    - B7
+
+  d_flat:
+    - D♭m7
+    - E♭ø7
+    - F♭∆7
+    - G♭m7
+    - A♭m7
+    - B♭♭∆7
+    - C♭7
+  d_natural:
+    - Dm7
+    - Eø7
+    - F∆7
+    - Gm7
+    - Am7
+    - B♭∆7
+    - C7
+  d_sharp:
+    - D♯m7
+    - E♯ø7
+    - F♯∆7
+    - G♯m7
+    - A♯m7
+    - B∆7
+    - C♯7
+
+  e_flat:
+    - E♭m7
+    - Fø7
+    - G♭∆7
+    - A♭m7
+    - B♭m7
+    - C♭∆7
+    - D♭7
+  e_natural:
+    - Em7
+    - F♯ø7
+    - G∆7
+    - Am7
+    - Bm7
+    - C∆7
+    - D7
+  e_sharp:
+    - E♯m7
+    - F♯♯ø7
+    - G♯∆7
+    - A♯m7
+    - B♯m7
+    - C♯∆7
+    - D♯7
+
+  f_flat:
+    - F♭m7
+    - G♭ø7
+    - A♭♭∆7
+    - B♭♭m7
+    - C♭m7
+    - D♭♭∆7
+    - E♭♭7
+  f_natural:
+    - Fm7
+    - Gø7
+    - A♭∆7
+    - B♭m7
+    - Cm7
+    - D♭∆7
+    - E♭7
+  f_sharp:
+    - F♯m7
+    - G♯ø7
+    - A∆7
+    - Bm7
+    - C♯m7
+    - D∆7
+    - E7
+
+  g_flat:
+    - G♭m7
+    - A♭ø7
+    - B♭♭∆7
+    - C♭m7
+    - D♭m7
+    - E♭♭∆7
+    - F♭7
+  g_natural:
+    - Gm7
+    - Aø7
+    - B♭∆7
+    - Cm7
+    - Dm7
+    - E♭∆7
+    - F7
+  g_sharp:
+    - G♯m7
+    - A♯ø7
+    - B∆7
+    - C♯m7
+    - D♯m7
+    - E∆7
+    - F♯7
