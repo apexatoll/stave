@@ -21,7 +21,7 @@ module Stave
       end
 
       def uniq
-        notes.uniq(&:to_i)
+        notes.uniq(&:variant)
       end
     end
   end
