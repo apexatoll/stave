@@ -28,7 +28,7 @@ module Stave
         def variant(name, **attributes)
           variant_lookup[name] = attributes
 
-          self.class.define_method name, -> { new(name) }
+          define_singleton_method name, -> { new(name) }
         end
 
         def variant?(name)
