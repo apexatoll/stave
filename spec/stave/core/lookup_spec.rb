@@ -205,5 +205,37 @@ RSpec.describe Stave::Core::Lookup do
     it "does not set the common options for variants outside of block" do
       expect(lookup_class.baz.foobar).to be(false)
     end
+
+    describe ":scope" do
+      context "when call does not include a scope attribute" do
+        it "does not set the scope method" do
+          expect(lookup_class).not_to respond_to(:items)
+        end
+      end
+
+      context "when call includes a scope attribute" do
+        let(:lookup_class) do
+          Class.new(described_class) do
+            with_options foobar: true, scope: :items do
+              variant :foo
+              variant :bar
+            end
+
+            variant :baz, foobar: false
+          end
+        end
+
+        it "sets the scope method" do
+          expect(lookup_class).to respond_to(:items)
+        end
+
+        it "returns the expected variants" do
+          expect(lookup_class.items).to contain_exactly(
+            lookup_class.foo,
+            lookup_class.bar
+          )
+        end
+      end
+    end
   end
 end

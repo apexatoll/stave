@@ -55,10 +55,14 @@ module Stave
           where(**attributes).first
         end
 
-        def with_options(**options, &)
+        def with_options(scope: nil, **options, &)
           merger = OptionMerger.new(self, options)
 
           merger.instance_eval(&)
+
+          return if scope.nil?
+
+          define_singleton_method scope, -> { where(**options) }
         end
       end
 
