@@ -538,6 +538,16 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "unisons" do
+    describe "scope" do
+      subject(:scope) { described_class.unisons }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.perfect_unison
+        )
+      end
+    end
+
     describe ":perfect_unison" do
       subject(:interval) { described_class.perfect_unison }
 
@@ -548,6 +558,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "seconds" do
+    describe "scope" do
+      subject(:scope) { described_class.seconds }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.minor_second,
+          described_class.major_second,
+          described_class.augmented_second
+        )
+      end
+    end
+
     describe ":minor_second" do
       subject(:interval) { described_class.minor_second }
 
@@ -574,6 +596,19 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "thirds" do
+    describe "scope" do
+      subject(:scope) { described_class.thirds }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_third,
+          described_class.minor_third,
+          described_class.major_third,
+          described_class.augmented_third
+        )
+      end
+    end
+
     describe ":diminished_third" do
       subject(:interval) { described_class.diminished_third }
 
@@ -600,6 +635,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "fourths" do
+    describe "scope" do
+      subject(:scope) { described_class.fourths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_fourth,
+          described_class.perfect_fourth,
+          described_class.augmented_fourth
+        )
+      end
+    end
+
     describe ":diminished_fourth" do
       subject(:interval) { described_class.diminished_fourth }
 
@@ -626,6 +673,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "fifths" do
+    describe "scope" do
+      subject(:scope) { described_class.fifths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_fifth,
+          described_class.perfect_fifth,
+          described_class.augmented_fifth
+        )
+      end
+    end
+
     describe ":diminished_fifth" do
       subject(:interval) { described_class.diminished_fifth }
 
@@ -652,6 +711,19 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "sixths" do
+    describe "scope" do
+      subject(:scope) { described_class.sixths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_sixth,
+          described_class.minor_sixth,
+          described_class.major_sixth,
+          described_class.augmented_sixth
+        )
+      end
+    end
+
     describe ":diminished_sixth" do
       subject(:interval) { described_class.diminished_sixth }
 
@@ -686,6 +758,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "sevenths" do
+    describe "scope" do
+      subject(:scope) { described_class.sevenths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_seventh,
+          described_class.minor_seventh,
+          described_class.major_seventh
+        )
+      end
+    end
+
     describe ":diminished_seventh" do
       subject(:interval) { described_class.diminished_seventh }
 
@@ -712,6 +796,16 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "octaves" do
+    describe "scope" do
+      subject(:scope) { described_class.octaves }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.perfect_octave
+        )
+      end
+    end
+
     describe ":perfect_octave" do
       subject(:interval) { described_class.perfect_octave }
 
@@ -722,6 +816,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "ninths" do
+    describe "scope" do
+      subject(:scope) { described_class.ninths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.minor_ninth,
+          described_class.major_ninth,
+          described_class.augmented_ninth
+        )
+      end
+    end
+
     describe ":minor_ninth" do
       subject(:interval) { described_class.minor_ninth }
 
@@ -748,6 +854,18 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "elevenths" do
+    describe "scope" do
+      subject(:scope) { described_class.elevenths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_eleventh,
+          described_class.perfect_eleventh,
+          described_class.augmented_eleventh
+        )
+      end
+    end
+
     describe ":diminished_eleventh" do
       subject(:interval) { described_class.diminished_eleventh }
 
@@ -774,6 +892,19 @@ RSpec.describe Stave::Theory::Interval do
   end
 
   describe "thirteenths" do
+    describe "scope" do
+      subject(:scope) { described_class.thirteenths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.diminished_thirteenth,
+          described_class.minor_thirteenth,
+          described_class.major_thirteenth,
+          described_class.augmented_thirteenth
+        )
+      end
+    end
+
     describe ":diminished_thirteenth" do
       subject(:interval) { described_class.diminished_thirteenth }
 

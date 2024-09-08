@@ -83,65 +83,65 @@ module Stave
         end
       end
 
-      with_options number: Number.one do
+      with_options number: Number.one, scope: :unisons do
         variant :perfect_unison, quality: Quality.perfect
       end
 
-      with_options number: Number.two do
+      with_options number: Number.two, scope: :seconds do
         variant :minor_second,     quality: Quality.minor
         variant :major_second,     quality: Quality.major
         variant :augmented_second, quality: Quality.augmented
       end
 
-      with_options number: Number.three do
+      with_options number: Number.three, scope: :thirds do
         variant :diminished_third, quality: Quality.diminished
         variant :minor_third,      quality: Quality.minor
         variant :major_third,      quality: Quality.major
         variant :augmented_third,  quality: Quality.augmented
       end
 
-      with_options number: Number.four do
+      with_options number: Number.four, scope: :fourths do
         variant :diminished_fourth, quality: Quality.diminished
         variant :perfect_fourth,    quality: Quality.perfect
         variant :augmented_fourth,  quality: Quality.augmented
       end
 
-      with_options number: Number.five do
+      with_options number: Number.five, scope: :fifths do
         variant :diminished_fifth, quality: Quality.diminished
         variant :perfect_fifth,    quality: Quality.perfect
         variant :augmented_fifth,  quality: Quality.augmented
       end
 
-      with_options number: Number.six do
+      with_options number: Number.six, scope: :sixths do
         variant :diminished_sixth, quality: Quality.diminished
         variant :minor_sixth,      quality: Quality.minor
         variant :major_sixth,      quality: Quality.major
         variant :augmented_sixth,  quality: Quality.augmented
       end
 
-      with_options number: Number.seven do
+      with_options number: Number.seven, scope: :sevenths do
         variant :diminished_seventh, quality: Quality.diminished
         variant :minor_seventh,      quality: Quality.minor
         variant :major_seventh,      quality: Quality.major
       end
 
-      with_options number: Number.eight do
+      with_options number: Number.eight, scope: :octaves do
         variant :perfect_octave, quality: Quality.perfect
       end
 
-      with_options number: Number.nine do
+      with_options number: Number.nine, scope: :ninths do
         variant :minor_ninth,     quality: Quality.minor
         variant :major_ninth,     quality: Quality.major
         variant :augmented_ninth, quality: Quality.augmented
       end
 
-      with_options number: Number.eleven do
+      with_options number: Number.eleven, scope: :elevenths do
         variant :diminished_eleventh, quality: Quality.diminished
         variant :perfect_eleventh,    quality: Quality.perfect
         variant :augmented_eleventh,  quality: Quality.augmented
       end
 
-      with_options number: Number.thirteen do
+      with_options number: Number.thirteen, scope: :thirteenths do
         variant :diminished_thirteenth, quality: Quality.diminished
         variant :minor_thirteenth,      quality: Quality.minor
         variant :major_thirteenth,      quality: Quality.major
