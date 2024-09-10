@@ -25,6 +25,10 @@ module Stave
       class << self
         def keys = variant_lookup.keys
 
+        def each_key(&)
+          keys.each(&)
+        end
+
         def variant(name, **attributes)
           variant_lookup[name] = attributes
 
