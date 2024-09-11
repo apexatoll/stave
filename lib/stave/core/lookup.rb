@@ -27,6 +27,8 @@ module Stave
       class << self
         def keys = variant_lookup.keys
 
+        def string_keys = keys.map(&:to_s)
+
         def each_key(&)
           keys.each(&)
         end
