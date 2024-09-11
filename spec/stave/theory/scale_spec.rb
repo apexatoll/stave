@@ -39,7 +39,7 @@ RSpec.describe Stave::Theory::Scale do
             let(:root) { Stave::Theory::Note.new(root_variant) }
 
             it "returns the expected triads" do
-              expect(triads.map(&:to_s)).to eq(expected)
+              expect(triads.map(&:symbol)).to eq(expected)
             end
           end
         end
@@ -59,7 +59,7 @@ RSpec.describe Stave::Theory::Scale do
             let(:root) { Stave::Theory::Note.new(root_variant) }
 
             it "returns the expected triads" do
-              expect(sevenths.map(&:to_s)).to eq(expected)
+              expect(sevenths.map(&:symbol)).to eq(expected)
             end
           end
         end

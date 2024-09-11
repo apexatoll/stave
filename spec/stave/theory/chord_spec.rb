@@ -9,7 +9,7 @@ RSpec.describe Stave::Theory::Chord do
         let(:type) { Stave::Theory::ChordType.new(type_variant) }
 
         cases.each do |root_variant, expected_variants|
-          describe root_variant.to_s do
+          describe root_variant do
             let(:root) { Stave::Theory::Note.new(root_variant) }
 
             let(:expected) do
@@ -27,8 +27,8 @@ RSpec.describe Stave::Theory::Chord do
     end
   end
 
-  describe "#to_s" do
-    subject(:string) { chord.to_s }
+  describe "#symbol" do
+    subject(:symbol) { chord.symbol }
 
     assertions = YAML.load_file("spec/cases/chord_strings.yml")
 
@@ -37,11 +37,11 @@ RSpec.describe Stave::Theory::Chord do
         let(:type) { Stave::Theory::ChordType.new(type_variant) }
 
         cases.each do |root_variant, expected_string|
-          describe root_variant.to_s do
+          describe root_variant do
             let(:root) { Stave::Theory::Note.new(root_variant) }
 
             it "returns #{expected_string}" do
-              expect(string).to eq(expected_string)
+              expect(symbol).to eq(expected_string)
             end
           end
         end

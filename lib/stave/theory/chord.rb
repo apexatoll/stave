@@ -1,8 +1,8 @@
 module Stave
   module Theory
     class Chord < Core::NoteCollection
-      def to_s
-        "#{root.symbol}#{type}"
+      def symbol
+        "#{root.symbol}#{type.symbol}"
       end
     end
   end
