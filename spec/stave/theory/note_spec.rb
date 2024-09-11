@@ -4,7 +4,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.c }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "C", to_i: 0)
+        expect(pitch_class).to have_attributes(symbol: "C", to_i: 0)
       end
     end
 
@@ -12,7 +12,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.d }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "D", to_i: 2)
+        expect(pitch_class).to have_attributes(symbol: "D", to_i: 2)
       end
     end
 
@@ -20,7 +20,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.e }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "E", to_i: 4)
+        expect(pitch_class).to have_attributes(symbol: "E", to_i: 4)
       end
     end
 
@@ -28,7 +28,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.f }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "F", to_i: 5)
+        expect(pitch_class).to have_attributes(symbol: "F", to_i: 5)
       end
     end
 
@@ -36,7 +36,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.g }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "G", to_i: 7)
+        expect(pitch_class).to have_attributes(symbol: "G", to_i: 7)
       end
     end
 
@@ -44,7 +44,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.a }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "A", to_i: 9)
+        expect(pitch_class).to have_attributes(symbol: "A", to_i: 9)
       end
     end
 
@@ -52,7 +52,7 @@ RSpec.describe Stave::Theory::Note do
       subject(:pitch_class) { described_class.b }
 
       it "sets the expected attributes" do
-        expect(pitch_class).to have_attributes(to_s: "B", to_i: 11)
+        expect(pitch_class).to have_attributes(symbol: "B", to_i: 11)
       end
     end
   end
@@ -64,7 +64,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "C♭♭",
+        symbol: "C♭♭",
         to_i: 10
       )
     end
@@ -77,7 +77,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "C♭",
+        symbol: "C♭",
         to_i: 11
       )
     end
@@ -90,7 +90,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "C",
+        symbol: "C",
         to_i: 0
       )
     end
@@ -103,7 +103,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "C♯",
+        symbol: "C♯",
         to_i: 1
       )
     end
@@ -116,7 +116,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "C♯♯",
+        symbol: "C♯♯",
         to_i: 2
       )
     end
@@ -129,7 +129,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "D♭♭",
+        symbol: "D♭♭",
         to_i: 0
       )
     end
@@ -142,7 +142,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "D♭",
+        symbol: "D♭",
         to_i: 1
       )
     end
@@ -155,7 +155,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "D",
+        symbol: "D",
         to_i: 2
       )
     end
@@ -168,7 +168,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "D♯",
+        symbol: "D♯",
         to_i: 3
       )
     end
@@ -181,7 +181,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "D♯♯",
+        symbol: "D♯♯",
         to_i: 4
       )
     end
@@ -194,7 +194,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "E♭♭",
+        symbol: "E♭♭",
         to_i: 2
       )
     end
@@ -207,7 +207,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "E♭",
+        symbol: "E♭",
         to_i: 3
       )
     end
@@ -220,7 +220,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "E",
+        symbol: "E",
         to_i: 4
       )
     end
@@ -233,7 +233,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "E♯",
+        symbol: "E♯",
         to_i: 5
       )
     end
@@ -246,7 +246,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "E♯♯",
+        symbol: "E♯♯",
         to_i: 6
       )
     end
@@ -259,7 +259,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "F♭♭",
+        symbol: "F♭♭",
         to_i: 3
       )
     end
@@ -272,7 +272,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "F♭",
+        symbol: "F♭",
         to_i: 4
       )
     end
@@ -285,7 +285,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "F",
+        symbol: "F",
         to_i: 5
       )
     end
@@ -298,7 +298,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "F♯",
+        symbol: "F♯",
         to_i: 6
       )
     end
@@ -311,7 +311,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "F♯♯",
+        symbol: "F♯♯",
         to_i: 7
       )
     end
@@ -324,7 +324,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "G♭♭",
+        symbol: "G♭♭",
         to_i: 5
       )
     end
@@ -337,7 +337,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "G♭",
+        symbol: "G♭",
         to_i: 6
       )
     end
@@ -350,7 +350,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "G",
+        symbol: "G",
         to_i: 7
       )
     end
@@ -363,7 +363,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "G♯",
+        symbol: "G♯",
         to_i: 8
       )
     end
@@ -376,7 +376,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "G♯♯",
+        symbol: "G♯♯",
         to_i: 9
       )
     end
@@ -389,7 +389,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "A♭♭",
+        symbol: "A♭♭",
         to_i: 7
       )
     end
@@ -402,7 +402,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "A♭",
+        symbol: "A♭",
         to_i: 8
       )
     end
@@ -415,7 +415,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "A",
+        symbol: "A",
         to_i: 9
       )
     end
@@ -428,7 +428,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "A♯",
+        symbol: "A♯",
         to_i: 10
       )
     end
@@ -441,7 +441,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "A♯♯",
+        symbol: "A♯♯",
         to_i: 11
       )
     end
@@ -454,7 +454,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.double_flat,
-        to_s: "B♭♭",
+        symbol: "B♭♭",
         to_i: 9
       )
     end
@@ -467,7 +467,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "B♭",
+        symbol: "B♭",
         to_i: 10
       )
     end
@@ -480,7 +480,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "B",
+        symbol: "B",
         to_i: 11
       )
     end
@@ -493,7 +493,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "B♯",
+        symbol: "B♯",
         to_i: 0
       )
     end
@@ -506,7 +506,7 @@ RSpec.describe Stave::Theory::Note do
       expect(note).to have_attributes(
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.double_sharp,
-        to_s: "B♯♯",
+        symbol: "B♯♯",
         to_i: 1
       )
     end

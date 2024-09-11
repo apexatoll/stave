@@ -2,13 +2,13 @@ module Stave
   module Theory
     class Note < Core::Lookup
       class PitchClass < Core::Lookup
-        variant :c, index: 0, to_s: "C", to_i: 0
-        variant :d, index: 1, to_s: "D", to_i: 2
-        variant :e, index: 2, to_s: "E", to_i: 4
-        variant :f, index: 3, to_s: "F", to_i: 5
-        variant :g, index: 4, to_s: "G", to_i: 7
-        variant :a, index: 5, to_s: "A", to_i: 9
-        variant :b, index: 6, to_s: "B", to_i: 11
+        variant :c, index: 0, symbol: "C", to_i: 0
+        variant :d, index: 1, symbol: "D", to_i: 2
+        variant :e, index: 2, symbol: "E", to_i: 4
+        variant :f, index: 3, symbol: "F", to_i: 5
+        variant :g, index: 4, symbol: "G", to_i: 7
+        variant :a, index: 5, symbol: "A", to_i: 9
+        variant :b, index: 6, symbol: "B", to_i: 11
 
         def +(other)
           case other
@@ -97,8 +97,8 @@ module Stave
         end
       end
 
-      def to_s
-        "#{pitch_class}#{accidental.symbol}"
+      def symbol
+        "#{pitch_class.symbol}#{accidental.symbol}"
       end
 
       def to_i
