@@ -9,19 +9,19 @@ module Stave
       end
 
       with_options set: Set.triad do
-        variant :major_triad, to_s: "", degrees: [
+        variant :major_triad, symbol: "", degrees: [
           Degree.root,
           Degree.three,
           Degree.five
         ]
 
-        variant :minor_triad, to_s: "m", degrees: [
+        variant :minor_triad, symbol: "m", degrees: [
           Degree.root,
           Degree.flat_three,
           Degree.five
         ]
 
-        variant :diminished_triad, to_s: "o", degrees: [
+        variant :diminished_triad, symbol: "o", degrees: [
           Degree.root,
           Degree.flat_three,
           Degree.flat_five
@@ -29,28 +29,28 @@ module Stave
       end
 
       with_options set: Set.seventh do
-        variant :major_seventh, to_s: "∆7", degrees: [
+        variant :major_seventh, symbol: "∆7", degrees: [
           Degree.root,
           Degree.three,
           Degree.five,
           Degree.seven
         ]
 
-        variant :dominant_seventh, to_s: "7", degrees: [
+        variant :dominant_seventh, symbol: "7", degrees: [
           Degree.root,
           Degree.three,
           Degree.five,
           Degree.flat_seven
         ]
 
-        variant :minor_seventh, to_s: "m7", degrees: [
+        variant :minor_seventh, symbol: "m7", degrees: [
           Degree.root,
           Degree.flat_three,
           Degree.five,
           Degree.flat_seven
         ]
 
-        variant :half_diminished_seventh, to_s: "ø7", degrees: [
+        variant :half_diminished_seventh, symbol: "ø7", degrees: [
           Degree.root,
           Degree.flat_three,
           Degree.flat_five,

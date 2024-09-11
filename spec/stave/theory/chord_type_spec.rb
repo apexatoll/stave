@@ -5,7 +5,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "",
+          symbol: "",
           note_count: 3,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -25,7 +25,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "m",
+          symbol: "m",
           note_count: 3,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -45,7 +45,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "o",
+          symbol: "o",
           note_count: 3,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -67,7 +67,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "∆7",
+          symbol: "∆7",
           note_count: 4,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -89,7 +89,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "7",
+          symbol: "7",
           note_count: 4,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -111,7 +111,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "m7",
+          symbol: "m7",
           note_count: 4,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
@@ -133,7 +133,7 @@ RSpec.describe Stave::Theory::ChordType do
 
       it "sets the expected attributes" do
         expect(chord_type).to have_attributes(
-          to_s: "ø7",
+          symbol: "ø7",
           note_count: 4,
           intervals: [
             Stave::Theory::Interval.perfect_unison,
