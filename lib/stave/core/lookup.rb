@@ -5,6 +5,8 @@ module Stave
 
       attr_reader :variant
 
+      def_delegators :variant, :to_s
+
       def initialize(variant)
         @variant = variant.to_sym
 
