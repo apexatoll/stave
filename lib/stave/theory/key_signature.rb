@@ -2,9 +2,9 @@ module Stave
   module Theory
     class KeySignature < Core::Lookup
       class Group < Core::Lookup
-        variant :flats, accidental: Accidental.flat, to_s: "flats"
-        variant :natural, accidental: Accidental.natural, to_s: ""
-        variant :sharps, accidental: Accidental.sharp, to_s: "sharps"
+        variant :flats, accidental: Accidental.flat, name: "flats"
+        variant :natural, accidental: Accidental.natural, name: ""
+        variant :sharps, accidental: Accidental.sharp, name: "sharps"
       end
 
       variant :natural, group: Group.natural, flat_count: 0, sharp_count: 0
