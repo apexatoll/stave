@@ -7,7 +7,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 1,
         interval: Stave::Theory::Interval.perfect_unison,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "R",
+        symbol: "R",
         to_i: 0
       )
     end
@@ -21,7 +21,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 2,
         interval: Stave::Theory::Interval.minor_second,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭2",
+        symbol: "♭2",
         to_i: 1
       )
     end
@@ -35,7 +35,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 2,
         interval: Stave::Theory::Interval.major_second,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "2",
+        symbol: "2",
         to_i: 2
       )
     end
@@ -49,7 +49,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 2,
         interval: Stave::Theory::Interval.augmented_second,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "♯2",
+        symbol: "♯2",
         to_i: 3
       )
     end
@@ -63,7 +63,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 3,
         interval: Stave::Theory::Interval.minor_third,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭3",
+        symbol: "♭3",
         to_i: 3
       )
     end
@@ -77,7 +77,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 3,
         interval: Stave::Theory::Interval.major_third,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "3",
+        symbol: "3",
         to_i: 4
       )
     end
@@ -91,7 +91,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 3,
         interval: Stave::Theory::Interval.augmented_third,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "♯3",
+        symbol: "♯3",
         to_i: 5
       )
     end
@@ -105,7 +105,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 4,
         interval: Stave::Theory::Interval.diminished_fourth,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭4",
+        symbol: "♭4",
         to_i: 4
       )
     end
@@ -119,7 +119,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 4,
         interval: Stave::Theory::Interval.perfect_fourth,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "4",
+        symbol: "4",
         to_i: 5
       )
     end
@@ -133,7 +133,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 4,
         interval: Stave::Theory::Interval.augmented_fourth,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "♯4",
+        symbol: "♯4",
         to_i: 6
       )
     end
@@ -147,7 +147,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 5,
         interval: Stave::Theory::Interval.diminished_fifth,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭5",
+        symbol: "♭5",
         to_i: 6
       )
     end
@@ -161,7 +161,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 5,
         interval: Stave::Theory::Interval.perfect_fifth,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "5",
+        symbol: "5",
         to_i: 7
       )
     end
@@ -175,7 +175,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 5,
         interval: Stave::Theory::Interval.augmented_fifth,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "♯5",
+        symbol: "♯5",
         to_i: 8
       )
     end
@@ -189,7 +189,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 6,
         interval: Stave::Theory::Interval.minor_sixth,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭6",
+        symbol: "♭6",
         to_i: 8
       )
     end
@@ -203,7 +203,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 6,
         interval: Stave::Theory::Interval.major_sixth,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "6",
+        symbol: "6",
         to_i: 9
       )
     end
@@ -217,7 +217,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 6,
         interval: Stave::Theory::Interval.augmented_sixth,
         accidental: Stave::Theory::Accidental.sharp,
-        to_s: "♯6",
+        symbol: "♯6",
         to_i: 10
       )
     end
@@ -231,7 +231,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 7,
         interval: Stave::Theory::Interval.minor_seventh,
         accidental: Stave::Theory::Accidental.flat,
-        to_s: "♭7",
+        symbol: "♭7",
         to_i: 10
       )
     end
@@ -245,7 +245,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 7,
         interval: Stave::Theory::Interval.major_seventh,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "7",
+        symbol: "7",
         to_i: 11
       )
     end
@@ -259,7 +259,7 @@ RSpec.describe Stave::Theory::Degree do
         position: 1,
         interval: Stave::Theory::Interval.perfect_octave,
         accidental: Stave::Theory::Accidental.natural,
-        to_s: "R",
+        symbol: "R",
         to_i: 12
       )
     end

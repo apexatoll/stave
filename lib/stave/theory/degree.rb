@@ -91,7 +91,7 @@ module Stave
                 accidental: Accidental.natural
       end
 
-      def to_s
+      def symbol
         return "R" if (to_i % 12).zero?
 
         "#{accidental.symbol}#{interval.number.symbol}"
