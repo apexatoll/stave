@@ -5,7 +5,7 @@ RSpec.describe Stave::Theory::Accidental do
     it "sets the expected attributes" do
       expect(accidental).to have_attributes(
         transform: -2,
-        to_s: "♭♭",
+        symbol: "♭♭",
         flat?: true,
         natural?: false,
         sharp?: false
@@ -19,7 +19,7 @@ RSpec.describe Stave::Theory::Accidental do
     it "sets the expected attributes" do
       expect(accidental).to have_attributes(
         transform: -1,
-        to_s: "♭",
+        symbol: "♭",
         flat?: true,
         natural?: false,
         sharp?: false
@@ -33,7 +33,7 @@ RSpec.describe Stave::Theory::Accidental do
     it "sets the expected attributes" do
       expect(accidental).to have_attributes(
         transform: 0,
-        to_s: "",
+        symbol: "",
         flat?: false,
         natural?: true,
         sharp?: false
@@ -47,7 +47,7 @@ RSpec.describe Stave::Theory::Accidental do
     it "sets the expected attributes" do
       expect(accidental).to have_attributes(
         transform: 1,
-        to_s: "♯",
+        symbol: "♯",
         flat?: false,
         natural?: false,
         sharp?: true
@@ -61,7 +61,7 @@ RSpec.describe Stave::Theory::Accidental do
     it "sets the expected attributes" do
       expect(accidental).to have_attributes(
         transform: 2,
-        to_s: "♯♯",
+        symbol: "♯♯",
         flat?: false,
         natural?: false,
         sharp?: true

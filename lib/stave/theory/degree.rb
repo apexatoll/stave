@@ -94,7 +94,7 @@ module Stave
       def to_s
         return "R" if (to_i % 12).zero?
 
-        "#{accidental}#{interval.number}"
+        "#{accidental.symbol}#{interval.number}"
       end
 
       def to_i

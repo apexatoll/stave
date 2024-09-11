@@ -98,7 +98,7 @@ module Stave
       end
 
       def to_s
-        "#{pitch_class}#{accidental}"
+        "#{pitch_class}#{accidental.symbol}"
       end
 
       def to_i
