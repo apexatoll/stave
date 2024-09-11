@@ -6,7 +6,7 @@ RSpec.describe Stave::Theory::Interval do
       it "sets the expected attributes" do
         expect(quality).to have_attributes(
           transform: { major: -2, perfect: -1 },
-          to_s: "d"
+          symbol: "d"
         )
       end
     end
@@ -17,7 +17,7 @@ RSpec.describe Stave::Theory::Interval do
       it "sets the expected attributes" do
         expect(quality).to have_attributes(
           transform: { major: -1, perfect: nil },
-          to_s: "m"
+          symbol: "m"
         )
       end
     end
@@ -28,7 +28,7 @@ RSpec.describe Stave::Theory::Interval do
       it "sets the expected attributes" do
         expect(quality).to have_attributes(
           transform: { major: 0, perfect: nil },
-          to_s: "M"
+          symbol: "M"
         )
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe Stave::Theory::Interval do
       it "sets the expected attributes" do
         expect(quality).to have_attributes(
           transform: { major: nil, perfect: 0 },
-          to_s: "P"
+          symbol: "P"
         )
       end
     end
@@ -50,7 +50,7 @@ RSpec.describe Stave::Theory::Interval do
       it "sets the expected attributes" do
         expect(quality).to have_attributes(
           transform: { major: 1, perfect: 1 },
-          to_s: "A"
+          symbol: "A"
         )
       end
     end
@@ -82,7 +82,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 0,
           relative: number,
           to_i: 1,
-          to_s: "1"
+          symbol: "1"
         )
       end
 
@@ -112,7 +112,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 2,
           relative: number,
           to_i: 2,
-          to_s: "2"
+          symbol: "2"
         )
       end
 
@@ -142,7 +142,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 4,
           relative: number,
           to_i: 3,
-          to_s: "3"
+          symbol: "3"
         )
       end
 
@@ -172,7 +172,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 5,
           relative: number,
           to_i: 4,
-          to_s: "4"
+          symbol: "4"
         )
       end
 
@@ -202,7 +202,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 7,
           relative: number,
           to_i: 5,
-          to_s: "5"
+          symbol: "5"
         )
       end
 
@@ -232,7 +232,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 9,
           relative: number,
           to_i: 6,
-          to_s: "6"
+          symbol: "6"
         )
       end
 
@@ -262,7 +262,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 11,
           relative: number,
           to_i: 7,
-          to_s: "7"
+          symbol: "7"
         )
       end
 
@@ -292,7 +292,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 12,
           relative: described_class.one,
           to_i: 8,
-          to_s: "8"
+          symbol: "8"
         )
       end
 
@@ -322,7 +322,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 14,
           relative: described_class.two,
           to_i: 9,
-          to_s: "9"
+          symbol: "9"
         )
       end
 
@@ -352,7 +352,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 17,
           relative: described_class.four,
           to_i: 11,
-          to_s: "11"
+          symbol: "11"
         )
       end
 
@@ -382,7 +382,7 @@ RSpec.describe Stave::Theory::Interval do
           size: 21,
           relative: described_class.six,
           to_i: 13,
-          to_s: "13"
+          symbol: "13"
         )
       end
 
@@ -552,7 +552,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.perfect_unison }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "P1", to_i: 0)
+        expect(interval).to have_attributes(symbol: "P1", to_i: 0)
       end
     end
   end
@@ -574,7 +574,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_second }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m2", to_i: 1)
+        expect(interval).to have_attributes(symbol: "m2", to_i: 1)
       end
     end
 
@@ -582,7 +582,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_second }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M2", to_i: 2)
+        expect(interval).to have_attributes(symbol: "M2", to_i: 2)
       end
     end
 
@@ -590,7 +590,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_second }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A2", to_i: 3)
+        expect(interval).to have_attributes(symbol: "A2", to_i: 3)
       end
     end
   end
@@ -613,7 +613,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_third }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d3", to_i: 2)
+        expect(interval).to have_attributes(symbol: "d3", to_i: 2)
       end
     end
 
@@ -621,7 +621,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_third }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m3", to_i: 3)
+        expect(interval).to have_attributes(symbol: "m3", to_i: 3)
       end
     end
 
@@ -629,7 +629,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_third }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M3", to_i: 4)
+        expect(interval).to have_attributes(symbol: "M3", to_i: 4)
       end
     end
   end
@@ -651,7 +651,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_fourth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d4", to_i: 4)
+        expect(interval).to have_attributes(symbol: "d4", to_i: 4)
       end
     end
 
@@ -659,7 +659,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.perfect_fourth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "P4", to_i: 5)
+        expect(interval).to have_attributes(symbol: "P4", to_i: 5)
       end
     end
 
@@ -667,7 +667,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_fourth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A4", to_i: 6)
+        expect(interval).to have_attributes(symbol: "A4", to_i: 6)
       end
     end
   end
@@ -689,7 +689,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_fifth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d5", to_i: 6)
+        expect(interval).to have_attributes(symbol: "d5", to_i: 6)
       end
     end
 
@@ -697,7 +697,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.perfect_fifth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "P5", to_i: 7)
+        expect(interval).to have_attributes(symbol: "P5", to_i: 7)
       end
     end
 
@@ -705,7 +705,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_fifth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A5", to_i: 8)
+        expect(interval).to have_attributes(symbol: "A5", to_i: 8)
       end
     end
   end
@@ -728,7 +728,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_sixth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d6", to_i: 7)
+        expect(interval).to have_attributes(symbol: "d6", to_i: 7)
       end
     end
 
@@ -736,7 +736,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_sixth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m6", to_i: 8)
+        expect(interval).to have_attributes(symbol: "m6", to_i: 8)
       end
     end
 
@@ -744,7 +744,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_sixth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M6", to_i: 9)
+        expect(interval).to have_attributes(symbol: "M6", to_i: 9)
       end
     end
 
@@ -752,7 +752,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_sixth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A6", to_i: 10)
+        expect(interval).to have_attributes(symbol: "A6", to_i: 10)
       end
     end
   end
@@ -774,7 +774,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_seventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d7", to_i: 9)
+        expect(interval).to have_attributes(symbol: "d7", to_i: 9)
       end
     end
 
@@ -782,7 +782,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_seventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m7", to_i: 10)
+        expect(interval).to have_attributes(symbol: "m7", to_i: 10)
       end
     end
 
@@ -790,7 +790,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_seventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M7", to_i: 11)
+        expect(interval).to have_attributes(symbol: "M7", to_i: 11)
       end
     end
   end
@@ -810,7 +810,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.perfect_octave }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "P8", to_i: 12)
+        expect(interval).to have_attributes(symbol: "P8", to_i: 12)
       end
     end
   end
@@ -832,7 +832,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_ninth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m9", to_i: 13)
+        expect(interval).to have_attributes(symbol: "m9", to_i: 13)
       end
     end
 
@@ -840,7 +840,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_ninth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M9", to_i: 14)
+        expect(interval).to have_attributes(symbol: "M9", to_i: 14)
       end
     end
 
@@ -848,7 +848,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_ninth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A9", to_i: 15)
+        expect(interval).to have_attributes(symbol: "A9", to_i: 15)
       end
     end
   end
@@ -870,7 +870,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_eleventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d11", to_i: 16)
+        expect(interval).to have_attributes(symbol: "d11", to_i: 16)
       end
     end
 
@@ -878,7 +878,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.perfect_eleventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "P11", to_i: 17)
+        expect(interval).to have_attributes(symbol: "P11", to_i: 17)
       end
     end
 
@@ -886,7 +886,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_eleventh }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A11", to_i: 18)
+        expect(interval).to have_attributes(symbol: "A11", to_i: 18)
       end
     end
   end
@@ -909,7 +909,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.diminished_thirteenth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "d13", to_i: 19)
+        expect(interval).to have_attributes(symbol: "d13", to_i: 19)
       end
     end
 
@@ -917,7 +917,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.minor_thirteenth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "m13", to_i: 20)
+        expect(interval).to have_attributes(symbol: "m13", to_i: 20)
       end
     end
 
@@ -925,7 +925,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.major_thirteenth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "M13", to_i: 21)
+        expect(interval).to have_attributes(symbol: "M13", to_i: 21)
       end
     end
 
@@ -933,7 +933,7 @@ RSpec.describe Stave::Theory::Interval do
       subject(:interval) { described_class.augmented_thirteenth }
 
       it "sets the expected attributes" do
-        expect(interval).to have_attributes(to_s: "A13", to_i: 22)
+        expect(interval).to have_attributes(symbol: "A13", to_i: 22)
       end
     end
   end

@@ -5,27 +5,27 @@ module Stave
         variant :diminished,
                 transform: { major: -2, perfect: -1 },
                 inversion: :augmented,
-                to_s: "d"
+                symbol: "d"
 
         variant :minor,
                 transform: { major: -1, perfect: nil },
                 inversion: :major,
-                to_s: "m"
+                symbol: "m"
 
         variant :major,
                 transform: { major: 0, perfect: nil },
                 inversion: :minor,
-                to_s: "M"
+                symbol: "M"
 
         variant :perfect,
                 transform: { major: nil, perfect: 0 },
                 inversion: :perfect,
-                to_s: "P"
+                symbol: "P"
 
         variant :augmented,
                 transform: { major: 1, perfect: 1 },
                 inversion: :diminished,
-                to_s: "A"
+                symbol: "A"
 
         def invert!
           Quality.new(inversion)
@@ -45,7 +45,7 @@ module Stave
         variant :eleven, to_i: 11, size: 17, perfect?: true
         variant :thirteen, to_i: 13, size: 21, perfect?: false
 
-        def_delegators :to_i, :to_s
+        def symbol = to_i.to_s
 
         def compound? = size >= 12
 
@@ -154,8 +154,8 @@ module Stave
         number.size + quality.transform[transform_key]
       end
 
-      def to_s
-        "#{quality}#{number}"
+      def symbol
+        "#{quality.symbol}#{number.symbol}"
       end
 
       def +(other)
