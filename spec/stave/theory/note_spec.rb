@@ -707,4 +707,20 @@ RSpec.describe Stave::Theory::Note do
       ]
     end
   end
+
+  describe ".single_accidental" do
+    subject(:single_accidental) { described_class.single_accidental }
+
+    it "returns the expected notes" do
+      expect(single_accidental.map(&:variant)).to contain_exactly(
+        :a_flat, :a_natural, :a_sharp,
+        :b_flat, :b_natural, :b_sharp,
+        :c_flat, :c_natural, :c_sharp,
+        :d_flat, :d_natural, :d_sharp,
+        :e_flat, :e_natural, :e_sharp,
+        :f_flat, :f_natural, :f_sharp,
+        :g_flat, :g_natural, :g_sharp
+      )
+    end
+  end
 end

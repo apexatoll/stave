@@ -115,6 +115,12 @@ module Stave
       def note_below(interval)
         note_above(interval.invert!)
       end
+
+      def self.single_accidental
+        where(accidental: Accidental.flat) +
+          where(accidental: Accidental.natural) +
+          where(accidental: Accidental.sharp)
+      end
     end
   end
 end
