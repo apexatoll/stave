@@ -5,6 +5,9 @@ RSpec.describe Stave::Core::Lookup do
     Class.new(described_class) do
       variant :fido, species: :dog, age: 3, short_hair?: true
       variant :felix, species: :cat, age: 4, short_hair?: false
+
+      variant :fred, species: :frog, age: 1, prefix: :frog
+      variant :frank, species: :frog, age: 2, suffix: :frog
     end
   end
 
@@ -105,15 +108,37 @@ RSpec.describe Stave::Core::Lookup do
 
   describe "factory methods" do
     it "sets class factory methods for each variant" do
-      expect(lookup_class).to respond_to(:fido, :felix)
+      expect(lookup_class).to respond_to(:fido, :felix, :frog_fred, :frank_frog)
     end
 
-    it "initialises the corresponding variant" do
-      expect(lookup_class.fido).to have_attributes(
-        variant: :fido,
-        species: :dog,
-        age: 3
-      )
+    context "with no prefix/suffix" do
+      it "initialises the corresponding variant" do
+        expect(lookup_class.fido).to have_attributes(
+          variant: :fido,
+          species: :dog,
+          age: 3
+        )
+      end
+    end
+
+    context "with prefix" do
+      it "initialises the corresponding variant" do
+        expect(lookup_class.frog_fred).to have_attributes(
+          variant: :frog_fred,
+          species: :frog,
+          age: 1
+        )
+      end
+    end
+
+    context "with suffix" do
+      it "initialises the corresponding variant" do
+        expect(lookup_class.frank_frog).to have_attributes(
+          variant: :frank_frog,
+          species: :frog,
+          age: 2
+        )
+      end
     end
   end
 
@@ -125,7 +150,7 @@ RSpec.describe Stave::Core::Lookup do
     end
 
     it "returns the expected variant keys" do
-      expect(keys).to contain_exactly(:fido, :felix)
+      expect(keys).to contain_exactly(:fido, :felix, :frog_fred, :frank_frog)
     end
   end
 
@@ -139,7 +164,9 @@ RSpec.describe Stave::Core::Lookup do
     it "returns all of the variants" do
       expect(variants).to contain_exactly(
         lookup_class.fido,
-        lookup_class.felix
+        lookup_class.felix,
+        lookup_class.frog_fred,
+        lookup_class.frank_frog
       )
     end
   end

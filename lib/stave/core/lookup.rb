@@ -33,7 +33,10 @@ module Stave
           keys.each(&)
         end
 
-        def variant(name, **attributes)
+        def variant(name, prefix: nil, suffix: nil, **attributes)
+          name = :"#{prefix}_#{name}" if prefix
+          name = :"#{name}_#{suffix}" if suffix
+
           variant_lookup[name] = attributes
 
           define_singleton_method name, -> { new(name) }
