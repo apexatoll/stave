@@ -8,7 +8,7 @@ module Stave
         end
       end
 
-      with_options set: Set.triad do
+      with_options set: Set.triad, scope: :triads do
         variant :major_triad, symbol: "", degrees: [
           Degree.root,
           Degree.three,
@@ -28,7 +28,7 @@ module Stave
         ]
       end
 
-      with_options set: Set.seventh do
+      with_options set: Set.seventh, scope: :sevenths do
         variant :major_seventh, symbol: "∆7", degrees: [
           Degree.root,
           Degree.three,

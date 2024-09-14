@@ -1,5 +1,17 @@
 RSpec.describe Stave::Theory::ChordType do
   describe ":triads" do
+    describe "scope" do
+      subject(:scope) { described_class.triads }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.major_triad,
+          described_class.minor_triad,
+          described_class.diminished_triad
+        )
+      end
+    end
+
     describe ":major_triad" do
       subject(:chord_type) { described_class.major_triad }
 
@@ -62,6 +74,19 @@ RSpec.describe Stave::Theory::ChordType do
   end
 
   describe ":sevenths" do
+    describe "scope" do
+      subject(:scope) { described_class.sevenths }
+
+      it "returns the expected variants" do
+        expect(scope).to contain_exactly(
+          described_class.major_seventh,
+          described_class.dominant_seventh,
+          described_class.minor_seventh,
+          described_class.half_diminished_seventh
+        )
+      end
+    end
+
     describe ":major_seventh" do
       subject(:chord_type) { described_class.major_seventh }
 
