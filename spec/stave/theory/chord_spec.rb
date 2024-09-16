@@ -30,9 +30,7 @@ RSpec.describe Stave::Theory::Chord do
   describe "#symbol" do
     subject(:symbol) { chord.symbol }
 
-    assertions = YAML.load_file("spec/cases/chord_strings.yml")
-
-    assertions.each do |type_variant, cases|
+    each_case(:chord_strings) do |type_variant, cases|
       describe ":#{type_variant}" do
         let(:type) { Stave::Theory::ChordType.new(type_variant) }
 
