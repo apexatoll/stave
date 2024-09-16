@@ -66,4 +66,56 @@ RSpec.describe Stave::Theory::ScaleType do
       )
     end
   end
+
+  describe ":major_pentatonic" do
+    subject(:scale_type) { described_class.major_pentatonic }
+
+    it "sets the expected attributes" do
+      expect(scale_type).to have_attributes(
+        count: 5,
+        intervals: [
+          Stave::Theory::Interval.perfect_unison,
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.major_third,
+          Stave::Theory::Interval.perfect_fifth,
+          Stave::Theory::Interval.major_sixth,
+          Stave::Theory::Interval.perfect_octave
+        ],
+        steps: [
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.minor_third,
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.minor_third
+        ],
+        mode_types: []
+      )
+    end
+  end
+
+  describe ":minor_pentatonic" do
+    subject(:scale_type) { described_class.minor_pentatonic }
+
+    it "sets the expected attributes" do
+      expect(scale_type).to have_attributes(
+        count: 5,
+        intervals: [
+          Stave::Theory::Interval.perfect_unison,
+          Stave::Theory::Interval.minor_third,
+          Stave::Theory::Interval.perfect_fourth,
+          Stave::Theory::Interval.perfect_fifth,
+          Stave::Theory::Interval.minor_seventh,
+          Stave::Theory::Interval.perfect_octave
+        ],
+        steps: [
+          Stave::Theory::Interval.minor_third,
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.major_second,
+          Stave::Theory::Interval.minor_third,
+          Stave::Theory::Interval.major_second
+        ],
+        mode_types: []
+      )
+    end
+  end
 end

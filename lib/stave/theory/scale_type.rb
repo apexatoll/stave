@@ -23,6 +23,26 @@ module Stave
         Degree.octave
       ]
 
+      with_options suffix: :pentatonic do
+        variant :major, degrees: [
+          Degree.root,
+          Degree.two,
+          Degree.three,
+          Degree.five,
+          Degree.six,
+          Degree.octave
+        ]
+
+        variant :minor, degrees: [
+          Degree.root,
+          Degree.flat_three,
+          Degree.four,
+          Degree.five,
+          Degree.flat_seven,
+          Degree.octave
+        ]
+      end
+
       def triad_types
         Core::ScaleHarmoniser
           .new(scale_type: self, chord_set: ChordType::Set.triad)
