@@ -21,6 +21,10 @@ module Stave
       def degrees
         chord_type.relative_rotate(position).uniq(&:variant)
       end
+
+      def symbol
+        "(#{'i' * inversion})"
+      end
     end
   end
 end
