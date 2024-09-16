@@ -43,6 +43,14 @@ module Stave
         ]
       end
 
+      def pentatonic?
+        count == 5
+      end
+
+      def hexatonic?
+        count == 7
+      end
+
       def triad_types
         Core::ScaleHarmoniser
           .new(scale_type: self, chord_set: ChordType::Set.triad)
