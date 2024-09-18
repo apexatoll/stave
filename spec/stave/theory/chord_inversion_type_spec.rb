@@ -9,6 +9,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.major_triad,
           symbol: "(i)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -27,6 +28,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.major_triad,
           symbol: "(ii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.four,
@@ -47,6 +49,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.minor_triad,
           symbol: "(i)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.three,
@@ -65,6 +68,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.minor_triad,
           symbol: "(ii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.four,
@@ -85,6 +89,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.diminished_triad,
           symbol: "(i)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -103,6 +108,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.diminished_triad,
           symbol: "(ii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.sharp_four,
@@ -123,6 +129,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.major_seventh,
           symbol: "(i)",
+          root_position: 3,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -142,6 +149,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.major_seventh,
           symbol: "(ii)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.three,
@@ -161,6 +169,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.major_seventh,
           symbol: "(iii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_two,
@@ -182,6 +191,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.dominant_seventh,
           symbol: "(i)",
+          root_position: 3,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -201,6 +211,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.dominant_seventh,
           symbol: "(ii)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -220,6 +231,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.dominant_seventh,
           symbol: "(iii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.two,
@@ -241,6 +253,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.minor_seventh,
           symbol: "(i)",
+          root_position: 3,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.three,
@@ -260,6 +273,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.minor_seventh,
           symbol: "(ii)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -279,6 +293,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.minor_seventh,
           symbol: "(iii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.two,
@@ -300,6 +315,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.half_diminished_seventh,
           symbol: "(i)",
+          root_position: 3,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.flat_three,
@@ -319,6 +335,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.half_diminished_seventh,
           symbol: "(ii)",
+          root_position: 2,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.three,
@@ -338,6 +355,7 @@ RSpec.describe Stave::Theory::ChordInversionType do
         expect(chord_inversion_type).to have_attributes(
           chord_type: Stave::Theory::ChordType.half_diminished_seventh,
           symbol: "(iii)",
+          root_position: 1,
           degrees: [
             Stave::Theory::Degree.root,
             Stave::Theory::Degree.two,

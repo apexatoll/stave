@@ -18,6 +18,8 @@ module Stave
 
       def position = inversion + 1
 
+      def root_position = degrees.count - inversion
+
       def degrees
         chord_type.relative_rotate(position).uniq(&:variant)
       end
