@@ -1,0 +1,521 @@
+first_inversion_major_triad:
+  a_flat: "F♭(i)"
+  a_natural: "F(i)"
+  a_sharp: "F♯(i)"
+
+  b_flat: "G♭(i)"
+  b_natural: "G(i)"
+  b_sharp: "G♯(i)"
+
+  c_flat: "A♭♭(i)"
+  c_natural: "A♭(i)"
+  c_sharp: "A(i)"
+
+  d_flat: "B♭♭(i)"
+  d_natural: "B♭(i)"
+  d_sharp: "B(i)"
+
+  e_flat: "C♭(i)"
+  e_natural: "C(i)"
+  e_sharp: "C♯(i)"
+
+  f_flat: "D♭♭(i)"
+  f_natural: "D♭(i)"
+  f_sharp: "D(i)"
+
+  g_flat: "E♭♭(i)"
+  g_natural: "E♭(i)"
+  g_sharp: "E(i)"
+
+second_inversion_major_triad:
+  a_flat: "D♭(ii)"
+  a_natural: "D(ii)"
+  a_sharp: "D♯(ii)"
+
+  b_flat: "E♭(ii)"
+  b_natural: "E(ii)"
+  b_sharp: "E♯(ii)"
+
+  c_flat: "F♭(ii)"
+  c_natural: "F(ii)"
+  c_sharp: "F♯(ii)"
+
+  d_flat: "G♭(ii)"
+  d_natural: "G(ii)"
+  d_sharp: "G♯(ii)"
+
+  e_flat: "A♭(ii)"
+  e_natural: "A(ii)"
+  e_sharp: "A♯(ii)"
+
+  f_flat: "B♭♭(ii)"
+  f_natural: "B♭(ii)"
+  f_sharp: "B(ii)"
+
+  g_flat: "C♭(ii)"
+  g_natural: "C(ii)"
+  g_sharp: "C♯(ii)"
+
+first_inversion_minor_triad:
+  a_flat: "Fm(i)"
+  a_natural: "F♯m(i)"
+  a_sharp: "F♯♯m(i)"
+
+  b_flat: "Gm(i)"
+  b_natural: "G♯m(i)"
+  b_sharp: "G♯♯m(i)"
+
+  c_flat: "A♭m(i)"
+  c_natural: "Am(i)"
+  c_sharp: "A♯m(i)"
+
+  d_flat: "B♭m(i)"
+  d_natural: "Bm(i)"
+  d_sharp: "B♯m(i)"
+
+  e_flat: "Cm(i)"
+  e_natural: "C♯m(i)"
+  e_sharp: "C♯♯m(i)"
+
+  f_flat: "D♭m(i)"
+  f_natural: "Dm(i)"
+  f_sharp: "D♯m(i)"
+
+  g_flat: "E♭m(i)"
+  g_natural: "Em(i)"
+  g_sharp: "E♯m(i)"
+
+second_inversion_minor_triad:
+  a_flat: "D♭m(ii)"
+  a_natural: "Dm(ii)"
+  a_sharp: "D♯m(ii)"
+
+  b_flat: "E♭m(ii)"
+  b_natural: "Em(ii)"
+  b_sharp: "E♯m(ii)"
+
+  c_flat: "F♭m(ii)"
+  c_natural: "Fm(ii)"
+  c_sharp: "F♯m(ii)"
+
+  d_flat: "G♭m(ii)"
+  d_natural: "Gm(ii)"
+  d_sharp: "G♯m(ii)"
+
+  e_flat: "A♭m(ii)"
+  e_natural: "Am(ii)"
+  e_sharp: "A♯m(ii)"
+
+  f_flat: "B♭♭m(ii)"
+  f_natural: "B♭m(ii)"
+  f_sharp: "Bm(ii)"
+
+  g_flat: "C♭m(ii)"
+  g_natural: "Cm(ii)"
+  g_sharp: "C♯m(ii)"
+
+first_inversion_diminished_triad:
+  a_flat: "Fo(i)"
+  a_natural: "F♯o(i)"
+  a_sharp: "F♯♯o(i)"
+
+  b_flat: "Go(i)"
+  b_natural: "G♯o(i)"
+  b_sharp: "G♯♯o(i)"
+
+  c_flat: "A♭o(i)"
+  c_natural: "Ao(i)"
+  c_sharp: "A♯o(i)"
+
+  d_flat: "B♭o(i)"
+  d_natural: "Bo(i)"
+  d_sharp: "B♯o(i)"
+
+  e_flat: "Co(i)"
+  e_natural: "C♯o(i)"
+  e_sharp: "C♯♯o(i)"
+
+  f_flat: "D♭o(i)"
+  f_natural: "Do(i)"
+  f_sharp: "D♯o(i)"
+
+  g_flat: "E♭o(i)"
+  g_natural: "Eo(i)"
+  g_sharp: "E♯o(i)"
+
+second_inversion_diminished_triad:
+  a_flat: "Do(ii)"
+  a_natural: "D♯o(ii)"
+  a_sharp: "D♯♯o(ii)"
+
+  b_flat: "Eo(ii)"
+  b_natural: "E♯o(ii)"
+  b_sharp: "E♯♯o(ii)"
+
+  c_flat: "Fo(ii)"
+  c_natural: "F♯o(ii)"
+  c_sharp: "F♯♯o(ii)"
+
+  d_flat: "Go(ii)"
+  d_natural: "G♯o(ii)"
+  d_sharp: "G♯♯o(ii)"
+
+  e_flat: "Ao(ii)"
+  e_natural: "A♯o(ii)"
+  e_sharp: "A♯♯o(ii)"
+
+  f_flat: "B♭o(ii)"
+  f_natural: "Bo(ii)"
+  f_sharp: "B♯o(ii)"
+
+  g_flat: "Co(ii)"
+  g_natural: "C♯o(ii)"
+  g_sharp: "C♯♯o(ii)"
+
+first_inversion_major_seventh:
+  a_flat: "F♭∆7(i)"
+  a_natural: "F∆7(i)"
+  a_sharp: "F♯∆7(i)"
+
+  b_flat: "G♭∆7(i)"
+  b_natural: "G∆7(i)"
+  b_sharp: "G♯∆7(i)"
+
+  c_flat: "A♭♭∆7(i)"
+  c_natural: "A♭∆7(i)"
+  c_sharp: "A∆7(i)"
+
+  d_flat: "B♭♭∆7(i)"
+  d_natural: "B♭∆7(i)"
+  d_sharp: "B∆7(i)"
+
+  e_flat: "C♭∆7(i)"
+  e_natural: "C∆7(i)"
+  e_sharp: "C♯∆7(i)"
+
+  f_flat: "D♭♭∆7(i)"
+  f_natural: "D♭∆7(i)"
+  f_sharp: "D∆7(i)"
+
+  g_flat: "E♭♭∆7(i)"
+  g_natural: "E♭∆7(i)"
+  g_sharp: "E∆7(i)"
+
+second_inversion_major_seventh:
+  a_flat: "D♭∆7(ii)"
+  a_natural: "D∆7(ii)"
+  a_sharp: "D♯∆7(ii)"
+
+  b_flat: "E♭∆7(ii)"
+  b_natural: "E∆7(ii)"
+  b_sharp: "E♯∆7(ii)"
+
+  c_flat: "F♭∆7(ii)"
+  c_natural: "F∆7(ii)"
+  c_sharp: "F♯∆7(ii)"
+
+  d_flat: "G♭∆7(ii)"
+  d_natural: "G∆7(ii)"
+  d_sharp: "G♯∆7(ii)"
+
+  e_flat: "A♭∆7(ii)"
+  e_natural: "A∆7(ii)"
+  e_sharp: "A♯∆7(ii)"
+
+  f_flat: "B♭♭∆7(ii)"
+  f_natural: "B♭∆7(ii)"
+  f_sharp: "B∆7(ii)"
+
+  g_flat: "C♭∆7(ii)"
+  g_natural: "C∆7(ii)"
+  g_sharp: "C♯∆7(ii)"
+
+third_inversion_major_seventh:
+  a_flat: "B♭♭∆7(iii)"
+  a_natural: "B♭∆7(iii)"
+  a_sharp: "B∆7(iii)"
+
+  b_flat: "C♭∆7(iii)"
+  b_natural: "C∆7(iii)"
+  b_sharp: "C♯∆7(iii)"
+
+  c_flat: "D♭♭∆7(iii)"
+  c_natural: "D♭∆7(iii)"
+  c_sharp: "D∆7(iii)"
+
+  d_flat: "E♭♭∆7(iii)"
+  d_natural: "E♭∆7(iii)"
+  d_sharp: "E∆7(iii)"
+
+  e_flat: "F♭∆7(iii)"
+  e_natural: "F∆7(iii)"
+  e_sharp: "F♯∆7(iii)"
+
+  f_flat: "G♭♭∆7(iii)"
+  f_natural: "G♭∆7(iii)"
+  f_sharp: "G∆7(iii)"
+
+  g_flat: "A♭♭∆7(iii)"
+  g_natural: "A♭∆7(iii)"
+  g_sharp: "A∆7(iii)"
+
+first_inversion_dominant_seventh:
+  a_flat: "F♭7(i)"
+  a_natural: "F7(i)"
+  a_sharp: "F♯7(i)"
+
+  b_flat: "G♭7(i)"
+  b_natural: "G7(i)"
+  b_sharp: "G♯7(i)"
+
+  c_flat: "A♭♭7(i)"
+  c_natural: "A♭7(i)"
+  c_sharp: "A7(i)"
+
+  d_flat: "B♭♭7(i)"
+  d_natural: "B♭7(i)"
+  d_sharp: "B7(i)"
+
+  e_flat: "C♭7(i)"
+  e_natural: "C7(i)"
+  e_sharp: "C♯7(i)"
+
+  f_flat: "D♭♭7(i)"
+  f_natural: "D♭7(i)"
+  f_sharp: "D7(i)"
+
+  g_flat: "E♭♭7(i)"
+  g_natural: "E♭7(i)"
+  g_sharp: "E7(i)"
+
+second_inversion_dominant_seventh:
+  a_flat: "D♭7(ii)"
+  a_natural: "D7(ii)"
+  a_sharp: "D♯7(ii)"
+
+  b_flat: "E♭7(ii)"
+  b_natural: "E7(ii)"
+  b_sharp: "E♯7(ii)"
+
+  c_flat: "F♭7(ii)"
+  c_natural: "F7(ii)"
+  c_sharp: "F♯7(ii)"
+
+  d_flat: "G♭7(ii)"
+  d_natural: "G7(ii)"
+  d_sharp: "G♯7(ii)"
+
+  e_flat: "A♭7(ii)"
+  e_natural: "A7(ii)"
+  e_sharp: "A♯7(ii)"
+
+  f_flat: "B♭♭7(ii)"
+  f_natural: "B♭7(ii)"
+  f_sharp: "B7(ii)"
+
+  g_flat: "C♭7(ii)"
+  g_natural: "C7(ii)"
+  g_sharp: "C♯7(ii)"
+
+third_inversion_dominant_seventh:
+  a_flat: "B♭7(iii)"
+  a_natural: "B7(iii)"
+  a_sharp: "B♯7(iii)"
+
+  b_flat: "C7(iii)"
+  b_natural: "C♯7(iii)"
+  b_sharp: "C♯♯7(iii)"
+
+  c_flat: "D♭7(iii)"
+  c_natural: "D7(iii)"
+  c_sharp: "D♯7(iii)"
+
+  d_flat: "E♭7(iii)"
+  d_natural: "E7(iii)"
+  d_sharp: "E♯7(iii)"
+
+  e_flat: "F7(iii)"
+  e_natural: "F♯7(iii)"
+  e_sharp: "F♯♯7(iii)"
+
+  f_flat: "G♭7(iii)"
+  f_natural: "G7(iii)"
+  f_sharp: "G♯7(iii)"
+
+  g_flat: "A♭7(iii)"
+  g_natural: "A7(iii)"
+  g_sharp: "A♯7(iii)"
+
+first_inversion_minor_seventh:
+  a_flat: "Fm7(i)"
+  a_natural: "F♯m7(i)"
+  a_sharp: "F♯♯m7(i)"
+
+  b_flat: "Gm7(i)"
+  b_natural: "G♯m7(i)"
+  b_sharp: "G♯♯m7(i)"
+
+  c_flat: "A♭m7(i)"
+  c_natural: "Am7(i)"
+  c_sharp: "A♯m7(i)"
+
+  d_flat: "B♭m7(i)"
+  d_natural: "Bm7(i)"
+  d_sharp: "B♯m7(i)"
+
+  e_flat: "Cm7(i)"
+  e_natural: "C♯m7(i)"
+  e_sharp: "C♯♯m7(i)"
+
+  f_flat: "D♭m7(i)"
+  f_natural: "Dm7(i)"
+  f_sharp: "D♯m7(i)"
+
+  g_flat: "E♭m7(i)"
+  g_natural: "Em7(i)"
+  g_sharp: "E♯m7(i)"
+
+second_inversion_minor_seventh:
+  a_flat: "D♭m7(ii)"
+  a_natural: "Dm7(ii)"
+  a_sharp: "D♯m7(ii)"
+
+  b_flat: "E♭m7(ii)"
+  b_natural: "Em7(ii)"
+  b_sharp: "E♯m7(ii)"
+
+  c_flat: "F♭m7(ii)"
+  c_natural: "Fm7(ii)"
+  c_sharp: "F♯m7(ii)"
+
+  d_flat: "G♭m7(ii)"
+  d_natural: "Gm7(ii)"
+  d_sharp: "G♯m7(ii)"
+
+  e_flat: "A♭m7(ii)"
+  e_natural: "Am7(ii)"
+  e_sharp: "A♯m7(ii)"
+
+  f_flat: "B♭♭m7(ii)"
+  f_natural: "B♭m7(ii)"
+  f_sharp: "Bm7(ii)"
+
+  g_flat: "C♭m7(ii)"
+  g_natural: "Cm7(ii)"
+  g_sharp: "C♯m7(ii)"
+
+third_inversion_minor_seventh:
+  a_flat: "B♭m7(iii)"
+  a_natural: "Bm7(iii)"
+  a_sharp: "B♯m7(iii)"
+
+  b_flat: "Cm7(iii)"
+  b_natural: "C♯m7(iii)"
+  b_sharp: "C♯♯m7(iii)"
+
+  c_flat: "D♭m7(iii)"
+  c_natural: "Dm7(iii)"
+  c_sharp: "D♯m7(iii)"
+
+  d_flat: "E♭m7(iii)"
+  d_natural: "Em7(iii)"
+  d_sharp: "E♯m7(iii)"
+
+  e_flat: "Fm7(iii)"
+  e_natural: "F♯m7(iii)"
+  e_sharp: "F♯♯m7(iii)"
+
+  f_flat: "G♭m7(iii)"
+  f_natural: "Gm7(iii)"
+  f_sharp: "G♯m7(iii)"
+
+  g_flat: "A♭m7(iii)"
+  g_natural: "Am7(iii)"
+  g_sharp: "A♯m7(iii)"
+
+first_inversion_half_diminished_seventh:
+  a_flat: "Fø7(i)"
+  a_natural: "F♯ø7(i)"
+  a_sharp: "F♯♯ø7(i)"
+
+  b_flat: "Gø7(i)"
+  b_natural: "G♯ø7(i)"
+  b_sharp: "G♯♯ø7(i)"
+
+  c_flat: "A♭ø7(i)"
+  c_natural: "Aø7(i)"
+  c_sharp: "A♯ø7(i)"
+
+  d_flat: "B♭ø7(i)"
+  d_natural: "Bø7(i)"
+  d_sharp: "B♯ø7(i)"
+
+  e_flat: "Cø7(i)"
+  e_natural: "C♯ø7(i)"
+  e_sharp: "C♯♯ø7(i)"
+
+  f_flat: "D♭ø7(i)"
+  f_natural: "Dø7(i)"
+  f_sharp: "D♯ø7(i)"
+
+  g_flat: "E♭ø7(i)"
+  g_natural: "Eø7(i)"
+  g_sharp: "E♯ø7(i)"
+
+second_inversion_half_diminished_seventh:
+  a_flat: "Dø7(ii)"
+  a_natural: "D♯ø7(ii)"
+  a_sharp: "D♯♯ø7(ii)"
+
+  b_flat: "Eø7(ii)"
+  b_natural: "E♯ø7(ii)"
+  b_sharp: "E♯♯ø7(ii)"
+
+  c_flat: "Fø7(ii)"
+  c_natural: "F♯ø7(ii)"
+  c_sharp: "F♯♯ø7(ii)"
+
+  d_flat: "Gø7(ii)"
+  d_natural: "G♯ø7(ii)"
+  d_sharp: "G♯♯ø7(ii)"
+
+  e_flat: "Aø7(ii)"
+  e_natural: "A♯ø7(ii)"
+  e_sharp: "A♯♯ø7(ii)"
+
+  f_flat: "B♭ø7(ii)"
+  f_natural: "Bø7(ii)"
+  f_sharp: "B♯ø7(ii)"
+
+  g_flat: "Cø7(ii)"
+  g_natural: "C♯ø7(ii)"
+  g_sharp: "C♯♯ø7(ii)"
+
+third_inversion_half_diminished_seventh:
+  a_flat: "B♭ø7(iii)"
+  a_natural: "Bø7(iii)"
+  a_sharp: "B♯ø7(iii)"
+
+  b_flat: "Cø7(iii)"
+  b_natural: "C♯ø7(iii)"
+  b_sharp: "C♯♯ø7(iii)"
+
+  c_flat: "D♭ø7(iii)"
+  c_natural: "Dø7(iii)"
+  c_sharp: "D♯ø7(iii)"
+
+  d_flat: "E♭ø7(iii)"
+  d_natural: "Eø7(iii)"
+  d_sharp: "E♯ø7(iii)"
+
+  e_flat: "Fø7(iii)"
+  e_natural: "F♯ø7(iii)"
+  e_sharp: "F♯♯ø7(iii)"
+
+  f_flat: "G♭ø7(iii)"
+  f_natural: "Gø7(iii)"
+  f_sharp: "G♯ø7(iii)"
+
+  g_flat: "A♭ø7(iii)"
+  g_natural: "Aø7(iii)"
+  g_sharp: "A♯ø7(iii)"
