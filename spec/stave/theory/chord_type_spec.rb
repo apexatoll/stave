@@ -211,4 +211,12 @@ RSpec.describe Stave::Theory::ChordType do
       end
     end
   end
+
+  describe ".class_key" do
+    subject(:class_key) { described_class.class_key }
+
+    it "returns the expected key" do
+      expect(class_key).to eq(:chord_type)
+    end
+  end
 end

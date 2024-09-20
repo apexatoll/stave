@@ -126,4 +126,12 @@ RSpec.describe Stave::Theory::ScaleType do
       )
     end
   end
+
+  describe ".class_key" do
+    subject(:class_key) { described_class.class_key }
+
+    it "returns the expected key" do
+      expect(class_key).to eq(:scale_type)
+    end
+  end
 end

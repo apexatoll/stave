@@ -133,4 +133,12 @@ RSpec.describe Stave::Theory::ModeType do
       end
     end
   end
+
+  describe ".class_key" do
+    subject(:class_key) { described_class.class_key }
+
+    it "returns the expected key" do
+      expect(class_key).to eq(:mode_type)
+    end
+  end
 end

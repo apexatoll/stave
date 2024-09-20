@@ -39,6 +39,13 @@ module Stave
       def uniq
         degrees.uniq(&:position)
       end
+
+      def self.class_key
+        to_s.delete_prefix("Stave::Theory::")
+            .gsub(/([a-z])([A-Z])/, "\\1_\\2")
+            .downcase
+            .to_sym
+      end
     end
   end
 end
