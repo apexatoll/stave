@@ -1,4 +1,8 @@
 RSpec.describe Stave::Theory::ChordType do
+  before do
+    stub_const "ChordInversionType", Stave::Theory::ChordInversionType
+  end
+
   describe ":triads" do
     describe "scope" do
       subject(:scope) { described_class.triads }
@@ -27,6 +31,10 @@ RSpec.describe Stave::Theory::ChordType do
           steps: [
             Stave::Theory::Interval.major_third,
             Stave::Theory::Interval.minor_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_major_triad,
+            ChordInversionType.second_inversion_major_triad
           ]
         )
       end
@@ -47,6 +55,10 @@ RSpec.describe Stave::Theory::ChordType do
           steps: [
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.major_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_minor_triad,
+            ChordInversionType.second_inversion_minor_triad
           ]
         )
       end
@@ -67,6 +79,10 @@ RSpec.describe Stave::Theory::ChordType do
           steps: [
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.minor_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_diminished_triad,
+            ChordInversionType.second_inversion_diminished_triad
           ]
         )
       end
@@ -104,6 +120,11 @@ RSpec.describe Stave::Theory::ChordType do
             Stave::Theory::Interval.major_third,
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.major_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_major_seventh,
+            ChordInversionType.second_inversion_major_seventh,
+            ChordInversionType.third_inversion_major_seventh
           ]
         )
       end
@@ -126,6 +147,11 @@ RSpec.describe Stave::Theory::ChordType do
             Stave::Theory::Interval.major_third,
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.minor_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_dominant_seventh,
+            ChordInversionType.second_inversion_dominant_seventh,
+            ChordInversionType.third_inversion_dominant_seventh
           ]
         )
       end
@@ -148,6 +174,11 @@ RSpec.describe Stave::Theory::ChordType do
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.major_third,
             Stave::Theory::Interval.minor_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_minor_seventh,
+            ChordInversionType.second_inversion_minor_seventh,
+            ChordInversionType.third_inversion_minor_seventh
           ]
         )
       end
@@ -170,6 +201,11 @@ RSpec.describe Stave::Theory::ChordType do
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.minor_third,
             Stave::Theory::Interval.major_third
+          ],
+          inversion_types: [
+            ChordInversionType.first_inversion_half_diminished_seventh,
+            ChordInversionType.second_inversion_half_diminished_seventh,
+            ChordInversionType.third_inversion_half_diminished_seventh
           ]
         )
       end

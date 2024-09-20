@@ -61,6 +61,10 @@ module Stave
       def note_count
         set.note_count
       end
+
+      def inversion_types
+        ChordInversionType.where(chord_type: self)
+      end
     end
   end
 end
