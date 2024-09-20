@@ -24,6 +24,13 @@ module Stave
         notes.uniq(&:variant)
       end
 
+      def to_h
+        {
+          self.class.type_class.class_key => { variant: type.variant },
+          root: root.variant
+        }
+      end
+
       def self.type_class
         const_get("#{self}Type")
       end
