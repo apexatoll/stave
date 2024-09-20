@@ -1,0 +1,580 @@
+major_triad:
+  a_flat:
+    - A♭(i)
+    - A♭(ii)
+  a_natural:
+    - A(i)
+    - A(ii)
+  a_sharp:
+    - A♯(i)
+    - A♯(ii)
+
+  b_flat:
+    - B♭(i)
+    - B♭(ii)
+  b_natural:
+    - B(i)
+    - B(ii)
+  b_sharp:
+    - B♯(i)
+    - B♯(ii)
+
+  c_flat:
+    - C♭(i)
+    - C♭(ii)
+  c_natural:
+    - C(i)
+    - C(ii)
+  c_sharp:
+    - C♯(i)
+    - C♯(ii)
+
+  d_flat:
+    - D♭(i)
+    - D♭(ii)
+  d_natural:
+    - D(i)
+    - D(ii)
+  d_sharp:
+    - D♯(i)
+    - D♯(ii)
+
+  e_flat:
+    - E♭(i)
+    - E♭(ii)
+  e_natural:
+    - E(i)
+    - E(ii)
+  e_sharp:
+    - E♯(i)
+    - E♯(ii)
+
+  f_flat:
+    - F♭(i)
+    - F♭(ii)
+  f_natural:
+    - F(i)
+    - F(ii)
+  f_sharp:
+    - F♯(i)
+    - F♯(ii)
+
+  g_flat:
+    - G♭(i)
+    - G♭(ii)
+  g_natural:
+    - G(i)
+    - G(ii)
+  g_sharp:
+    - G♯(i)
+    - G♯(ii)
+
+minor_triad:
+  a_flat:
+    - A♭m(i)
+    - A♭m(ii)
+  a_natural:
+    - Am(i)
+    - Am(ii)
+  a_sharp:
+    - A♯m(i)
+    - A♯m(ii)
+
+  b_flat:
+    - B♭m(i)
+    - B♭m(ii)
+  b_natural:
+    - Bm(i)
+    - Bm(ii)
+  b_sharp:
+    - B♯m(i)
+    - B♯m(ii)
+
+  c_flat:
+    - C♭m(i)
+    - C♭m(ii)
+  c_natural:
+    - Cm(i)
+    - Cm(ii)
+  c_sharp:
+    - C♯m(i)
+    - C♯m(ii)
+
+  d_flat:
+    - D♭m(i)
+    - D♭m(ii)
+  d_natural:
+    - Dm(i)
+    - Dm(ii)
+  d_sharp:
+    - D♯m(i)
+    - D♯m(ii)
+
+  e_flat:
+    - E♭m(i)
+    - E♭m(ii)
+  e_natural:
+    - Em(i)
+    - Em(ii)
+  e_sharp:
+    - E♯m(i)
+    - E♯m(ii)
+
+  f_flat:
+    - F♭m(i)
+    - F♭m(ii)
+  f_natural:
+    - Fm(i)
+    - Fm(ii)
+  f_sharp:
+    - F♯m(i)
+    - F♯m(ii)
+
+  g_flat:
+    - G♭m(i)
+    - G♭m(ii)
+  g_natural:
+    - Gm(i)
+    - Gm(ii)
+  g_sharp:
+    - G♯m(i)
+    - G♯m(ii)
+
+diminished_triad:
+  a_flat:
+    - A♭o(i)
+    - A♭o(ii)
+  a_natural:
+    - Ao(i)
+    - Ao(ii)
+  a_sharp:
+    - A♯o(i)
+    - A♯o(ii)
+
+  b_flat:
+    - B♭o(i)
+    - B♭o(ii)
+  b_natural:
+    - Bo(i)
+    - Bo(ii)
+  b_sharp:
+    - B♯o(i)
+    - B♯o(ii)
+
+  c_flat:
+    - C♭o(i)
+    - C♭o(ii)
+  c_natural:
+    - Co(i)
+    - Co(ii)
+  c_sharp:
+    - C♯o(i)
+    - C♯o(ii)
+
+  d_flat:
+    - D♭o(i)
+    - D♭o(ii)
+  d_natural:
+    - Do(i)
+    - Do(ii)
+  d_sharp:
+    - D♯o(i)
+    - D♯o(ii)
+
+  e_flat:
+    - E♭o(i)
+    - E♭o(ii)
+  e_natural:
+    - Eo(i)
+    - Eo(ii)
+  e_sharp:
+    - E♯o(i)
+    - E♯o(ii)
+
+  f_flat:
+    - F♭o(i)
+    - F♭o(ii)
+  f_natural:
+    - Fo(i)
+    - Fo(ii)
+  f_sharp:
+    - F♯o(i)
+    - F♯o(ii)
+
+  g_flat:
+    - G♭o(i)
+    - G♭o(ii)
+  g_natural:
+    - Go(i)
+    - Go(ii)
+  g_sharp:
+    - G♯o(i)
+    - G♯o(ii)
+
+major_seventh:
+  a_flat:
+    - A♭∆7(i)
+    - A♭∆7(ii)
+    - A♭∆7(iii)
+  a_natural:
+    - A∆7(i)
+    - A∆7(ii)
+    - A∆7(iii)
+  a_sharp:
+    - A♯∆7(i)
+    - A♯∆7(ii)
+    - A♯∆7(iii)
+
+  b_flat:
+    - B♭∆7(i)
+    - B♭∆7(ii)
+    - B♭∆7(iii)
+  b_natural:
+    - B∆7(i)
+    - B∆7(ii)
+    - B∆7(iii)
+  b_sharp:
+    - B♯∆7(i)
+    - B♯∆7(ii)
+    - B♯∆7(iii)
+
+  c_flat:
+    - C♭∆7(i)
+    - C♭∆7(ii)
+    - C♭∆7(iii)
+  c_natural:
+    - C∆7(i)
+    - C∆7(ii)
+    - C∆7(iii)
+  c_sharp:
+    - C♯∆7(i)
+    - C♯∆7(ii)
+    - C♯∆7(iii)
+
+  d_flat:
+    - D♭∆7(i)
+    - D♭∆7(ii)
+    - D♭∆7(iii)
+  d_natural:
+    - D∆7(i)
+    - D∆7(ii)
+    - D∆7(iii)
+  d_sharp:
+    - D♯∆7(i)
+    - D♯∆7(ii)
+    - D♯∆7(iii)
+
+  e_flat:
+    - E♭∆7(i)
+    - E♭∆7(ii)
+    - E♭∆7(iii)
+  e_natural:
+    - E∆7(i)
+    - E∆7(ii)
+    - E∆7(iii)
+  e_sharp:
+    - E♯∆7(i)
+    - E♯∆7(ii)
+    - E♯∆7(iii)
+
+  f_flat:
+    - F♭∆7(i)
+    - F♭∆7(ii)
+    - F♭∆7(iii)
+  f_natural:
+    - F∆7(i)
+    - F∆7(ii)
+    - F∆7(iii)
+  f_sharp:
+    - F♯∆7(i)
+    - F♯∆7(ii)
+    - F♯∆7(iii)
+
+  g_flat:
+    - G♭∆7(i)
+    - G♭∆7(ii)
+    - G♭∆7(iii)
+  g_natural:
+    - G∆7(i)
+    - G∆7(ii)
+    - G∆7(iii)
+  g_sharp:
+    - G♯∆7(i)
+    - G♯∆7(ii)
+    - G♯∆7(iii)
+
+dominant_seventh:
+  a_flat:
+    - A♭7(i)
+    - A♭7(ii)
+    - A♭7(iii)
+  a_natural:
+    - A7(i)
+    - A7(ii)
+    - A7(iii)
+  a_sharp:
+    - A♯7(i)
+    - A♯7(ii)
+    - A♯7(iii)
+
+  b_flat:
+    - B♭7(i)
+    - B♭7(ii)
+    - B♭7(iii)
+  b_natural:
+    - B7(i)
+    - B7(ii)
+    - B7(iii)
+  b_sharp:
+    - B♯7(i)
+    - B♯7(ii)
+    - B♯7(iii)
+
+  c_flat:
+    - C♭7(i)
+    - C♭7(ii)
+    - C♭7(iii)
+  c_natural:
+    - C7(i)
+    - C7(ii)
+    - C7(iii)
+  c_sharp:
+    - C♯7(i)
+    - C♯7(ii)
+    - C♯7(iii)
+
+  d_flat:
+    - D♭7(i)
+    - D♭7(ii)
+    - D♭7(iii)
+  d_natural:
+    - D7(i)
+    - D7(ii)
+    - D7(iii)
+  d_sharp:
+    - D♯7(i)
+    - D♯7(ii)
+    - D♯7(iii)
+
+  e_flat:
+    - E♭7(i)
+    - E♭7(ii)
+    - E♭7(iii)
+  e_natural:
+    - E7(i)
+    - E7(ii)
+    - E7(iii)
+  e_sharp:
+    - E♯7(i)
+    - E♯7(ii)
+    - E♯7(iii)
+
+  f_flat:
+    - F♭7(i)
+    - F♭7(ii)
+    - F♭7(iii)
+  f_natural:
+    - F7(i)
+    - F7(ii)
+    - F7(iii)
+  f_sharp:
+    - F♯7(i)
+    - F♯7(ii)
+    - F♯7(iii)
+
+  g_flat:
+    - G♭7(i)
+    - G♭7(ii)
+    - G♭7(iii)
+  g_natural:
+    - G7(i)
+    - G7(ii)
+    - G7(iii)
+  g_sharp:
+    - G♯7(i)
+    - G♯7(ii)
+    - G♯7(iii)
+
+minor_seventh:
+  a_flat:
+    - A♭m7(i)
+    - A♭m7(ii)
+    - A♭m7(iii)
+  a_natural:
+    - Am7(i)
+    - Am7(ii)
+    - Am7(iii)
+  a_sharp:
+    - A♯m7(i)
+    - A♯m7(ii)
+    - A♯m7(iii)
+
+  b_flat:
+    - B♭m7(i)
+    - B♭m7(ii)
+    - B♭m7(iii)
+  b_natural:
+    - Bm7(i)
+    - Bm7(ii)
+    - Bm7(iii)
+  b_sharp:
+    - B♯m7(i)
+    - B♯m7(ii)
+    - B♯m7(iii)
+
+  c_flat:
+    - C♭m7(i)
+    - C♭m7(ii)
+    - C♭m7(iii)
+  c_natural:
+    - Cm7(i)
+    - Cm7(ii)
+    - Cm7(iii)
+  c_sharp:
+    - C♯m7(i)
+    - C♯m7(ii)
+    - C♯m7(iii)
+
+  d_flat:
+    - D♭m7(i)
+    - D♭m7(ii)
+    - D♭m7(iii)
+  d_natural:
+    - Dm7(i)
+    - Dm7(ii)
+    - Dm7(iii)
+  d_sharp:
+    - D♯m7(i)
+    - D♯m7(ii)
+    - D♯m7(iii)
+
+  e_flat:
+    - E♭m7(i)
+    - E♭m7(ii)
+    - E♭m7(iii)
+  e_natural:
+    - Em7(i)
+    - Em7(ii)
+    - Em7(iii)
+  e_sharp:
+    - E♯m7(i)
+    - E♯m7(ii)
+    - E♯m7(iii)
+
+  f_flat:
+    - F♭m7(i)
+    - F♭m7(ii)
+    - F♭m7(iii)
+  f_natural:
+    - Fm7(i)
+    - Fm7(ii)
+    - Fm7(iii)
+  f_sharp:
+    - F♯m7(i)
+    - F♯m7(ii)
+    - F♯m7(iii)
+
+  g_flat:
+    - G♭m7(i)
+    - G♭m7(ii)
+    - G♭m7(iii)
+  g_natural:
+    - Gm7(i)
+    - Gm7(ii)
+    - Gm7(iii)
+  g_sharp:
+    - G♯m7(i)
+    - G♯m7(ii)
+    - G♯m7(iii)
+
+half_diminished_seventh:
+  a_flat:
+    - A♭ø7(i)
+    - A♭ø7(ii)
+    - A♭ø7(iii)
+  a_natural:
+    - Aø7(i)
+    - Aø7(ii)
+    - Aø7(iii)
+  a_sharp:
+    - A♯ø7(i)
+    - A♯ø7(ii)
+    - A♯ø7(iii)
+
+  b_flat:
+    - B♭ø7(i)
+    - B♭ø7(ii)
+    - B♭ø7(iii)
+  b_natural:
+    - Bø7(i)
+    - Bø7(ii)
+    - Bø7(iii)
+  b_sharp:
+    - B♯ø7(i)
+    - B♯ø7(ii)
+    - B♯ø7(iii)
+
+  c_flat:
+    - C♭ø7(i)
+    - C♭ø7(ii)
+    - C♭ø7(iii)
+  c_natural:
+    - Cø7(i)
+    - Cø7(ii)
+    - Cø7(iii)
+  c_sharp:
+    - C♯ø7(i)
+    - C♯ø7(ii)
+    - C♯ø7(iii)
+
+  d_flat:
+    - D♭ø7(i)
+    - D♭ø7(ii)
+    - D♭ø7(iii)
+  d_natural:
+    - Dø7(i)
+    - Dø7(ii)
+    - Dø7(iii)
+  d_sharp:
+    - D♯ø7(i)
+    - D♯ø7(ii)
+    - D♯ø7(iii)
+
+  e_flat:
+    - E♭ø7(i)
+    - E♭ø7(ii)
+    - E♭ø7(iii)
+  e_natural:
+    - Eø7(i)
+    - Eø7(ii)
+    - Eø7(iii)
+  e_sharp:
+    - E♯ø7(i)
+    - E♯ø7(ii)
+    - E♯ø7(iii)
+
+  f_flat:
+    - F♭ø7(i)
+    - F♭ø7(ii)
+    - F♭ø7(iii)
+  f_natural:
+    - Fø7(i)
+    - Fø7(ii)
+    - Fø7(iii)
+  f_sharp:
+    - F♯ø7(i)
+    - F♯ø7(ii)
+    - F♯ø7(iii)
+
+  g_flat:
+    - G♭ø7(i)
+    - G♭ø7(ii)
+    - G♭ø7(iii)
+  g_natural:
+    - Gø7(i)
+    - Gø7(ii)
+    - Gø7(iii)
+  g_sharp:
+    - G♯ø7(i)
+    - G♯ø7(ii)
+    - G♯ø7(iii)
