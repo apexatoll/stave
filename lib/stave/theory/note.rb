@@ -116,10 +116,24 @@ module Stave
         note_above(interval.invert!)
       end
 
+      def self.flats
+        where(accidental: Accidental.flat)
+      end
+
+      def self.naturals
+        where(accidental: Accidental.natural)
+      end
+
+      def self.sharps
+        where(accidental: Accidental.sharp)
+      end
+
       def self.single_accidental
-        where(accidental: Accidental.flat) +
-          where(accidental: Accidental.natural) +
-          where(accidental: Accidental.sharp)
+        flats + naturals + sharps
+      end
+
+      def self.circle_of_fifths
+        Circle.new(type: CircleType.fifths, root: Note.c_natural).notes
       end
     end
   end
