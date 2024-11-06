@@ -758,4 +758,20 @@ RSpec.describe Stave::Theory::Note do
       )
     end
   end
+
+  describe ".circle_of_fifths" do
+    subject(:circle_of_fifths) { described_class.circle_of_fifths }
+
+    it "returns the expected notes" do
+      expect(circle_of_fifths.map(&:variant)).to contain_exactly(
+        :a_flat, :a_natural,
+        :b_flat, :b_natural,
+        :c_flat, :c_natural, :c_sharp,
+        :d_flat, :d_natural,
+        :e_flat, :e_natural,
+        :f_natural, :f_sharp,
+        :g_flat, :g_natural
+      )
+    end
+  end
 end

@@ -231,7 +231,7 @@ module Stave
       end
 
       def self.circle_of_fifths
-        Circle.new(type: CircleType.fifths, root: Note.c_natural).notes
+        where(circle_of_fifths?: true)
       end
     end
   end
