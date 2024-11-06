@@ -1,6 +1,6 @@
 module Stave
   module Theory
-    class Note < Core::Lookup
+    class Note < Core::Lookup # rubocop:disable Metrics/ClassLength
       class PitchClass < Core::Lookup
         variant :c, index: 0, symbol: "C", to_i: 0
         variant :d, index: 1, symbol: "D", to_i: 2
@@ -26,59 +26,157 @@ module Stave
       end
 
       with_options pitch_class: PitchClass.a do
-        variant :a_double_flat,  accidental: Accidental.double_flat
-        variant :a_flat,         accidental: Accidental.flat
-        variant :a_natural,      accidental: Accidental.natural
-        variant :a_sharp,        accidental: Accidental.sharp
-        variant :a_double_sharp, accidental: Accidental.double_sharp
+        variant :a_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :a_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :a_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :a_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: false
+
+        variant :a_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.b do
-        variant :b_double_flat,  accidental: Accidental.double_flat
-        variant :b_flat,         accidental: Accidental.flat
-        variant :b_natural,      accidental: Accidental.natural
-        variant :b_sharp,        accidental: Accidental.sharp
-        variant :b_double_sharp, accidental: Accidental.double_sharp
+        variant :b_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :b_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :b_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :b_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: false
+
+        variant :b_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.c do
-        variant :c_double_flat,  accidental: Accidental.double_flat
-        variant :c_flat,         accidental: Accidental.flat
-        variant :c_natural,      accidental: Accidental.natural
-        variant :c_sharp,        accidental: Accidental.sharp
-        variant :c_double_sharp, accidental: Accidental.double_sharp
+        variant :c_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :c_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :c_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :c_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: true
+
+        variant :c_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.d do
-        variant :d_double_flat,  accidental: Accidental.double_flat
-        variant :d_flat,         accidental: Accidental.flat
-        variant :d_natural,      accidental: Accidental.natural
-        variant :d_sharp,        accidental: Accidental.sharp
-        variant :d_double_sharp, accidental: Accidental.double_sharp
+        variant :d_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :d_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :d_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :d_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: false
+
+        variant :d_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.e do
-        variant :e_double_flat,  accidental: Accidental.double_flat
-        variant :e_flat,         accidental: Accidental.flat
-        variant :e_natural,      accidental: Accidental.natural
-        variant :e_sharp,        accidental: Accidental.sharp
-        variant :e_double_sharp, accidental: Accidental.double_sharp
+        variant :e_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :e_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :e_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :e_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: false
+
+        variant :e_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.f do
-        variant :f_double_flat,  accidental: Accidental.double_flat
-        variant :f_flat,         accidental: Accidental.flat
-        variant :f_natural,      accidental: Accidental.natural
-        variant :f_sharp,        accidental: Accidental.sharp
-        variant :f_double_sharp, accidental: Accidental.double_sharp
+        variant :f_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :f_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: false
+
+        variant :f_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :f_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: true
+
+        variant :f_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       with_options pitch_class: PitchClass.g do
-        variant :g_double_flat,  accidental: Accidental.double_flat
-        variant :g_flat,         accidental: Accidental.flat
-        variant :g_natural,      accidental: Accidental.natural
-        variant :g_sharp,        accidental: Accidental.sharp
-        variant :g_double_sharp, accidental: Accidental.double_sharp
+        variant :g_double_flat,
+                accidental: Accidental.double_flat,
+                circle_of_fifths?: false
+
+        variant :g_flat,
+                accidental: Accidental.flat,
+                circle_of_fifths?: true
+
+        variant :g_natural,
+                accidental: Accidental.natural,
+                circle_of_fifths?: true
+
+        variant :g_sharp,
+                accidental: Accidental.sharp,
+                circle_of_fifths?: false
+
+        variant :g_double_sharp,
+                accidental: Accidental.double_sharp,
+                circle_of_fifths?: false
       end
 
       def +(other)

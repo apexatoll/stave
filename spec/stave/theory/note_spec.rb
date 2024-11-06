@@ -65,7 +65,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "C♭♭",
-        to_i: 10
+        to_i: 10,
+        circle_of_fifths?: false
       )
     end
   end
@@ -78,7 +79,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "C♭",
-        to_i: 11
+        to_i: 11,
+        circle_of_fifths?: true
       )
     end
   end
@@ -91,7 +93,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "C",
-        to_i: 0
+        to_i: 0,
+        circle_of_fifths?: true
       )
     end
   end
@@ -104,7 +107,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "C♯",
-        to_i: 1
+        to_i: 1,
+        circle_of_fifths?: true
       )
     end
   end
@@ -117,7 +121,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.c,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "C♯♯",
-        to_i: 2
+        to_i: 2,
+        circle_of_fifths?: false
       )
     end
   end
@@ -130,7 +135,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "D♭♭",
-        to_i: 0
+        to_i: 0,
+        circle_of_fifths?: false
       )
     end
   end
@@ -143,7 +149,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "D♭",
-        to_i: 1
+        to_i: 1,
+        circle_of_fifths?: true
       )
     end
   end
@@ -156,7 +163,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "D",
-        to_i: 2
+        to_i: 2,
+        circle_of_fifths?: true
       )
     end
   end
@@ -169,7 +177,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "D♯",
-        to_i: 3
+        to_i: 3,
+        circle_of_fifths?: false
       )
     end
   end
@@ -182,7 +191,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.d,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "D♯♯",
-        to_i: 4
+        to_i: 4,
+        circle_of_fifths?: false
       )
     end
   end
@@ -195,7 +205,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "E♭♭",
-        to_i: 2
+        to_i: 2,
+        circle_of_fifths?: false
       )
     end
   end
@@ -208,7 +219,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "E♭",
-        to_i: 3
+        to_i: 3,
+        circle_of_fifths?: true
       )
     end
   end
@@ -221,7 +233,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "E",
-        to_i: 4
+        to_i: 4,
+        circle_of_fifths?: true
       )
     end
   end
@@ -234,7 +247,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "E♯",
-        to_i: 5
+        to_i: 5,
+        circle_of_fifths?: false
       )
     end
   end
@@ -247,7 +261,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.e,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "E♯♯",
-        to_i: 6
+        to_i: 6,
+        circle_of_fifths?: false
       )
     end
   end
@@ -260,7 +275,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "F♭♭",
-        to_i: 3
+        to_i: 3,
+        circle_of_fifths?: false
       )
     end
   end
@@ -273,7 +289,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "F♭",
-        to_i: 4
+        to_i: 4,
+        circle_of_fifths?: false
       )
     end
   end
@@ -286,7 +303,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "F",
-        to_i: 5
+        to_i: 5,
+        circle_of_fifths?: true
       )
     end
   end
@@ -299,7 +317,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "F♯",
-        to_i: 6
+        to_i: 6,
+        circle_of_fifths?: true
       )
     end
   end
@@ -312,7 +331,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.f,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "F♯♯",
-        to_i: 7
+        to_i: 7,
+        circle_of_fifths?: false
       )
     end
   end
@@ -325,7 +345,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "G♭♭",
-        to_i: 5
+        to_i: 5,
+        circle_of_fifths?: false
       )
     end
   end
@@ -338,7 +359,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "G♭",
-        to_i: 6
+        to_i: 6,
+        circle_of_fifths?: true
       )
     end
   end
@@ -351,7 +373,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "G",
-        to_i: 7
+        to_i: 7,
+        circle_of_fifths?: true
       )
     end
   end
@@ -364,7 +387,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "G♯",
-        to_i: 8
+        to_i: 8,
+        circle_of_fifths?: false
       )
     end
   end
@@ -377,7 +401,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.g,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "G♯♯",
-        to_i: 9
+        to_i: 9,
+        circle_of_fifths?: false
       )
     end
   end
@@ -390,7 +415,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "A♭♭",
-        to_i: 7
+        to_i: 7,
+        circle_of_fifths?: false
       )
     end
   end
@@ -403,7 +429,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "A♭",
-        to_i: 8
+        to_i: 8,
+        circle_of_fifths?: true
       )
     end
   end
@@ -416,7 +443,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "A",
-        to_i: 9
+        to_i: 9,
+        circle_of_fifths?: true
       )
     end
   end
@@ -429,7 +457,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "A♯",
-        to_i: 10
+        to_i: 10,
+        circle_of_fifths?: false
       )
     end
   end
@@ -442,7 +471,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.a,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "A♯♯",
-        to_i: 11
+        to_i: 11,
+        circle_of_fifths?: false
       )
     end
   end
@@ -455,7 +485,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.double_flat,
         symbol: "B♭♭",
-        to_i: 9
+        to_i: 9,
+        circle_of_fifths?: false
       )
     end
   end
@@ -468,7 +499,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.flat,
         symbol: "B♭",
-        to_i: 10
+        to_i: 10,
+        circle_of_fifths?: true
       )
     end
   end
@@ -481,7 +513,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.natural,
         symbol: "B",
-        to_i: 11
+        to_i: 11,
+        circle_of_fifths?: true
       )
     end
   end
@@ -494,7 +527,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.sharp,
         symbol: "B♯",
-        to_i: 0
+        to_i: 0,
+        circle_of_fifths?: false
       )
     end
   end
@@ -507,7 +541,8 @@ RSpec.describe Stave::Theory::Note do
         pitch_class: described_class::PitchClass.b,
         accidental: Stave::Theory::Accidental.double_sharp,
         symbol: "B♯♯",
-        to_i: 1
+        to_i: 1,
+        circle_of_fifths?: false
       )
     end
   end
