@@ -1,7 +1,7 @@
 module Stave
   module Theory
     class ScaleType < Core::DegreeCollection
-      variant :major, degrees: [
+      variant :major, symbol: "major", degrees: [
         Degree.root,
         Degree.two,
         Degree.three,
@@ -12,7 +12,7 @@ module Stave
         Degree.octave
       ]
 
-      variant :minor, degrees: [
+      variant :minor, symbol: "minor", degrees: [
         Degree.root,
         Degree.two,
         Degree.flat_three,
@@ -24,7 +24,7 @@ module Stave
       ]
 
       with_options suffix: :pentatonic do
-        variant :major, degrees: [
+        variant :major, symbol: "major pentatonic", degrees: [
           Degree.root,
           Degree.two,
           Degree.three,
@@ -33,7 +33,7 @@ module Stave
           Degree.octave
         ]
 
-        variant :minor, degrees: [
+        variant :minor, symbol: "minor pentatonic", degrees: [
           Degree.root,
           Degree.flat_three,
           Degree.four,

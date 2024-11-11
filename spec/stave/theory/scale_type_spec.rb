@@ -4,6 +4,7 @@ RSpec.describe Stave::Theory::ScaleType do
 
     it "sets the expected attributes" do
       expect(scale_type).to have_attributes(
+        symbol: "major",
         count: 7,
         intervals: [
           Stave::Theory::Interval.perfect_unison,
@@ -44,6 +45,7 @@ RSpec.describe Stave::Theory::ScaleType do
 
     it "sets the expected attributes" do
       expect(scale_type).to have_attributes(
+        symbol: "minor",
         count: 7,
         intervals: [
           Stave::Theory::Interval.perfect_unison,
@@ -76,6 +78,7 @@ RSpec.describe Stave::Theory::ScaleType do
 
     it "sets the expected attributes" do
       expect(scale_type).to have_attributes(
+        symbol: "major pentatonic",
         count: 5,
         intervals: [
           Stave::Theory::Interval.perfect_unison,
@@ -104,6 +107,7 @@ RSpec.describe Stave::Theory::ScaleType do
 
     it "sets the expected attributes" do
       expect(scale_type).to have_attributes(
+        symbol: "minor pentatonic",
         count: 5,
         intervals: [
           Stave::Theory::Interval.perfect_unison,
