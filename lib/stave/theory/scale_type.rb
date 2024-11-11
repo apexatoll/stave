@@ -47,7 +47,7 @@ module Stave
         count == 5
       end
 
-      def hexatonic?
+      def heptatonic?
         count == 7
       end
 

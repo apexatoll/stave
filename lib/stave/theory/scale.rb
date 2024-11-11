@@ -6,13 +6,13 @@ module Stave
       end
 
       def triads
-        return unless type.hexatonic?
+        return unless type.heptatonic?
 
         harmonise!(type.triad_types)
       end
 
       def sevenths
-        return unless type.hexatonic?
+        return unless type.heptatonic?
 
         harmonise!(type.seventh_types)
       end

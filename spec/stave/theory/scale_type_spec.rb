@@ -34,7 +34,7 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::ModeType.aeolian,
           Stave::Theory::ModeType.locrian
         ],
-        hexatonic?: true,
+        heptatonic?: true,
         pentatonic?: false
       )
     end
@@ -67,7 +67,7 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::Interval.major_second
         ],
         mode_types: [],
-        hexatonic?: true,
+        heptatonic?: true,
         pentatonic?: false
       )
     end
@@ -96,7 +96,7 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::Interval.minor_third
         ],
         mode_types: [],
-        hexatonic?: false,
+        heptatonic?: false,
         pentatonic?: true
       )
     end
@@ -125,7 +125,7 @@ RSpec.describe Stave::Theory::ScaleType do
           Stave::Theory::Interval.major_second
         ],
         mode_types: [],
-        hexatonic?: false,
+        heptatonic?: false,
         pentatonic?: true
       )
     end
