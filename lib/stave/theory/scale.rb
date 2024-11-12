@@ -26,6 +26,10 @@ module Stave
         )
       end
 
+      def symbol
+        "#{root.symbol} #{type.symbol}"
+      end
+
       private
 
       def harmonise!(chord_types)
