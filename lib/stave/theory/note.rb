@@ -214,6 +214,10 @@ module Stave
         note_above(interval.invert!)
       end
 
+      def self.double_flats
+        where(accidental: Accidental.double_flat)
+      end
+
       def self.flats
         where(accidental: Accidental.flat)
       end
@@ -224,6 +228,10 @@ module Stave
 
       def self.sharps
         where(accidental: Accidental.sharp)
+      end
+
+      def self.double_sharps
+        where(accidental: Accidental.double_sharp)
       end
 
       def self.single_accidental
