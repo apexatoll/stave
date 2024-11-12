@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    stave (0.1.1)
+    stave (0.1.2)
       zeitwerk
 
 GEM
