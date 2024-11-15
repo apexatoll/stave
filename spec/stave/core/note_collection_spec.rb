@@ -171,6 +171,26 @@ RSpec.describe Stave::Core::NoteCollection do
     end
   end
 
+  describe "#note_degree" do
+    subject(:note_degree) { note_collection.note_degree(note) }
+
+    context "when note is not diatonic to the scale" do
+      let(:note) { Stave::Theory::Note.e_flat }
+
+      it "returns nil" do
+        expect(note_degree).to be_nil
+      end
+    end
+
+    context "when note is diatonic to the scale" do
+      let(:note) { Stave::Theory::Note.f_natural }
+
+      it "returns the degree of the note in the scale" do
+        expect(note_degree).to eq(Stave::Theory::Degree.four)
+      end
+    end
+  end
+
   describe "#uniq" do
     subject(:uniq) { note_collection.uniq }
 

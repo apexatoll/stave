@@ -1,6 +1,10 @@
 module Stave
   module Core
     class NoteCollection
+      extend Forwardable
+
+      def_delegators :type, :degrees
+
       attr_reader :root, :type
 
       def initialize(root:, type:)
@@ -18,6 +22,14 @@ module Stave
         position -= 7 while position >= 8
 
         notes[position - 1]
+      end
+
+      def note_degree(note)
+        return unless notes.include?(note)
+
+        position = notes.index(note)
+
+        degrees[position]
       end
 
       def uniq
