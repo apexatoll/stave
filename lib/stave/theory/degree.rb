@@ -112,6 +112,10 @@ module Stave
 
         Degree.find_by(interval: new_interval)
       end
+
+      def self.non_root
+        variants.reject { |degree| degree.position == 1 }
+      end
     end
   end
 end
