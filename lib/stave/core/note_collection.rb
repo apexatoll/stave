@@ -32,6 +32,14 @@ module Stave
         degrees[position]
       end
 
+      def degree_note(degree)
+        return unless degrees.include?(degree)
+
+        position = degrees.index(degree)
+
+        notes[position]
+      end
+
       def uniq
         notes.uniq(&:variant)
       end

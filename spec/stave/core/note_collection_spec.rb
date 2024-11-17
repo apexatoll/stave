@@ -191,6 +191,26 @@ RSpec.describe Stave::Core::NoteCollection do
     end
   end
 
+  describe "#degree_note" do
+    subject(:degree_note) { note_collection.degree_note(degree) }
+
+    context "when degree is not part of the scale" do
+      let(:degree) { Stave::Theory::Degree.five }
+
+      it "returns nil" do
+        expect(degree_note).to be_nil
+      end
+    end
+
+    context "when degree is part of the scale" do
+      let(:degree) { Stave::Theory::Degree.four }
+
+      it "returns the note corresponding to the degree in the scale" do
+        expect(degree_note).to eq(Stave::Theory::Note.f_natural)
+      end
+    end
+  end
+
   describe "#uniq" do
     subject(:uniq) { note_collection.uniq }
 
